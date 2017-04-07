@@ -6,7 +6,7 @@ const morgan     = require('morgan');
 
 // Define app to initialize express
 const app        = express();
-const PORT       = 3000;
+const PORT       = 8000;
 
 // Logs HTTP request and status codes
 app.use(morgan('dev'));

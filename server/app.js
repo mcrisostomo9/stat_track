@@ -11,27 +11,13 @@ const PORT       = 8000;
 // Logs HTTP request and status codes
 app.use(morgan('dev'));
 
-// Defines a GET route for all teams in 2016
-// Using the API from the NBA library
-app.get('/teams', (req,res) =>{
-  nba.data.teams({
-    year: 2016
-  }).then(function(data) {
-    res.send(data);
-  }).catch(function(err) {
-    console.error(err);
-  });
-});
-
-app.get('/games', (req,res) =>{
-  nba.data.scoreboard({
-    date: 20170405
-  }).then(function(data) {
-    res.send(data.games);
-  }).catch(function(err) {
-    console.error(err);
-  });
-});
+app.get('/', (req,res) => {
+  nba.data.scoreboard({date:20170324}).then(res => {
+    console.log(res);
+  }).catch(err => {
+    console.log('error returned', err);
+  })
+})
 
 // Returns a status code and handles our errors
 app.use(function (err, req, res, next) {

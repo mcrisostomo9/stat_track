@@ -1,8 +1,8 @@
 module.exports = {
   db: {
-    name: "DB NAME HERE",
-    user: "username",
-    password: "password"
+    name: "stat_track",
+    user: "root",
+    password: "root"
   },
   token: {
     secret: "walnutbrownie",

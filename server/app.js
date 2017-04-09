@@ -6,17 +6,17 @@ const morgan     = require('morgan');
 
 // Define app to initialize express
 const app        = express();
+const routes     = require('./routes');
 const PORT       = 8000;
 
 // Logs HTTP request and status codes
 app.use(morgan('dev'));
 
-app.get('/', (req,res) => {
-  nba.data.scoreboard({date:20170324}).then(res => {
-    console.log(res);
-  }).catch(err => {
-    console.log('error returned', err);
-  })
+// Initialize CRUD API for user's favorite team
+// Catch all route to render index file for all react routes
+app.use('/api', routes);
+app.use('*', (req,res) => {
+  res.sendFile(path.resolve(__dirname, '..', 'public', 'index.html'));
 })
 
 // Returns a status code and handles our errors

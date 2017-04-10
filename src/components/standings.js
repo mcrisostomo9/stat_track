@@ -1,21 +1,47 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {fetchStandingsFromApi} from '../actions/actionCreators';
+import WestStandings from './westStandings';
 
 class Standings extends React.Component{
   componentDidMount(){
     this.props.fetchStandings()
   }
-  render(){
+
+  westTeams(){
     if(!this.props.standings){
-      return(
-        <div>Loading standings</div>
-      )
+      return <div>loading</div>
     }
-    console.log('standings props', this.props.standings);
+    let {west} = this.props.standings;
+    console.log('this is the west',west);
+    return west.map((team, index)=>{
+      return <WestStandings name={team.teamId} key={index + team.teamId} wins={team.win} losses={team.loss} index={index}/>
+    })
+  }
+
+  render(){
+    // if(!this.props.standings){
+    //   return(
+    //     <div>Loading standings</div>
+    //   )
+    // }
+
     return(
-      <div>
-        Standings placeholder
+      <div className="card">
+          <table className="table table-sm table-hover">
+              <thead>
+                  <tr className="card-header">
+                      <th>Place</th>
+                      <th>Team</th>
+                      <th>Wins</th>
+                      <th>Losses</th>
+                  </tr>
+              </thead>
+              <tbody className="card-block">
+                  {this.westTeams()}
+                  {/* {this.eastTeams()} */}
+              </tbody>
+          </table>
       </div>
     )
   }

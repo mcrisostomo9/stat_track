@@ -1,4 +1,4 @@
-import {FETCH_GAMES} from './types';
+import {FETCH_GAMES, FETCH_STANDINGS} from './types';
 import nba from 'nba.js';
 
 
@@ -18,6 +18,25 @@ export function fetchGamesFromApi(day){
       dispatch(gamesAction(res))
     })
     .catch(err =>{
+      console.log('error', err);
+    })
+  }
+}
+
+//function to dispatch the standings reducer
+function standingsAction(res){
+  return{
+    type: FETCH_STANDINGS,
+    payload: res
+  }
+}
+
+export function fetchStandingsFromApi(){
+  return (dispatch)=>{
+    return nba.data.conferenceStandings().then(res =>{
+      dispatch(standingsAction(res))
+    })
+    .catch(err=>{
       console.log('error', err);
     })
   }

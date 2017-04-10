@@ -20,6 +20,18 @@ class Scoreboard extends React.Component{
     //when component mounts, makes call to get games data
     this.props.fetchGames(date.yyyymmdd());
   }
+   renderList(){
+     return this.props.games.map((game, index) => {
+        return (
+          <div key>
+          <li>
+            {game.hTeam.triCode}
+          </li>
+          <li>{game.vTeam.triCode}</li>
+          </div>
+        )
+      })
+   }
   render(){
   //handles initial render to show loading of the games, probably need to refine tho
   if(!this.props.games){
@@ -32,7 +44,10 @@ class Scoreboard extends React.Component{
   console.log('game props which are avaialble', this.props.games);
   return(
     <div>
-        Scoreboard data placeholder
+        <h1>This is what is rendering</h1>
+        <ul className='list-group ' > 
+          {this.renderList()} 
+        </ul>
     </div>
   )
   }

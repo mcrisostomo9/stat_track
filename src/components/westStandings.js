@@ -1,4 +1,5 @@
 import React from 'react';
+import teams from '../data/teamInfo';
 
 export default class WestStandings extends React.Component{
   constructor(props){
@@ -6,14 +7,16 @@ export default class WestStandings extends React.Component{
   }
 
   render(){
-    const team = this.props.name[this.props.index];
     const info = this.props;
+    let team = teams.filter((name)=>{
+      return (name.teamId === info.name)
+    });
     return(
       <tr>
               <td>{info.index + 1}</td>
-              <td>{info.name}</td>
+              <td>{team[0].fullName}</td>
               <td>{info.wins}</td>
-              <td className='hideOnMobile'>{info.losses}</td>
+              <td>{info.losses}</td>
           </tr>
         )
   }

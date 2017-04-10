@@ -332,3 +332,5 @@ const teams = [
         "divName": "Southeast"
       }
     ]
+
+export default teams;

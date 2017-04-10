@@ -23,11 +23,9 @@ class Scoreboard extends React.Component{
    renderList(){
      return this.props.games.map((game, index) => {
         return (
-          <div key>
-          <li>
-            {game.hTeam.triCode}
-          </li>
-          <li>{game.vTeam.triCode}</li>
+          <div>
+            {game.hTeam.triCode}<br></br>
+            {game.vTeam.triCode}<br></br>
           </div>
         )
       })

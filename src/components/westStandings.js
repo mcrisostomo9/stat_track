@@ -14,12 +14,15 @@ export default class WestStandings extends React.Component{
 
     return(
       <tr>
-              {/* added 1 for standings since zero base */}
-              <td>{info.index + 1}</td>
-              <td>{team[0].fullName}</td>
-              <td>{info.wins}</td>
-              <td>{info.losses}</td>
-      </tr>
+        {/* added 1 for standings since zero base */}
+        <td>{info.index + 1}</td>
+        <td>{team[0].fullName}</td>
+        <td>{info.wins}</td>
+        <td>{info.losses}</td>
+        <td className="hidden-md-down">{info.lastTenWin}-{10 - info.lastTenWin}</td>
+        <td className="hidden-md-down">{info.winPercent}</td>
+        <td className="hidden-md-down">{info.gamesBehind}</td>
+    </tr>
         )
   }
 }

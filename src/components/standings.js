@@ -16,7 +16,7 @@ class Standings extends React.Component{
     // to map through the returned standings data
     let {west} = this.props.standings;
     return west.map((team, index)=>{
-      return <WestStandings name={team.teamId} key={index + team.teamId} wins={team.win} losses={team.loss} index={index}/>
+      return <WestStandings name={team.teamId} key={index + team.teamId} wins={team.win} losses={team.loss} lastTenWin={team.lastTenWin} winPercent={team.winPctV2} gamesBehind={team.gamesBehind} index={index}/>
     })
   }
 
@@ -27,11 +27,12 @@ class Standings extends React.Component{
     // to map through the returned standings data
     let {east} = this.props.standings;
     return east.map((team, index)=>{
-      return <EastStandings name={team.teamId} key={index + team.teamId} wins={team.win} losses={team.loss} index={index}/>
+      return <EastStandings name={team.teamId} key={index + team.teamId} wins={team.win} losses={team.loss} lastTenWin={team.lastTenWin} winPercent={team.winPctV2} gamesBehind={team.gamesBehind} index={index}/>
     })
   }
 
   render(){
+    console.log('standingsData', this.props.standings);
     return(
       <div className="container row">
           <div className="col-lg-6 col-sm-12">
@@ -42,6 +43,10 @@ class Standings extends React.Component{
                           <th >Team</th>
                           <th >Wins</th>
                           <th >Losses</th>
+                          <th className="hidden-md-down">Last Ten</th>
+                          <th className="hidden-md-down">Win %</th>
+                          <th className="hidden-md-down">Games Behind</th>
+
                       </tr>
                   </thead>
                   <tbody className="card-block">
@@ -54,9 +59,12 @@ class Standings extends React.Component{
                   <thead className="thead-default">
                       <tr className="card-header">
                           <th>East Standings</th>
-                          <th>Team</th>
-                          <th>Wins</th>
-                          <th>Losses</th>
+                          <th >Team</th>
+                          <th >Wins</th>
+                          <th >Losses</th>
+                          <th className="hidden-md-down">Last Ten</th>
+                          <th className="hidden-md-down">Win %</th>
+                          <th className="hidden-md-down">Games Behind</th>
                       </tr>
                   </thead>
                   <tbody className="card-block">

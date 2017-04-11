@@ -2,18 +2,15 @@ import React from 'react';
 import teams from '../data/teamInfo';
 
 export default class EastStandings extends React.Component{
-  constructor(props){
-    super(props)
-  }
-
   render(){
+    //to store the component props to info
+    const info = this.props;
+
     //to filter the returned team id to have access to relevant team specific data
     let team = teams.filter((name)=>{
       return (name.teamId === info.name)
     });
 
-    //to store the component props to info
-    const info = this.props;
 
     return(
       <tr>

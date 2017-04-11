@@ -27,7 +27,7 @@ class Standings extends React.Component{
     // to map through the returned standings data
     let {east} = this.props.standings;
     return east.map((team, index)=>{
-      return <WestStandings name={team.teamId} key={index + team.teamId} wins={team.win} losses={team.loss} index={index}/>
+      return <EastStandings name={team.teamId} key={index + team.teamId} wins={team.win} losses={team.loss} index={index}/>
     })
   }
 

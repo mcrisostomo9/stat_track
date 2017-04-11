@@ -22,11 +22,20 @@ class Scoreboard extends React.Component{
   }
    renderList(){
      return this.props.games.map((game, index) => {
+
         return (
-          <div>
-            {game.hTeam.triCode}<br></br>
-            {game.vTeam.triCode}<br></br>
-          </div>
+             <tbody className='col-md-4'>
+              <tr>
+                <ul>        
+                  <td>{game.hTeam.triCode}</td>
+                  <td>120</td>
+                </ul>  
+               <ul>
+                  <td>{game.vTeam.triCode}</td>
+                  <td>92</td>
+               </ul>   
+              </tr>
+            </tbody>      
         )
       })
    }
@@ -41,11 +50,12 @@ class Scoreboard extends React.Component{
   }
   console.log('game props which are avaialble', this.props.games);
   return(
-    <div>
-        <h1>This is what is rendering</h1>
-        <ul className='list-group ' > 
-          {this.renderList()} 
-        </ul>
+    <div className ='col-md-5 table-hover'>
+        <h1>NBA Scores</h1>
+        <p>Scores are hardCoded when games are not on</p>
+        <table className='table table-sm'>
+          {this.renderList()}
+        </table>
     </div>
   )
   }

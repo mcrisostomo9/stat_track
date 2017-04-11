@@ -34,7 +34,7 @@ class Standings extends React.Component{
   render(){
     return(
       <div className="container row">
-          <div className="col-6">
+          <div className="col-lg-6 col-sm-12">
               <table className="table table-sm table-hover table-bordered ">
                   <thead className="thead-inverse">
                       <tr className="card-header">
@@ -49,7 +49,7 @@ class Standings extends React.Component{
                   </tbody>
               </table>
             </div>
-            <div className="col-6">
+            <div className="col-lg-6 col-sm-12">
               <table className="table table-sm table-hover table-bordered ">
                   <thead className="thead-default">
                       <tr className="card-header">

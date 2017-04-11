@@ -1,6 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {fetchGamesFromApi} from '../actions/actionCreators';
+import IndividualGames from './nba_scoreboard'
 
 //to provide current date
 Date.prototype.yyyymmdd = function() {
@@ -20,25 +21,7 @@ class Scoreboard extends React.Component{
     //when component mounts, makes call to get games data
     this.props.fetchGames(date.yyyymmdd());
   }
-   renderList(){
-     return this.props.games.map((game, index) => {
-
-        return (
-             <tbody className='col-md-4'>
-              <tr>
-                <ul>        
-                  <td>{game.hTeam.triCode}</td>
-                  <td>120</td>
-                </ul>  
-               <ul>
-                  <td>{game.vTeam.triCode}</td>
-                  <td>92</td>
-               </ul>   
-              </tr>
-            </tbody>      
-        )
-      })
-   }
+   
   render(){
   //handles initial render to show loading of the games, probably need to refine tho
   if(!this.props.games){
@@ -52,10 +35,8 @@ class Scoreboard extends React.Component{
   return(
     <div className ='col-md-5 table-hover'>
         <h1>NBA Scores</h1>
-        <p>Scores are hardCoded when games are not on</p>
-        <table className='table table-sm'>
-          {this.renderList()}
-        </table>
+          <IndividualGames />
+        
     </div>
   )
   }

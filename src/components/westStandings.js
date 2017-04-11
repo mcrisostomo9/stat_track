@@ -19,7 +19,7 @@ export default class WestStandings extends React.Component{
               <td>{team[0].fullName}</td>
               <td>{info.wins}</td>
               <td>{info.losses}</td>
-          </tr>
+      </tr>
         )
   }
 }

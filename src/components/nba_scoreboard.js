@@ -5,11 +5,14 @@ class IndvidualGames extends React.Component{
   
   renderList(){
      return this.props.games.map((game, index) => {
+       if (game.clock === ""){
+         game.clock = 'Games has not started, yet.'
+       }
 
         return (
              <div key = {index} className='card-deck'>
                <div className='card'>
-               <div className='card-header'>Q4 3:01</div>
+               <div className='card-header'>{game.clock}</div>
                <table className ='table'>
                   <tbody>
                     <tr>
@@ -27,8 +30,7 @@ class IndvidualGames extends React.Component{
                 </table>
                </div>   
              </div>
-             
-                
+           
                
         )
       })

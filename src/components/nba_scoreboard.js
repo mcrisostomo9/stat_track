@@ -1,9 +1,11 @@
 import React, { Component }from 'react';
 import { connect } from 'react-redux';
+import teams from '../data/teamInfo';
 
 class IndvidualGames extends React.Component{
   
   renderList(){
+    
      return this.props.games.map((game, index) => {
        if (game.clock === ""){
          game.clock = 'Games has not started, yet.'

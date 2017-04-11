@@ -180,6 +180,7 @@ const teams = [
         "confName": "West",
         "divName": "Southwest",
         "arena": 'FedExForum'
+
       },
       {
         "city": "Miami",
@@ -324,6 +325,7 @@ const teams = [
         "confName": "West",
         "divName": "Southwest",
         "arena": 'AT&T Center'
+
       },
       {
         "city": "Toronto",

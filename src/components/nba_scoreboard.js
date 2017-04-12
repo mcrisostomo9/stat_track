@@ -1,8 +1,8 @@
 import React, { Component }from 'react';
 import { connect } from 'react-redux';
-import teams from '../data/teamInfo';
+// import teams from '../data/teamInfo';
 
-class IndvidualGames extends React.Component{
+class IndvidualGames extends Component{
   
   renderList(){
     

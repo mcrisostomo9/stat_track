@@ -3,9 +3,9 @@ import { connect } from 'react-redux';
 // import teams from '../data/teamInfo';
 
 class IndvidualGames extends Component{
-  
+
   renderList(){
-    
+
      return this.props.games.map((game, index) => {
        if (game.clock === ""){
          game.clock = 'Games has not started, yet.'
@@ -20,20 +20,20 @@ class IndvidualGames extends Component{
                     <tr>
                       <ul>
                         <td>{game.vTeam.triCode}</td>
-                            <td>23</td> 
+                            <td>{game.vTeam.score}</td>
                       </ul>
                       <ul>
                           <td> {game.hTeam.triCode} </td>
-                          <td> 26 </td>
-                      </ul>    
+                          <td> {game.hTeam.score} </td>
+                      </ul>
                     </tr>
-                    </tbody> 
-               <div className='card-footer'>Staple Center</div>     
+                    </tbody>
+               <div className='card-footer'>Staple Center</div>
                 </table>
-               </div>   
+               </div>
              </div>
-           
-               
+
+
         )
       })
    }

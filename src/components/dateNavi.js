@@ -7,6 +7,7 @@ class DateNavi extends React.Component{
   constructor(props){
     super(props);
     this.props.sendDate(new Date());
+    console.log('unformattedDate', this.props.unformattedDate);
   }
   previousDay(){
     // console.log('date prior', this.props.viewedDateLongForm);
@@ -14,15 +15,13 @@ class DateNavi extends React.Component{
     temp.setDate(temp.getDate()-1);
     console.log('setting date', temp);
     this.props.sendDate(temp);
-    console.log('numeric', this.props.viewedDate);
-    console.log('long form', this.props.viewedDateLongForm);
-    console.log('unformat', this.props.unformattedDate);
 
   }
   render(){
+
     return(
       <div>
-        <button className="btn btn-outline-primary" onClick={this.previousDay.bind(this)}>Previous Day</button>
+        <button className="btn btn-outline-primary" onClick={()=>this.previousDay()}>Previous Day</button>
         <h4>{this.props.viewedDateLongForm}</h4>
         <button className="btn btn-outline-primary">Next day</button>
         <Scoreboard/>

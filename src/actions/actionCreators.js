@@ -57,9 +57,6 @@ Date.prototype.yyyymmdd = function() {
 export function setViewedDate(date){
   let dateLongForm = date.toDateString();
   let dateNumeric = date.yyyymmdd();
-  console.log('action unformattedDate', date);
-  console.log('action dateNumeric', dateNumeric);
-  console.log('action dateLongForm', dateLongForm);
   return {
     type: SET_DATE,
     numeric: dateNumeric,

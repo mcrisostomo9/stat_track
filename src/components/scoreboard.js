@@ -1,17 +1,17 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {fetchGamesFromApi, setViewedDate} from '../actions/actionCreators';
+import {fetchGamesFromApi} from '../actions/actionCreators';
 import IndividualGames from './IndividualGames'
 
 class Scoreboard extends React.Component{
-  componentWillReceiveProps(nextProps){
+  componentDidMount(){
     //when component mounts, makes call to get games data
     // this.props.fetchGames(date.yyyymmdd());
-    console.log('next props', nextProps);
+    // console.log('next props', nextProps);
     let {viewedDate} = this.props;
-    console.log('props  render viewedDate', viewedDate);
+    console.log('props render viewedDate', viewedDate);
 
-    // this.props.fetchGames(viewedDate);
+    this.props.fetchGames(viewedDate);
   }
 
   render(){
@@ -23,7 +23,7 @@ class Scoreboard extends React.Component{
       </div>
     )
   }
-  console.log('game props which are avaialble', this.props.games);
+  console.log('game props scoreboard', this.props.games);
 
   return(
     <div className='col-md-5 table-hover'>

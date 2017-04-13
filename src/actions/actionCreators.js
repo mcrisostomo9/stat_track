@@ -1,4 +1,4 @@
-import {FETCH_GAMES, FETCH_STANDINGS} from './types';
+import {FETCH_GAMES, FETCH_STANDINGS, SET_DATE} from './types';
 import nba from 'nba.js';
 
 
@@ -39,5 +39,28 @@ export function fetchStandingsFromApi(){
     .catch(err=>{
       console.log('error', err);
     })
+  }
+}
+
+
+//to format given date for api
+Date.prototype.yyyymmdd = function() {
+  let mm = this.getMonth() + 1; // getMonth() is zero-based
+  let dd = this.getDate();
+
+  return [this.getFullYear(),
+          (mm>9 ? '' : '0') + mm,
+          (dd>9 ? '' : '0') + dd
+         ].join('');
+};
+
+export function setViewedDate(date){
+  let dateLongForm = date.toDateString();
+  let dateNumeric = date.yyyymmdd();
+  return {
+    type: SET_DATE,
+    numeric: dateNumeric,
+    longDate: dateLongForm,
+    unformattedDate: date
   }
 }

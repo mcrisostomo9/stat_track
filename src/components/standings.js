@@ -36,16 +36,17 @@ class Standings extends React.Component{
     return(
       <div className="container row">
           <div className="col-lg-6 col-sm-12">
+              <h3>            West Standings </h3>
               <table className="table table-sm table-hover table-bordered ">
                   <thead className="thead-inverse">
                       <tr className="card-header">
-                          <th >West Standings</th>
+                          <th >#</th>
                           <th >Team</th>
                           <th >Wins</th>
                           <th >Losses</th>
                           <th className="hidden-md-down">Last Ten</th>
                           <th className="hidden-md-down">Win %</th>
-                          <th className="hidden-md-down">Games Behind</th>
+                          <th className="hidden-md-down">GB</th>
 
                       </tr>
                   </thead>
@@ -55,16 +56,17 @@ class Standings extends React.Component{
               </table>
             </div>
             <div className="col-lg-6 col-sm-12">
+              <h3>East Standings</h3>
               <table className="table table-sm table-hover table-bordered ">
                   <thead className="thead-default">
                       <tr className="card-header">
-                          <th>East Standings</th>
+                          <th>#</th>
                           <th >Team</th>
                           <th >Wins</th>
                           <th >Losses</th>
                           <th className="hidden-md-down">Last Ten</th>
                           <th className="hidden-md-down">Win %</th>
-                          <th className="hidden-md-down">Games Behind</th>
+                          <th className="hidden-md-down">GB</th>
                       </tr>
                   </thead>
                   <tbody className="card-block">

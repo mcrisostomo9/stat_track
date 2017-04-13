@@ -7,7 +7,6 @@ class DateNavi extends React.Component{
   constructor(props){
     super(props);
     this.props.sendDate(new Date());
-    console.log('unformattedDate', this.props.unformattedDate);
   }
   previousDay(){
     // console.log('date prior', this.props.viewedDateLongForm);
@@ -18,6 +17,7 @@ class DateNavi extends React.Component{
 
   }
   render(){
+    console.log('unformattedDate', this.props.unformattedDate);
 
     return(
       <div>

@@ -9,7 +9,7 @@ class Scoreboard extends React.Component{
     // this.props.fetchGames(date.yyyymmdd());
     // console.log('next props', nextProps);
     let {viewedDate} = this.props;
-    console.log('props render viewedDate', viewedDate);
+    console.log('props date scoreboard', viewedDate);
 
     this.props.fetchGames(viewedDate);
   }

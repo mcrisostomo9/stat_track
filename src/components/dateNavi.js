@@ -12,18 +12,25 @@ class DateNavi extends React.Component{
     // console.log('date prior', this.props.viewedDateLongForm);
     let temp = this.props.unformattedDate;
     temp.setDate(temp.getDate()-1);
-    console.log('setting date', temp);
+    console.log('setting previous date', temp);
     this.props.sendDate(temp);
-
   }
+  nextDay(){
+    // console.log('date prior', this.props.viewedDateLongForm);
+    let temp = this.props.unformattedDate;
+    temp.setDate(temp.getDate()+1);
+    console.log('setting next date', temp);
+    this.props.sendDate(temp);
+  }
+
   render(){
-    console.log('unformattedDate', this.props.unformattedDate);
+    // console.log('unformattedDate', this.props.unformattedDate);
 
     return(
       <div>
         <button className="btn btn-outline-primary" onClick={()=>this.previousDay()}>Previous Day</button>
         <h4>{this.props.viewedDateLongForm}</h4>
-        <button className="btn btn-outline-primary">Next day</button>
+        <button className="btn btn-outline-primary" onClick={()=>this.nextDay()}>Next day</button>
         <Scoreboard/>
       </div>
     )

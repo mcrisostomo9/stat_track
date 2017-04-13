@@ -4,14 +4,17 @@ import {fetchGamesFromApi} from '../actions/actionCreators';
 import IndividualGames from './IndividualGames'
 
 class Scoreboard extends React.Component{
-  componentDidMount(){
-    //when component mounts, makes call to get games data
-    // this.props.fetchGames(date.yyyymmdd());
-    // console.log('next props', nextProps);
-    let {viewedDate} = this.props;
-    console.log('props date scoreboard', viewedDate);
 
+  componentDidMount(){
+    let {viewedDate} = this.props;
     this.props.fetchGames(viewedDate);
+  }
+  shouldComponentUpdate(nextProps){
+    console.log('props comparison', this.props.viewedDate);
+    console.log('nextProps', nextProps.viewedDate);
+    if (this.props.viewedDate === nextProps.viewedDate) return false;
+          this.props.fetchGames(nextProps.viewedDate);
+          return true;
   }
 
   render(){

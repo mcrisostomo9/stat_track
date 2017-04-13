@@ -5,11 +5,15 @@ class App extends Component {
     render() {
         return (
             <div className="container">
-                <div className="row">
-                    <Header/>
+                <div className="row justify-content-center">
+                    <div className="col-10">
+                        <Header/>
+                    </div>
                 </div>
-                <div className="row">
-                    { this.props.children }
+                <div className="row justify-content-center">
+                    <div className="col-10">
+                        { this.props.children }
+                    </div>
                 </div>
             </div>
         )

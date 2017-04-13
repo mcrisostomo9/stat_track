@@ -7,14 +7,13 @@ import {Link, IndexLink} from 'react-router';
 export class Header extends React.Component{
     render(){
         return(
-            <nav className="navbar navbar-default">
-                <div className="container">
-                    <div className="navbar-header">
-                        <ul className="nav navbar-nav">
-                            <li><IndexLink to="/">Scoreboard</IndexLink></li>
-                            <li><Link to="standings">Standings</Link></li>
-                        </ul>
-                    </div>
+            <nav className="navbar navbar-light bg-faded">
+                <div className="nav">
+                    <h1 className="navbar-brand mb-0">Logo</h1>
+                    <ul className="nav">
+                        <li className="nav-item"><IndexLink to="/" className="nav-link">Scoreboard</IndexLink></li>
+                        <li className="nav-item"><Link to="standings" className="nav-link">Standings</Link></li>
+                    </ul>
                 </div>
             </nav>
         )

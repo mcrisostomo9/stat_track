@@ -8,7 +8,8 @@ const teams = [
         "nickname": "Hawks",
         "urlName": "hawks",
         "confName": "East",
-        "divName": "Southeast"
+        "divName": "Southeast",
+        "arena": "Philips Arena"
       },
       {
         "city": "Boston",
@@ -19,7 +20,8 @@ const teams = [
         "nickname": "Celtics",
         "urlName": "celtics",
         "confName": "East",
-        "divName": "Atlantic"
+        "divName": "Atlantic",
+         "arena": "TD Garden"
       },
       {
         "city": "Brooklyn",
@@ -30,7 +32,8 @@ const teams = [
         "nickname": "Nets",
         "urlName": "nets",
         "confName": "East",
-        "divName": "Atlantic"
+        "divName": "Atlantic",
+        "arena": "Barclays Center"     
       },
 
       {
@@ -42,7 +45,8 @@ const teams = [
         "nickname": "Hornets",
         "urlName": "hornets",
         "confName": "East",
-        "divName": "Southeast"
+        "divName": "Southeast",
+        "arena": 'Spectrum Center'
       },
       {
         "city": "Chicago",
@@ -53,7 +57,8 @@ const teams = [
         "nickname": "Bulls",
         "urlName": "bulls",
         "confName": "East",
-        "divName": "Central"
+        "divName": "Central",
+        "arena": 'United Center'
       },
       {
         "city": "Cleveland",
@@ -64,7 +69,8 @@ const teams = [
         "nickname": "Cavaliers",
         "urlName": "cavaliers",
         "confName": "East",
-        "divName": "Central"
+        "divName": "Central",
+        "arena": 'Quicken Loans Arena'
       },
       {
         "city": "Dallas",
@@ -75,7 +81,8 @@ const teams = [
         "nickname": "Mavericks",
         "urlName": "mavericks",
         "confName": "West",
-        "divName": "Southwest"
+        "divName": "Southwest",
+        'arena': 'American Airlines Center'
       },
       {
         "city": "Denver",
@@ -86,7 +93,8 @@ const teams = [
         "nickname": "Nuggets",
         "urlName": "nuggets",
         "confName": "West",
-        "divName": "Northwest"
+        "divName": "Northwest",
+        'arena': 'Pepsi Center'
       },
       {
         "city": "Detroit",
@@ -97,7 +105,8 @@ const teams = [
         "nickname": "Pistons",
         "urlName": "pistons",
         "confName": "East",
-        "divName": "Central"
+        "divName": "Central",
+        'arena': 'The Palace of Auburn hills'
       },
 
       {
@@ -109,7 +118,8 @@ const teams = [
         "nickname": "Warriors",
         "urlName": "warriors",
         "confName": "West",
-        "divName": "Pacific"
+        "divName": "Pacific",
+        "arena": "Oracle Center"
       },
       {
         "city": "Houston",
@@ -120,7 +130,8 @@ const teams = [
         "nickname": "Rockets",
         "urlName": "rockets",
         "confName": "West",
-        "divName": "Southwest"
+        "divName": "Southwest",
+        "arena": 'Toyota Center'
       },
       {
         "city": "Indiana",
@@ -131,7 +142,8 @@ const teams = [
         "nickname": "Pacers",
         "urlName": "pacers",
         "confName": "East",
-        "divName": "Central"
+        "divName": "Central",
+        "arena": 'Bankers Life Fieldhouse'
       },
       {
         "city": "LA",
@@ -142,7 +154,8 @@ const teams = [
         "nickname": "Clippers",
         "urlName": "clippers",
         "confName": "West",
-        "divName": "Pacific"
+        "divName": "Pacific",
+        "arena": 'Staples Center'
       },
       {
         "city": "Los Angeles",
@@ -153,7 +166,8 @@ const teams = [
         "nickname": "Lakers",
         "urlName": "lakers",
         "confName": "West",
-        "divName": "Pacific"
+        "divName": "Pacific",
+        "arena": "Staples Center"
       },
       {
         "city": "Memphis",
@@ -164,7 +178,9 @@ const teams = [
         "nickname": "Grizzlies",
         "urlName": "grizzlies",
         "confName": "West",
-        "divName": "Southwest"
+        "divName": "Southwest",
+        "arena": 'FedExForum'
+
       },
       {
         "city": "Miami",
@@ -175,7 +191,8 @@ const teams = [
         "nickname": "Heat",
         "urlName": "heat",
         "confName": "East",
-        "divName": "Southeast"
+        "divName": "Southeast",
+        "arena": 'American Airlines Arena'
       },
       {
         "city": "Milwaukee",
@@ -186,7 +203,8 @@ const teams = [
         "nickname": "Bucks",
         "urlName": "bucks",
         "confName": "East",
-        "divName": "Central"
+        "divName": "Central",
+        "arena": 'BMO Harris Bradley Center'
       },
       {
         "city": "Minnesota",
@@ -197,7 +215,8 @@ const teams = [
         "nickname": "Timberwolves",
         "urlName": "timberwolves",
         "confName": "West",
-        "divName": "Northwest"
+        "divName": "Northwest",
+        "arena": 'Target Center'
       },
       {
         "city": "New Orleans",
@@ -208,7 +227,8 @@ const teams = [
         "nickname": "Pelicans",
         "urlName": "pelicans",
         "confName": "West",
-        "divName": "Southwest"
+        "divName": "Southwest",
+        "arena": 'Smoothie King Center'
       },
       {
         "city": "New York",
@@ -219,7 +239,8 @@ const teams = [
         "nickname": "Knicks",
         "urlName": "knicks",
         "confName": "East",
-        "divName": "Atlantic"
+        "divName": "Atlantic",
+        "arena": 'Madison Square Garden'
       },
       {
         "city": "Oklahoma City",
@@ -230,7 +251,8 @@ const teams = [
         "nickname": "Thunder",
         "urlName": "thunder",
         "confName": "West",
-        "divName": "Northwest"
+        "divName": "Northwest",
+        "arena": 'Chesapeake Energy Arena'
       },
       {
         "city": "Orlando",
@@ -241,7 +263,8 @@ const teams = [
         "nickname": "Magic",
         "urlName": "magic",
         "confName": "East",
-        "divName": "Southeast"
+        "divName": "Southeast",
+        "arena": 'Amway Center'
       },
       {
         "city": "Philadelphia",
@@ -252,7 +275,8 @@ const teams = [
         "nickname": "76ers",
         "urlName": "sixers",
         "confName": "East",
-        "divName": "Atlantic"
+        "divName": "Atlantic",
+        "arena": 'Wells Fargo Center'
       },
       {
         "city": "Phoenix",
@@ -263,7 +287,8 @@ const teams = [
         "nickname": "Suns",
         "urlName": "suns",
         "confName": "West",
-        "divName": "Pacific"
+        "divName": "Pacific",
+        "arena": 'Talking Stick Resort Arena'
       },
       {
         "city": "Portland",
@@ -274,7 +299,8 @@ const teams = [
         "nickname": "Trail Blazers",
         "urlName": "blazers",
         "confName": "West",
-        "divName": "Northwest"
+        "divName": "Northwest",
+        "arena": 'Moda Center'
       },
       {
         "city": "Sacramento",
@@ -285,7 +311,8 @@ const teams = [
         "nickname": "Kings",
         "urlName": "kings",
         "confName": "West",
-        "divName": "Pacific"
+        "divName": "Pacific",
+        "arena": 'Golden 1 Tier'
       },
       {
         "city": "San Antonio",
@@ -296,7 +323,9 @@ const teams = [
         "nickname": "Spurs",
         "urlName": "spurs",
         "confName": "West",
-        "divName": "Southwest"
+        "divName": "Southwest",
+        "arena": 'AT&T Center'
+
       },
       {
         "city": "Toronto",
@@ -307,7 +336,8 @@ const teams = [
         "nickname": "Raptors",
         "urlName": "raptors",
         "confName": "East",
-        "divName": "Atlantic"
+        "divName": "Atlantic",
+        "arena": 'Air Canada Centre'
       },
       {
         "city": "Utah",
@@ -318,7 +348,8 @@ const teams = [
         "nickname": "Jazz",
         "urlName": "jazz",
         "confName": "West",
-        "divName": "Northwest"
+        "divName": "Northwest",
+        "arena": 'Vivint Smart Home Arena'
       },
       {
         "city": "Washington",
@@ -329,7 +360,8 @@ const teams = [
         "nickname": "Wizards",
         "urlName": "wizards",
         "confName": "East",
-        "divName": "Southeast"
+        "divName": "Southeast",
+        "arena": 'Verizon Center'
       }
     ]
 

@@ -14,7 +14,7 @@ const router = (
     <Router history = { browserHistory }>
       <Route path ='/' component = { App }>
         <IndexRoute component = { Scoreboard } />
-        <Route path ='Standings' component = {Standings}/>
+        <Route path ='standings' component = {Standings}/>
       </Route>
     </Router>
   </Provider>

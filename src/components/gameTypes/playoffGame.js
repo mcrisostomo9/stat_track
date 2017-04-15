@@ -57,7 +57,7 @@ const PlayoffGame = (props)=> {
 return(
   <div  className='card-deck'>
     <div className='card'>
-          <div className='card-header'>GAME {game.playoffs.gameNumInSeries} Clock: {game.clock}</div>
+          <div className='card-header'>{game.clock} {game.period.current}Q </div>
           <table className='table'>
                <tbody>
                  <tr>
@@ -72,7 +72,7 @@ return(
                  </tr>
               </tbody>
           </table>
-            <div className='card-header'>{game.playoffs.seriesSummaryText}</div>
+            <div className='card-header'>GAME {game.playoffs.gameNumInSeries} {game.playoffs.seriesSummaryText}</div>
     </div>
   </div>
 )

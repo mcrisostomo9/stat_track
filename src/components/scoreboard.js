@@ -4,9 +4,21 @@ import {fetchGamesFromApi} from '../actions/actionCreators';
 import GamesContainer from './gamesContainer'
 
 class Scoreboard extends React.Component {
-    componentDidMount() {
-        let {viewedDate} = this.props;
+    // componentWillMount() {
+    //     let {viewedDate, games} = this.props;
+    //     this.props.fetchGames(viewedDate);
+    //     console.log('games before mount', games);
+    // }
+    constructor(props){
+      super(props);
+        let {games, viewedDate} = this.props;
         this.props.fetchGames(viewedDate);
+        console.log('games before mount', games);
+    }
+    componentDidMount(){
+      let {viewedDate, games} = this.props;
+      // this.props.fetchGames(viewedDate);
+      console.log('games after mount', games);
     }
     shouldComponentUpdate(nextProps) {
         if (this.props.viewedDate === nextProps.viewedDate)
@@ -21,7 +33,7 @@ class Scoreboard extends React.Component {
         if (!games) {
             return (
                 <div>
-                   {/* No games today */}
+                  loading...
                 </div>
             )
         }

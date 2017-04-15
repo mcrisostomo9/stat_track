@@ -55,7 +55,7 @@ const RegularGame = (props)=> {
 return(
   <div  className='card-deck'>
     <div className='card'>
-          <div className='card-header'>Clock: {game.clock}</div>
+          <div className='card-header'>{game.clock} {game.period.current}Q</div>
           <table className='table'>
                <tbody>
                  <tr>

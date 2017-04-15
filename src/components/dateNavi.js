@@ -41,7 +41,7 @@ const mapStateToProps = (state)=>{
 
 const mapDispatchToProps = (dispatch)=>{
   return{
-    sendDate: (day) => dispatch(setViewedDate(day))
+    sendDate: (day) => dispatch(setViewedDate(day)),
   }
 }
 

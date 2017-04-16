@@ -19,9 +19,9 @@ export default class EastStandings extends React.Component{
               <td>{team[0].fullName}</td>
               <td>{info.wins}</td>
               <td>{info.losses}</td>
-              <td className="hidden-md-down">{info.lastTenWin}-{10 - info.lastTenWin}</td>
-              <td className="hidden-md-down">{info.winPercent}</td>
-              <td className="hidden-md-down">{info.gamesBehind}</td>
+              <td >{info.lastTenWin}-{10 - info.lastTenWin}</td>
+              <td >{info.winPercent}</td>
+              <td >{info.gamesBehind}</td>
           </tr>
         )
   }

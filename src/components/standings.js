@@ -45,9 +45,9 @@ class Standings extends React.Component{
                           <th >Team</th>
                           <th >Wins</th>
                           <th >Losses</th>
-                          <th className="hidden-md-down">Last Ten</th>
-                          <th className="hidden-md-down">Win %</th>
-                          <th className="hidden-md-down">GB</th>
+                          <th >Last Ten</th>
+                          <th >Win %</th>
+                          <th >GB</th>
 
                       </tr>
                   </thead>
@@ -65,9 +65,9 @@ class Standings extends React.Component{
                           <th >Team</th>
                           <th >Wins</th>
                           <th >Losses</th>
-                          <th className="hidden-md-down">Last Ten</th>
-                          <th className="hidden-md-down">Win %</th>
-                          <th className="hidden-md-down">GB</th>
+                          <th >Last Ten</th>
+                          <th >Win %</th>
+                          <th >GB</th>
                       </tr>
                   </thead>
                   <tbody className="panel-body">

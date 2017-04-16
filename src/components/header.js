@@ -25,13 +25,3 @@ export class Header extends React.Component{
         )
     }
 }
-
-// <nav className="navbar navbar-light bg-faded">
-//     <div className="nav">
-//         <h1 className="navbar-brand mb-0">Logo</h1>
-//         <ul className="nav">
-//             <li className="nav-item"><IndexLinkContainer to="/" className="nav-link">Scoreboard</IndexLinkContainer></li>
-//             <li className="nav-item"><LinkContainer to="standings" className="nav-link">Standings</LinkContainer></li>
-//         </ul>
-//     </div>
-// </nav>

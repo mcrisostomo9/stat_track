@@ -60,7 +60,7 @@ return(
           {
             (game.clock === "")
             ? <div className='card-header'>Halftime</div>
-            : <div className='card-header'>{game.clock} {game.period.current}Q</div>
+            : <div className='card-header'>{game.period.current}Q {game.clock}</div>
         }
           <table className='table'>
                <tbody>

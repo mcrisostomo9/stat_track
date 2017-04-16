@@ -8,7 +8,7 @@ const PlayoffGame = (props)=> {
   return(
         <div  className='card-deck'>
           <div className='card'>
-                <div className='card-header'> GAME {game.playoffs.gameNumInSeries}</div>
+                <div className='card-header'> GAME {game.playoffs.gameNumInSeries} FINAL</div>
                 <table className='table'>
                      <tbody>
                        <tr>

@@ -4,23 +4,18 @@ import {fetchGamesFromApi} from '../actions/actionCreators';
 import GamesContainer from './gamesContainer'
 
 class Scoreboard extends React.Component {
-    // componentWillMount() {
-    //     let {viewedDate, games} = this.props;
-    //     this.props.fetchGames(viewedDate);
-    //     console.log('games before mount', games);
-    // }
-    constructor(props){
-      super(props);
-        let {games, viewedDate} = this.props;
-        this.props.fetchGames(viewedDate);
-        console.log('games before mount', games);
-    }
+    //make call to fetch game on mount
     componentDidMount(){
       let {viewedDate, games} = this.props;
-      // this.props.fetchGames(viewedDate);
+      this.props.fetchGames(viewedDate);
       console.log('games after mount', games);
     }
-    shouldComponentUpdate(nextProps) {
+
+    //TODO comment on what this actually does
+    componentWillReceiveProps(nextProps){
+      let {viewedDate, games} = this.props;
+      console.log('nextProps', nextProps);
+      console.log('TESTING PROPS GAMES', games);
         if (this.props.viewedDate === nextProps.viewedDate)
             return false;
         this.props.fetchGames(nextProps.viewedDate);
@@ -29,6 +24,7 @@ class Scoreboard extends React.Component {
 
     render() {
         //handles initial render to show loading of the games, probably need to refine tho
+        console.log('games checkeing for render', this.props.games);
         let {games} = this.props;
         if (!games) {
             return (

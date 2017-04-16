@@ -29,7 +29,7 @@ const PlayoffGame = (props)=> {
     )
   }
   //for game that hasnt started
-  if(game.clock === ""){
+  if(game.clock === "" && game.period.isHalftime === false){
     return(
       <div  className='card-deck'>
         <div className='card'>
@@ -57,7 +57,11 @@ const PlayoffGame = (props)=> {
 return(
   <div  className='card-deck'>
     <div className='card'>
-          <div className='card-header'>{game.clock} {game.period.current}Q </div>
+          {
+            (game.clock === "")
+            ? <div className='card-header'>Halftime</div>
+            : <div className='card-header'>{game.clock} {game.period.current}Q</div>
+        }
           <table className='table'>
                <tbody>
                  <tr>

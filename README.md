@@ -1,7 +1,8 @@
-# NBA Stat Tracker
+# NBA Scoreboard Application
 
 ## Description
-An NBA application that will display current regular season and post-season box scores.
+An NBA application that will display current regular season and post-season box scores and standings.
+Future development to include other sports such as MLB scores and statistics.
 
 
 ## Technologies

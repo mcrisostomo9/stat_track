@@ -1,13 +1,20 @@
 import React, {Component} from 'react';
-import Scoreboard from './components/scoreboard';
-import Standings from './components/standings';
+import {Header} from './components/header';
 
 class App extends Component {
     render() {
         return (
-            <div>
-              <Scoreboard/>
-              <Standings/>
+            <div className="container">
+                <div className="row justify-content-center">
+                    <div className="col-10">
+                        <Header/>
+                    </div>
+                </div>
+                <div className="row justify-content-center">
+                    <div className="col-10">
+                        { this.props.children }
+                    </div>
+                </div>
             </div>
         )
     }

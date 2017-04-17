@@ -1,56 +1,63 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {fetchGamesFromApi} from '../actions/actionCreators';
+
 import IndividualGames from './nba_scoreboard'
 import teams from '../data/teamInfo';
+import GamesContainer from './gamesContainer'
 
-//to provide current date
-Date.prototype.yyyymmdd = function() {
-  let mm = this.getMonth() + 1; // getMonth() is zero-based
-  let dd = this.getDate();
 
-  return [this.getFullYear(),
-          (mm>9 ? '' : '0') + mm,
-          (dd>9 ? '' : '0') + dd
-         ].join('');
-};
-//defines date for use in the fetchGames
-let date = new Date();
-
-class Scoreboard extends React.Component{
-  componentDidMount(){
-    //when component mounts, makes call to get games data
-    this.props.fetchGames(date.yyyymmdd());
+class Scoreboard extends React.Component {
+  //make call to fetch game on mount
+  componentDidMount() {
+    let {viewedDate, games} = this.props;
+    this.props.fetchGames(viewedDate);
+    console.log('games after mount', games);
   }
-   
-  render(){
-  //handles initial render to show loading of the games, probably need to refine tho
-  if(!this.props.games){
-    return(
-      <div>
-        loading games...
+
+  //TODO comment on what this actually does
+  componentWillReceiveProps(nextProps) {
+    let {viewedDate, games} = this.props;
+    console.log('nextProps', nextProps);
+    console.log('TESTING PROPS GAMES', games);
+    if (this.props.viewedDate === nextProps.viewedDate)
+      return false;
+    this.props.fetchGames(nextProps.viewedDate);
+    return true;
+  }
+
+  render() {
+    //handles initial render to show loading of the games, probably need to refine tho
+    console.log('games checking for render', this.props.games);
+    let {games} = this.props;
+    if (!games) {
+      return (
+        <div>
+          loading...
+        </div>
+      )
+    }
+    if (games.length === 0) {
+      return (
+        <div>No games today</div>
+      )
+    }
+    return (
+      <div className='col-md-5 table-hover'>
+        <h1>NBA Scores</h1>
+        <GamesContainer/>
       </div>
     )
   }
-  console.log('game props which are avaialble', this.props.games);
-  return(
-    <div className ='col-md-5 table-hover'>
-        <h1>NBA Scores</h1>
-          <IndividualGames />
-        
-    </div>
-  )
-  }
 }
 
-const mapStateToProps = (state)=>{
-  return{
-    games: state.gamesData.games,
-  }
+
+const mapStateToProps = (state) => {
+  return {games: state.gamesData.games, viewedDate: state.setDate.viewedDate}
 }
 
-const mapDispatchToProps= (dispatch)=>{
-  return{
+const mapDispatchToProps = (dispatch) => {
+  return {
     fetchGames: (day) => dispatch(fetchGamesFromApi(day))
   }
 }

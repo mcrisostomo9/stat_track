@@ -44,19 +44,29 @@ export function fetchStandingsFromApi(){
 
 
 //to format given date for api
-Date.prototype.yyyymmdd = function() {
-  let mm = this.getMonth() + 1; // getMonth() is zero-based
-  let dd = this.getDate();
+// Date.prototype.yyyymmdd = function() {
+//   let mm = this.getMonth() + 1; // getMonth() is zero-based
+//   let dd = this.getDate();
+//
+//   return [this.getFullYear(),
+//           (mm>9 ? '' : '0') + mm,
+//           (dd>9 ? '' : '0') + dd
+//          ].join('');
+// };
 
-  return [this.getFullYear(),
+function convertDate(date){
+  let mm = date.getMonth() + 1; // getMonth() is zero-based
+  let dd = date.getDate();
+
+  return [date.getFullYear(),
           (mm>9 ? '' : '0') + mm,
           (dd>9 ? '' : '0') + dd
          ].join('');
-};
+}
 
 export function setViewedDate(date){
   let dateLongForm = date.toDateString();
-  let dateNumeric = date.yyyymmdd();
+  let dateNumeric = convertDate(date)
   return {
     type: SET_DATE,
     numeric: dateNumeric,

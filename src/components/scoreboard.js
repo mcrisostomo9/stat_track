@@ -2,6 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {fetchGamesFromApi} from '../actions/actionCreators';
 import IndividualGames from './nba_scoreboard'
+import teams from '../data/teamInfo';
 
 //to provide current date
 Date.prototype.yyyymmdd = function() {
@@ -44,7 +45,7 @@ class Scoreboard extends React.Component{
 
 const mapStateToProps = (state)=>{
   return{
-    games: state.gamesData.games
+    games: state.gamesData.games,
   }
 }
 

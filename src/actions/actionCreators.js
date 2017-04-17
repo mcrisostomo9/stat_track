@@ -66,7 +66,7 @@ function convertDate(date){
 
 export function setViewedDate(date){
   let dateLongForm = date.toDateString();
-  let dateNumeric = convertDate(date)
+  let dateNumeric = convertDate(date);//converts given date to YYYYMMDD
   return {
     type: SET_DATE,
     numeric: dateNumeric,

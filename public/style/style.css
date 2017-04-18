@@ -1,0 +1,9 @@
+a.navbar-brand{
+    padding: 10px;
+}
+
+/*target logo img*/
+a.navbar-brand > img{
+    width: 34px;
+    height: 36px;
+}

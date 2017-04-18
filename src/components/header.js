@@ -11,7 +11,7 @@ export class Header extends React.Component{
             <Navbar inverse collapseOnSelect>
                 <Navbar.Header>
                     <Navbar.Brand>
-                        <a href="/">LOGO</a>
+                        <a href="/"><img src="../assets/ballcourt_white.png"/></a>
                     </Navbar.Brand>
                     <Navbar.Toggle />
                 </Navbar.Header>

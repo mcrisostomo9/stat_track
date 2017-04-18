@@ -55,11 +55,19 @@ if(game.clock === ""){
 return(
     <div  className='col-xs-12 col-md-4'>
         <div className='panel panel-warning'>
-            <div className='panel-heading'>
-                <div className="row">
-                    <div className="col-xs-12 text-right">{game.clock} {game.period.current}Q</div>
+            {
+                (game.clock === "")
+                    ? <div className='panel-heading'>
+                    <div className="row">
+                        <div className="col-xs-12 text-right">Halftime</div>
+                    </div>
                 </div>
-            </div>
+                    : <div className='panel-heading'>
+                    <div className="row">
+                        <div className="col-xs-12 text-right">{game.period.current}Q - {game.clock}</div>
+                    </div>
+                </div>
+            }
             <div className='panel-body'>
                 <div className="row">
                     <div className="col-xs-9">{game.vTeam.triCode}</div>

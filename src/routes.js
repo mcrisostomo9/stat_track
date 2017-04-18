@@ -4,7 +4,7 @@ import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 
 import App from './App.js';
 import DateNavi from './components/dateNavi.js';
-import Standings from './components/standings.js';
+import Standings from './containers/standingsContainer.js';
 
 import { Provider } from 'react-redux';
 import store from './store.js';

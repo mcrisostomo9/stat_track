@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {setViewedDate} from '../actions/actionCreators';
-import Scoreboard from './scoreboard';
+import Scoreboard from '../containers/scoreboardContainer';
 import {Glyphicon} from "react-bootstrap";
 
 class DateNavi extends React.Component{

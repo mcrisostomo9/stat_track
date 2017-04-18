@@ -1,7 +1,16 @@
 import React from 'react';
+import teams from '../data/teamInfo';
 
 const RegularGame = (props)=> {
   let {game} = props;
+
+  let homeTeam  = teams.filter((homeTeam) => {
+        return (homeTeam.teamId === game.hTeam.teamId)
+  })
+  let visitorTeam = teams.filter((visitorTeam) =>{
+      return (visitorTeam.teamId === game.vTeam.teamId);
+  })
+
 
   // for final score
 if(game.attendance > 0 && game.clock === ""){
@@ -15,11 +24,11 @@ if(game.attendance > 0 && game.clock === ""){
               </div>
               <div className='panel-body'>
                   <div className="row">
-                      <div className="col-xs-9">{game.vTeam.triCode}</div>
+                      <div className="col-xs-9"><img src={visitorTeam[0].logo}/>{game.vTeam.triCode}</div>
                       <div className="col-xs-3 text-center">{game.vTeam.score}</div>
                   </div>
                   <div className="row">
-                      <div className="col-xs-9">{game.hTeam.triCode}</div>
+                      <div className="col-xs-9"><img src={homeTeam[0].logo}/>{game.hTeam.triCode}</div>
                       <div className="col-xs-3 text-center">{game.hTeam.score}</div>
                   </div>
               </div>
@@ -39,11 +48,11 @@ if(game.clock === ""){
               </div>
               <div className='panel-body'>
                   <div className="row">
-                      <div className="col-xs-9">{game.vTeam.triCode}</div>
+                      <div className="col-xs-9"><img src={visitorTeam[0].logo}/>{game.vTeam.triCode}</div>
                       <div className="col-xs-3 text-center">{game.vTeam.score}</div>
                   </div>
                   <div className="row">
-                      <div className="col-xs-9">{game.hTeam.triCode}</div>
+                      <div className="col-xs-9"><img src={homeTeam[0].logo}/>{game.hTeam.triCode}</div>
                       <div className="col-xs-3 text-center">{game.hTeam.score}</div>
                   </div>
               </div>

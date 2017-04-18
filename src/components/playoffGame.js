@@ -1,8 +1,19 @@
 import React from 'react';
+import teams from '../data/teamInfo';
+
 
 const PlayoffGame = (props)=> {
-  let {game} = props;
+  let {game} = props; // same as saying let game = props.game
   let {startTime} = props;
+ 
+  let homeTeam  = teams.filter((homeTeam) => {
+        return (homeTeam.teamId === game.hTeam.teamId)
+  })
+  let visitorTeam = teams.filter((visitorTeam) =>{
+      return (visitorTeam.teamId === game.vTeam.teamId);
+  })
+  console.log('these are the home teams', homeTeam)
+  console.log('these are the away team,', visitorTeam)
   // for final score
   if(game.attendance > 0 && game.clock === ""){
       return(
@@ -16,11 +27,11 @@ const PlayoffGame = (props)=> {
                   </div>
                   <div className='panel-body'>
                       <div className="row">
-                          <div className="col-xs-9">{game.vTeam.triCode}</div>
+                          <div className="col-xs-9"><img src={visitorTeam[0].logo}/>{game.vTeam.triCode}</div>
                           <div className="col-xs-3 text-center">{game.vTeam.score}</div>
                       </div>
                       <div className="row">
-                          <div className="col-xs-9">{game.hTeam.triCode}</div>
+                          <div className="col-xs-9"><img src={homeTeam[0].logo}/>{game.hTeam.triCode}</div>
                           <div className="col-xs-3 text-center">{game.hTeam.score}</div>
                       </div>
                   </div>
@@ -44,11 +55,12 @@ const PlayoffGame = (props)=> {
                   </div>
                   <div className='panel-body'>
                       <div className="row">
-                          <div className="col-xs-9">{game.vTeam.triCode}</div>
+                          <div className="col-xs-9"><img src={visitorTeam[0].logo}/>{game.vTeam.triCode}</div>
                           <div className="col-xs-3 text-center">{game.vTeam.score}</div>
                       </div>
                       <div className="row">
-                          <div className="col-xs-9">{game.hTeam.triCode}</div>
+                          
+                          <div className="col-xs-9"><img src={homeTeam[0].logo}/>{game.hTeam.triCode}</div>
                           <div className="col-xs-3 text-center">{game.hTeam.score}</div>
                       </div>
                   </div>

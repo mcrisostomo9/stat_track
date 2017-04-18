@@ -1,8 +1,9 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {fetchStandingsFromApi} from '../actions/actionCreators';
-import WestStandings from './westStandings';
-import EastStandings from './eastStandings';
+import WestStandings from '../components/westStandings';
+import EastStandings from '../components/eastStandings';
+import {Table} from 'react-bootstrap';
 
 class Standings extends React.Component{
   componentDidMount(){
@@ -11,7 +12,7 @@ class Standings extends React.Component{
 
   westTeams(){
     if(!this.props.standings){
-      return <div>loading</div>
+      return <tr><td>loading...</td></tr>
     }
     // to map through the returned standings data
     let {west} = this.props.standings;
@@ -22,7 +23,7 @@ class Standings extends React.Component{
 
   eastTeams(){
     if(!this.props.standings){
-      return <div>loading</div>
+        return <tr><td>loading...</td></tr>
     }
     // to map through the returned standings data
     let {east} = this.props.standings;
@@ -34,45 +35,45 @@ class Standings extends React.Component{
   render(){
     console.log('standingsData', this.props.standings);
     return(
-      <div className="container row">
+      <div>
           <div className="col-lg-6 col-sm-12">
-              <h3>            West Standings </h3>
-              <table className="table table-sm table-hover table-bordered ">
-                  <thead className="thead-inverse">
-                      <tr className="card-header">
+              <h3>West Standings </h3>
+              <Table hover bordered responsive>
+                  <thead>
+                      <tr className="panel-heading warning">
                           <th >#</th>
                           <th >Team</th>
                           <th >Wins</th>
                           <th >Losses</th>
-                          <th className="hidden-md-down">Last Ten</th>
-                          <th className="hidden-md-down">Win %</th>
-                          <th className="hidden-md-down">GB</th>
+                          <th >Last Ten</th>
+                          <th >Win %</th>
+                          <th >GB</th>
 
                       </tr>
                   </thead>
-                  <tbody className="card-block">
+                  <tbody className="panel-body">
                       {this.westTeams()}
                   </tbody>
-              </table>
+              </Table>
             </div>
             <div className="col-lg-6 col-sm-12">
               <h3>East Standings</h3>
-              <table className="table table-sm table-hover table-bordered ">
-                  <thead className="thead-default">
-                      <tr className="card-header">
+                <Table hover bordered responsive>
+                  <thead>
+                      <tr className="panel-heading warning">
                           <th>#</th>
                           <th >Team</th>
                           <th >Wins</th>
                           <th >Losses</th>
-                          <th className="hidden-md-down">Last Ten</th>
-                          <th className="hidden-md-down">Win %</th>
-                          <th className="hidden-md-down">GB</th>
+                          <th >Last Ten</th>
+                          <th >Win %</th>
+                          <th >GB</th>
                       </tr>
                   </thead>
-                  <tbody className="card-block">
+                  <tbody className="panel-body">
                       {this.eastTeams()}
                   </tbody>
-              </table>
+              </Table>
           </div>
       </div>
     )

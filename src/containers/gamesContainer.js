@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import RegularGame from './gameTypes/regularGame';
-import PlayoffGame from './gameTypes/playoffGame';
+import RegularGame from '../components/regularGame';
+import PlayoffGame from '../components/playoffGame';
 
 class GamesContainer extends Component {
 
@@ -23,7 +23,7 @@ class GamesContainer extends Component {
 
     render() {
         return (
-            <div>
+            <div className="row">
                 {this.renderGames()}
             </div>
         )

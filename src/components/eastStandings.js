@@ -14,6 +14,7 @@ const EastStandings = (props)=> {
               {/* added 1 for standings since zero base */}
               <td>{info.index + 1}</td>
               <td>{team[0].fullName}</td>
+              <img src={team[0].logo}/>
               <td>{info.wins}</td>
               <td>{info.losses}</td>
               <td >{info.lastTenWin}-{10 - info.lastTenWin}</td>

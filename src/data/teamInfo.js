@@ -9,7 +9,8 @@ const teams = [
         "urlName": "hawks",
         "confName": "East",
         "divName": "Southeast",
-        "arena": "Philips Arena"
+        "arena": "Philips Arena",
+        "logo": '../assets/nba_logos/atl.png'
       },
       {
         "city": "Boston",
@@ -21,7 +22,9 @@ const teams = [
         "urlName": "celtics",
         "confName": "East",
         "divName": "Atlantic",
-         "arena": "TD Garden"
+         "arena": "TD Garden",
+        "logo": '../assets/nba_logos/bos.png'
+         
       },
       {
         "city": "Brooklyn",
@@ -33,7 +36,8 @@ const teams = [
         "urlName": "nets",
         "confName": "East",
         "divName": "Atlantic",
-        "arena": "Barclays Center"     
+        "arena": "Barclays Center",
+        "logo": '../assets/nba_logos/bkn.png'     
       },
 
       {
@@ -46,7 +50,8 @@ const teams = [
         "urlName": "hornets",
         "confName": "East",
         "divName": "Southeast",
-        "arena": 'Spectrum Center'
+        "arena": 'Spectrum Center',
+        "logo": '../assets/nba_logos/cha.png'
       },
       {
         "city": "Chicago",
@@ -58,7 +63,8 @@ const teams = [
         "urlName": "bulls",
         "confName": "East",
         "divName": "Central",
-        "arena": 'United Center'
+        "arena": 'United Center',
+        "logo": '../assets/nba_logos/chi.png'
       },
       {
         "city": "Cleveland",
@@ -70,7 +76,8 @@ const teams = [
         "urlName": "cavaliers",
         "confName": "East",
         "divName": "Central",
-        "arena": 'Quicken Loans Arena'
+        "arena": 'Quicken Loans Arena',
+        "logo": '../assets/nba_logos/cle.png'
       },
       {
         "city": "Dallas",
@@ -82,7 +89,8 @@ const teams = [
         "urlName": "mavericks",
         "confName": "West",
         "divName": "Southwest",
-        'arena': 'American Airlines Center'
+        'arena': 'American Airlines Center',
+        "logo": '../assets/nba_logos/dal.png'
       },
       {
         "city": "Denver",
@@ -94,7 +102,8 @@ const teams = [
         "urlName": "nuggets",
         "confName": "West",
         "divName": "Northwest",
-        'arena': 'Pepsi Center'
+        'arena': 'Pepsi Center',
+        "logo": '../assets/nba_logos/den.png'
       },
       {
         "city": "Detroit",
@@ -106,7 +115,8 @@ const teams = [
         "urlName": "pistons",
         "confName": "East",
         "divName": "Central",
-        'arena': 'The Palace of Auburn hills'
+        'arena': 'The Palace of Auburn hills',
+        "logo": '../assets/nba_logos/det.png'
       },
 
       {
@@ -119,7 +129,8 @@ const teams = [
         "urlName": "warriors",
         "confName": "West",
         "divName": "Pacific",
-        "arena": "Oracle Center"
+        "arena": "Oracle Center",
+        "logo": '../assets/nba_logos/gsw.png'
       },
       {
         "city": "Houston",
@@ -131,7 +142,8 @@ const teams = [
         "urlName": "rockets",
         "confName": "West",
         "divName": "Southwest",
-        "arena": 'Toyota Center'
+        "arena": 'Toyota Center',
+        "logo": '../assets/nba_logos/hou.png'
       },
       {
         "city": "Indiana",
@@ -143,7 +155,8 @@ const teams = [
         "urlName": "pacers",
         "confName": "East",
         "divName": "Central",
-        "arena": 'Bankers Life Fieldhouse'
+        "arena": 'Bankers Life Fieldhouse',
+        "logo": '../assets/nba_logos/ind.png'
       },
       {
         "city": "LA",
@@ -155,7 +168,8 @@ const teams = [
         "urlName": "clippers",
         "confName": "West",
         "divName": "Pacific",
-        "arena": 'Staples Center'
+        "arena": 'Staples Center',
+        "logo": '../assets/nba_logos/lac.png'
       },
       {
         "city": "Los Angeles",
@@ -167,7 +181,8 @@ const teams = [
         "urlName": "lakers",
         "confName": "West",
         "divName": "Pacific",
-        "arena": "Staples Center"
+        "arena": "Staples Center",
+        "logo": '../assets/nba_logos/lal.png'
       },
       {
         "city": "Memphis",
@@ -179,7 +194,8 @@ const teams = [
         "urlName": "grizzlies",
         "confName": "West",
         "divName": "Southwest",
-        "arena": 'FedExForum'
+        "arena": 'FedExForum',
+        "logo": '../assets/nba_logos/mem.png'
 
       },
       {
@@ -192,7 +208,8 @@ const teams = [
         "urlName": "heat",
         "confName": "East",
         "divName": "Southeast",
-        "arena": 'American Airlines Arena'
+        "arena": 'American Airlines Arena',
+        "logo": '../assets/nba_logos/mia.png'
       },
       {
         "city": "Milwaukee",
@@ -204,7 +221,8 @@ const teams = [
         "urlName": "bucks",
         "confName": "East",
         "divName": "Central",
-        "arena": 'BMO Harris Bradley Center'
+        "arena": 'BMO Harris Bradley Center',
+        "logo": '../assets/nba_logos/mil.png'
       },
       {
         "city": "Minnesota",
@@ -216,7 +234,8 @@ const teams = [
         "urlName": "timberwolves",
         "confName": "West",
         "divName": "Northwest",
-        "arena": 'Target Center'
+        "arena": 'Target Center',
+        "logo": '../assets/nba_logos/min.png'
       },
       {
         "city": "New Orleans",
@@ -228,7 +247,8 @@ const teams = [
         "urlName": "pelicans",
         "confName": "West",
         "divName": "Southwest",
-        "arena": 'Smoothie King Center'
+        "arena": 'Smoothie King Center',
+        "logo": '../assets/nba_logos/nop.png'
       },
       {
         "city": "New York",
@@ -240,7 +260,8 @@ const teams = [
         "urlName": "knicks",
         "confName": "East",
         "divName": "Atlantic",
-        "arena": 'Madison Square Garden'
+        "arena": 'Madison Square Garden',
+        "logo": '../assets/nba_logos/nyk.png'
       },
       {
         "city": "Oklahoma City",
@@ -252,7 +273,8 @@ const teams = [
         "urlName": "thunder",
         "confName": "West",
         "divName": "Northwest",
-        "arena": 'Chesapeake Energy Arena'
+        "arena": 'Chesapeake Energy Arena',
+        "logo": '../assets/nba_logos/okc.png'
       },
       {
         "city": "Orlando",
@@ -264,7 +286,8 @@ const teams = [
         "urlName": "magic",
         "confName": "East",
         "divName": "Southeast",
-        "arena": 'Amway Center'
+        "arena": 'Amway Center',
+        "logo": '../assets/nba_logos/orl.png'
       },
       {
         "city": "Philadelphia",
@@ -276,7 +299,8 @@ const teams = [
         "urlName": "sixers",
         "confName": "East",
         "divName": "Atlantic",
-        "arena": 'Wells Fargo Center'
+        "arena": 'Wells Fargo Center',
+        "logo": '../assets/nba_logos/phi.png'
       },
       {
         "city": "Phoenix",
@@ -288,7 +312,8 @@ const teams = [
         "urlName": "suns",
         "confName": "West",
         "divName": "Pacific",
-        "arena": 'Talking Stick Resort Arena'
+        "arena": 'Talking Stick Resort Arena',
+        "logo": '../assets/nba_logos/pho.png'
       },
       {
         "city": "Portland",
@@ -300,7 +325,8 @@ const teams = [
         "urlName": "blazers",
         "confName": "West",
         "divName": "Northwest",
-        "arena": 'Moda Center'
+        "arena": 'Moda Center',
+        "logo": '../assets/nba_logos/por.png'
       },
       {
         "city": "Sacramento",
@@ -312,7 +338,8 @@ const teams = [
         "urlName": "kings",
         "confName": "West",
         "divName": "Pacific",
-        "arena": 'Golden 1 Tier'
+        "arena": 'Golden 1 Tier',
+        "logo": '../assets/nba_logos/sac.png'
       },
       {
         "city": "San Antonio",
@@ -324,7 +351,8 @@ const teams = [
         "urlName": "spurs",
         "confName": "West",
         "divName": "Southwest",
-        "arena": 'AT&T Center'
+        "arena": 'AT&T Center',
+        "logo": '../assets/nba_logos/sas.png'
 
       },
       {
@@ -337,7 +365,8 @@ const teams = [
         "urlName": "raptors",
         "confName": "East",
         "divName": "Atlantic",
-        "arena": 'Air Canada Centre'
+        "arena": 'Air Canada Centre',
+        "logo": '../assets/nba_logos/tor.png'
       },
       {
         "city": "Utah",
@@ -349,7 +378,8 @@ const teams = [
         "urlName": "jazz",
         "confName": "West",
         "divName": "Northwest",
-        "arena": 'Vivint Smart Home Arena'
+        "arena": 'Vivint Smart Home Arena',
+        "logo": '../assets/nba_logos/uth.png'
       },
       {
         "city": "Washington",
@@ -361,7 +391,8 @@ const teams = [
         "urlName": "wizards",
         "confName": "East",
         "divName": "Southeast",
-        "arena": 'Verizon Center'
+        "arena": 'Verizon Center',
+        "logo": '../assets/nba_logos/was.png'
       }
     ]
 

@@ -1,7 +1,11 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {fetchGamesFromApi} from '../actions/actionCreators';
+
+import IndividualGames from './nba_scoreboard'
+import teams from '../data/teamInfo';
 import GamesContainer from './gamesContainer'
+
 
 class Scoreboard extends React.Component {
     //make call to fetch game on mount
@@ -45,6 +49,7 @@ class Scoreboard extends React.Component {
         )
     }
 }
+
 
 const mapStateToProps = (state) => {
     return {games: state.gamesData.games, viewedDate: state.setDate.viewedDate}

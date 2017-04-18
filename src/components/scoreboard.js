@@ -34,9 +34,13 @@ class Scoreboard extends React.Component {
             )
         }
         return (
-            <div className='col-md-5 table-hover'>
-                <h1>NBA Scores</h1>
-                <GamesContainer/>
+            <div className="row">
+                <div className="col-xs-12 text-center">
+                    <h1>NBA Scoreboard</h1>
+                </div>
+                <div className="col-xs-12">
+                    <GamesContainer/>
+                </div>
             </div>
         )
     }

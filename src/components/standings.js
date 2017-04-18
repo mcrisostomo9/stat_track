@@ -12,7 +12,7 @@ class Standings extends React.Component{
 
   westTeams(){
     if(!this.props.standings){
-      return <div>loading</div>
+      return <tr><td>loading...</td></tr>
     }
     // to map through the returned standings data
     let {west} = this.props.standings;
@@ -23,7 +23,7 @@ class Standings extends React.Component{
 
   eastTeams(){
     if(!this.props.standings){
-      return <div>loading</div>
+        return <tr><td>loading...</td></tr>
     }
     // to map through the returned standings data
     let {east} = this.props.standings;

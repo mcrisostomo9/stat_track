@@ -5,79 +5,86 @@ const PlayoffGame = (props)=> {
   let {startTime} = props;
   // for final score
   if(game.attendance > 0 && game.clock === ""){
-  return(
-        <div  className='card-deck'>
-          <div className='card'>
-                <div className='card-header'> GAME {game.playoffs.gameNumInSeries} FINAL</div>
-                <table className='table'>
-                     <tbody>
-                       <tr>
-                         <ul>
-                           <td>{game.vTeam.triCode}</td>
-                           <td>{game.vTeam.score}</td>
-                         </ul>
-                         <ul>
-                             <td> {game.hTeam.triCode} </td>
-                             <td> {game.hTeam.score} </td>
-                         </ul>
-                       </tr>
-                    </tbody>
-                </table>
-                <div className='card-header'>{game.playoffs.seriesSummaryText}</div>
+      return(
+          <div  className='col-xs-12 col-md-4'>
+              <div className='panel panel-warning'>
+                  <div className='panel-heading'>
+                      <div className="row">
+                          <div className="col-xs-9">GAME {game.playoffs.gameNumInSeries}</div>
+                          <div className="col-xs-3">FINAL</div>
+                      </div>
+                  </div>
+                  <div className='panel-body'>
+                      <div className="row">
+                          <div className="col-xs-9">{game.vTeam.triCode}</div>
+                          <div className="col-xs-3 text-center">{game.vTeam.score}</div>
+                      </div>
+                      <div className="row">
+                          <div className="col-xs-9">{game.hTeam.triCode}</div>
+                          <div className="col-xs-3 text-center">{game.hTeam.score}</div>
+                      </div>
+                  </div>
+                  <div className='panel-footer'>
+                      {game.playoffs.seriesSummaryText}
+                  </div>
+              </div>
           </div>
-        </div>
-    )
+      )
   }
   //for game that hasnt started
   if(game.clock === ""){
-    return(
-      <div  className='card-deck'>
-        <div className='card'>
-              <div className='card-header'>GAME {game.playoffs.gameNumInSeries} Start time: {startTime}</div>
-              <table className='table'>
-                   <tbody>
-                     <tr>
-                       <ul>
-                         <td>{game.vTeam.triCode}</td>
-                         <td>{game.vTeam.score}</td>
-                       </ul>
-                       <ul>
-                           <td> {game.hTeam.triCode} </td>
-                           <td> {game.hTeam.score} </td>
-                       </ul>
-                     </tr>
-                  </tbody>
-              </table>
-              <div className='card-header'>{game.playoffs.seriesSummaryText}</div>
-        </div>
-      </div>
-  )
-}
+      return(
+          <div  className='col-xs-12 col-md-4'>
+              <div className='panel panel-warning'>
+                  <div className='panel-heading'>
+                      <div className="row">
+                          <div className="col-xs-5">GAME {game.playoffs.gameNumInSeries}</div>
+                          <div className="col-xs-7 text-right">Start time: {startTime}</div>
+                      </div>
+                  </div>
+                  <div className='panel-body'>
+                      <div className="row">
+                          <div className="col-xs-9">{game.vTeam.triCode}</div>
+                          <div className="col-xs-3 text-center">{game.vTeam.score}</div>
+                      </div>
+                      <div className="row">
+                          <div className="col-xs-9">{game.hTeam.triCode}</div>
+                          <div className="col-xs-3 text-center">{game.hTeam.score}</div>
+                      </div>
+                  </div>
+                  <div className='panel-footer'>
+                      {game.playoffs.seriesSummaryText}
+                  </div>
+              </div>
+          </div>
+      )
+  }
 // for game in progress
-return(
-  <div  className='card-deck'>
-    <div className='card'>
-          <div className='card-header'>{game.clock} {game.period.current}Q </div>
-          <table className='table'>
-               <tbody>
-                 <tr>
-                   <ul>
-                     <td>{game.vTeam.triCode}</td>
-                     <td>{game.vTeam.score}</td>
-                   </ul>
-                   <ul>
-                       <td> {game.hTeam.triCode} </td>
-                       <td> {game.hTeam.score} </td>
-                   </ul>
-                 </tr>
-              </tbody>
-          </table>
-            <div className='card-header'>GAME {game.playoffs.gameNumInSeries} {game.playoffs.seriesSummaryText}</div>
-    </div>
-  </div>
-)
-
-
+    return(
+        <div  className='col-xs-12 col-md-4'>
+            <div className='panel panel-warning'>
+                <div className='panel-heading'>
+                    <div className="row">
+                        <div className="col-xs-5">GAME {game.playoffs.gameNumInSeries}</div>
+                        <div className="col-xs-7 text-right">{game.clock} {game.period.current}Q</div>
+                    </div>
+                </div>
+                <div className='panel-body'>
+                    <div className="row">
+                        <div className="col-xs-9">{game.vTeam.triCode}</div>
+                        <div className="col-xs-3 text-center">{game.vTeam.score}</div>
+                    </div>
+                    <div className="row">
+                        <div className="col-xs-9">{game.hTeam.triCode}</div>
+                        <div className="col-xs-3 text-center">{game.hTeam.score}</div>
+                    </div>
+                </div>
+                <div className='panel-footer'>
+                    {game.playoffs.seriesSummaryText}
+                </div>
+            </div>
+        </div>
+    )
 }
 
 export default PlayoffGame

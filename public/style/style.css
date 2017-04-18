@@ -34,3 +34,9 @@ h3.eastern_conference > img{
     width: 52px;
     height: 50px;
 }
+
+/*targets nba team images in scoreboard*/
+img.nba_team_images_scoreboard{
+    width: 30px;
+    height:30px;
+}

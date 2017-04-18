@@ -24,7 +24,7 @@ class Scoreboard extends React.Component {
 
     render() {
         //handles initial render to show loading of the games, probably need to refine tho
-        console.log('games checkeing for render', this.props.games);
+        console.log('games checking for render', this.props.games);
         let {games} = this.props;
         if (!games) {
             return (

@@ -2,6 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {setViewedDate} from '../actions/actionCreators';
 import Scoreboard from './scoreboard';
+import {Glyphicon} from "react-bootstrap";
 
 class DateNavi extends React.Component{
   constructor(props){
@@ -22,9 +23,17 @@ class DateNavi extends React.Component{
   render(){
     return(
       <div>
-        <button className="btn btn-outline-primary" onClick={()=>this.previousDay()}>Previous Day</button>
-        <h4>{this.props.viewedDateLongForm}</h4>
-        <button className="btn btn-outline-primary" onClick={()=>this.nextDay()}>Next day</button>
+          <div className="row">
+            <div className="col-xs-4 text-right">
+              <button className="btn btn-default" onClick={()=>this.previousDay()}><Glyphicon glyph="chevron-left"/> Previous Day</button>
+            </div>
+            <div className="col-xs-4 text-center">
+              <h4>{this.props.viewedDateLongForm}</h4>
+            </div>
+            <div className="col-xs-4 text-left">
+              <button className="btn btn-default" onClick={()=>this.nextDay()}>Next day <Glyphicon glyph="chevron-right"/></button>
+            </div>
+          </div>
         <Scoreboard/>
       </div>
     )

@@ -37,7 +37,7 @@ class Standings extends React.Component{
     return(
       <div>
           <div className="col-lg-6 col-sm-12">
-              <h3>West Standings </h3>
+              <h3 className="western_conference"><img src="../assets/nba_logos/west.png"/> West Standings </h3>
               <Table hover bordered responsive>
                   <thead>
                       <tr className="panel-heading warning">
@@ -51,13 +51,13 @@ class Standings extends React.Component{
 
                       </tr>
                   </thead>
-                  <tbody className="panel-body">
+                  <tbody className="panel-body text-center">
                       {this.westTeams()}
                   </tbody>
               </Table>
             </div>
             <div className="col-lg-6 col-sm-12">
-              <h3>East Standings</h3>
+              <h3 className="eastern_conference"><img src="../assets/nba_logos/east.png"/> East Standings</h3>
                 <Table hover bordered responsive>
                   <thead>
                       <tr className="panel-heading warning">
@@ -70,7 +70,7 @@ class Standings extends React.Component{
                           <th >GB</th>
                       </tr>
                   </thead>
-                  <tbody className="panel-body">
+                  <tbody className="panel-body text-center">
                       {this.eastTeams()}
                   </tbody>
               </Table>

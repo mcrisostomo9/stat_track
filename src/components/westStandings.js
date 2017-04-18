@@ -13,7 +13,7 @@ const WestStandings = (props)=> {
       <tr>
         {/* added 1 for standings since zero base */}
         <td>{info.index + 1}</td>
-        <td>{team[0].fullName}</td>
+        <td className="text-left"><img className="nba_team_images" src={team[0].logo}/> {team[0].fullName}</td>
         <td>{info.wins}</td>
         <td>{info.losses}</td>
         <td >{info.lastTenWin}-{10 - info.lastTenWin}</td>

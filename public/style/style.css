@@ -1,9 +1,36 @@
+/*targets header logo*/
+
 a.navbar-brand{
     padding: 10px;
 }
 
-/*target logo img*/
 a.navbar-brand > img{
     width: 34px;
     height: 36px;
+}
+
+/*targets nba team images in standings*/
+img.nba_team_images{
+    width: 21px;
+    height:21px;
+}
+
+/*overriding thead alignment for standings container*/
+.table>thead:first-child>tr:first-child>th {
+    text-align: center;
+}
+
+/*targets western/eastern conference images in standingsContainer*/
+h3.western_conference, h3.eastern_conference{
+    margin-top: 0;
+}
+
+h3.western_conference > img{
+    width: 50px;
+    height: 50px;
+}
+
+h3.eastern_conference > img{
+    width: 52px;
+    height: 50px;
 }

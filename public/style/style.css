@@ -59,6 +59,7 @@ img.nba_team_images_scoreboard{
 
 @media only screen and (max-width: 477px) {
     .date_longform{
-        font-size: 14px;
+        font-size: 13px;
+        font-weight: 600;
     }
 }

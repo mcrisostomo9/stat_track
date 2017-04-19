@@ -1,4 +1,4 @@
-import {FETCH_GAMES, FETCH_STANDINGS, SET_DATE} from './types';
+import {FETCH_GAMES, FETCH_STANDINGS, SET_DATE, ERROR_404} from './types';
 import nba from 'nba.js';
 
 
@@ -7,6 +7,13 @@ function gamesAction(res){
   return{
     type: FETCH_GAMES,
     payload: res
+  }
+}
+
+function renderError(err){
+  return {
+    type: ERROR_404,
+    payload: err
   }
 }
 
@@ -19,6 +26,7 @@ export function fetchGamesFromApi(day){
     })
     .catch(err =>{
       console.log('error', err);
+      dispatch(renderError(err));
     })
   }
 }

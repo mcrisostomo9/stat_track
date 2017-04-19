@@ -33,7 +33,7 @@ class Scoreboard extends React.Component {
         </div>
       )
     }
-    if (games.length === 0) {
+    if (games.length === 0 || this.props.noGames) {
       return (
         <div className="row no_games_div">
           <div className="col-xs-6 col-xs-offset-3 text-center">
@@ -57,7 +57,11 @@ class Scoreboard extends React.Component {
 }
 
 const mapStateToProps = (state) => {
-  return {games: state.gamesData.games, viewedDate: state.setDate.viewedDate}
+  return {
+          games: state.gamesData.games,
+          viewedDate: state.setDate.viewedDate,
+          noGames: state.gamesData.noGames
+         }
 }
 
 const mapDispatchToProps = (dispatch) => {

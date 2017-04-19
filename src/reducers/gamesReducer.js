@@ -1,4 +1,4 @@
-import {FETCH_GAMES} from '../actions/types';
+import {FETCH_GAMES, ERROR_404} from '../actions/types';
 
 
 export default function gamesData(state = [], action){
@@ -6,9 +6,16 @@ export default function gamesData(state = [], action){
     case FETCH_GAMES:
       return {
         ...state,
-        games: action.payload.games
+        games: action.payload.games,
+        noGames: false
+      }
+    case ERROR_404:
+      return {
+        ...state,
+        noGames: action.payload,
+        games: []
       }
     default:
-      return state
+      return state;
   }
 }

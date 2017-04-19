@@ -25,13 +25,13 @@ class DateNavi extends React.Component{
           <div>
               <div className="row">
                   <div className="col-xs-4 text-right">
-                    <button className="btn btn-default" onClick={()=>this.previousDay()}><Glyphicon glyph="chevron-left"/> Previous Day</button>
+                    <button className="btn btn-default" onClick={()=>this.previousDay()}><Glyphicon glyph="chevron-left"/>Previous</button>
                   </div>
                   <div className="col-xs-4 text-center">
-                    <h4>{this.props.viewedDateLongForm}</h4>
+                    <h4 className="date_longform">{this.props.viewedDateLongForm}</h4>
                   </div>
                   <div className="col-xs-4 text-left">
-                    <button className="btn btn-default" onClick={()=>this.nextDay()}>Next day <Glyphicon glyph="chevron-right"/></button>
+                    <button className="btn btn-default" onClick={()=>this.nextDay()}>Next<Glyphicon glyph="chevron-right"/></button>
                   </div>
               </div>
               <Scoreboard/>

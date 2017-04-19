@@ -11,11 +11,10 @@ const RegularGame = (props)=> {
       return (visitorTeam.teamId === game.vTeam.teamId);
   })
 
-
   // for final score
 if(game.attendance > 0 && game.clock === ""){
   return(
-      <div  className='col-xs-12 col-md-4'>
+      <div  className='col-xs-7 col-md-4'>
           <div className='panel panel-warning'>
               <div className='panel-heading'>
                   <div className="row">
@@ -24,11 +23,11 @@ if(game.attendance > 0 && game.clock === ""){
               </div>
               <div className='panel-body'>
                   <div className="row">
-                      <div className="col-xs-9"><img className="nba_team_images_scoreboard" src={visitorTeam[0].logo} alt=""/> {game.vTeam.triCode}</div>
+                      <div className="col-xs-9"><img className="nba_team_images_scoreboard" src={visitorTeam[0].logo} alt=""/> {visitorTeam[0].fullName}</div>
                       <div className="col-xs-3 text-center">{game.vTeam.score}</div>
                   </div>
                   <div className="row">
-                      <div className="col-xs-9"><img className="nba_team_images_scoreboard" src={homeTeam[0].logo} alt=""/> {game.hTeam.triCode}</div>
+                      <div className="col-xs-9"><img className="nba_team_images_scoreboard" src={homeTeam[0].logo} alt=""/> {homeTeam[0].fullName}</div>
                       <div className="col-xs-3 text-center">{game.hTeam.score}</div>
                   </div>
               </div>
@@ -39,7 +38,7 @@ if(game.attendance > 0 && game.clock === ""){
   //for game that hasnt started
 if(game.clock === ""){
   return(
-      <div  className='col-xs-12 col-md-4'>
+      <div  className='col-xs-7 col-md-4'>
           <div className='panel panel-warning'>
               <div className='panel-heading'>
                   <div className="row">
@@ -48,11 +47,11 @@ if(game.clock === ""){
               </div>
               <div className='panel-body'>
                   <div className="row">
-                      <div className="col-xs-9"><img className="nba_team_images_scoreboard" src={visitorTeam[0].logo} alt=""/> {game.vTeam.triCode}</div>
+                      <div className="col-xs-9"><img className="nba_team_images_scoreboard" src={visitorTeam[0].logo} alt=""/> {visitorTeam[0].fullName}</div>
                       <div className="col-xs-3 text-center">{game.vTeam.score}</div>
                   </div>
                   <div className="row">
-                      <div className="col-xs-9"><img className="nba_team_images_scoreboard" src={homeTeam[0].logo} alt=""/> {game.hTeam.triCode}</div>
+                      <div className="col-xs-9"><img className="nba_team_images_scoreboard" src={homeTeam[0].logo} alt=""/> {homeTeam[0].fullName}</div>
                       <div className="col-xs-3 text-center">{game.hTeam.score}</div>
                   </div>
               </div>
@@ -62,7 +61,7 @@ if(game.clock === ""){
 }
 // for game in progress
 return(
-    <div  className='col-xs-12 col-md-4'>
+    <div  className='col-xs-7 col-md-4'>
         <div className='panel panel-warning'>
             {
                 (game.clock === "")
@@ -79,11 +78,11 @@ return(
             }
             <div className='panel-body'>
                 <div className="row">
-                    <div className="col-xs-9"><img className="nba_team_images_scoreboard" src={homeTeam[0].logo} alt=""/> {game.vTeam.triCode}</div>
+                    <div className="col-xs-9"><img className="nba_team_images_scoreboard" src={homeTeam[0].logo} alt=""/> {visitorTeam[0].fullName}</div>
                     <div className="col-xs-3 text-center">{game.vTeam.score}</div>
                 </div>
                 <div className="row">
-                    <div className="col-xs-9"><img className="nba_team_images_scoreboard" src={homeTeam[0].logo} alt=""/> {game.hTeam.triCode}</div>
+                    <div className="col-xs-9"><img className="nba_team_images_scoreboard" src={homeTeam[0].logo} alt=""/> {homeTeam[0].fullName}</div>
                     <div className="col-xs-3 text-center">{game.hTeam.score}</div>
                 </div>
             </div>

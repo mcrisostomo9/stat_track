@@ -40,3 +40,19 @@ img.nba_team_images_scoreboard{
     width: 30px;
     height:30px;
 }
+
+/*place bottom margin for the "first displayed team row" in scoreboard box*/
+.scoreboard_first_team_row{
+    margin-bottom: 3%;
+}
+
+/*targeting dateNavi container in scoreboard*/
+.btn-default{
+    width: 95px;
+}
+
+@media only screen and (max-width: 477px) {
+    .date_longform{
+        font-size: 14px;
+    }
+}

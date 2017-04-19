@@ -16,7 +16,7 @@ class Scoreboard extends React.Component {
     let {viewedDate, games} = this.props;
     console.log('nextProps', nextProps);
     console.log('TESTING PROPS GAMES', games);
-    if (this.props.viewedDate === nextProps.viewedDate)
+    if (viewedDate === nextProps.viewedDate)
       return false;
     this.props.fetchGames(nextProps.viewedDate);
     return true;

@@ -42,7 +42,7 @@ const PlayoffGame = (props)=> {
       )
   }
   //for game that hasnt started
-  if(game.clock === ""){
+  if(game.clock === "" &&  game.period.isHalftime === false){
       return(
           <div  className='col-xs-12 col-md-4'>
               <div className='panel panel-warning'>

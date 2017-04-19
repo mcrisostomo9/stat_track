@@ -39,9 +39,15 @@ h3.eastern_conference > img{
 img.nba_team_images_scoreboard{
     width: 30px;
     height:30px;
+    margin-right: 3%;
+}
+/*targeting scores in scoreboard*/
+.score{
+    font-size: 16px;
+    font-weight: 600;
 }
 
-/*place bottom margin for the "first displayed team row" in scoreboard box*/
+/*place bottom margin for the "first displayed team row" in scoreboard*/
 .scoreboard_first_team_row{
     margin-bottom: 3%;
 }

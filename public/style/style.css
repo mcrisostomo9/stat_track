@@ -35,7 +35,13 @@ h3.eastern_conference > img{
     height: 50px;
 }
 
-/*targets nba team images in scoreboard*/
+/*targets nba images in scoreboard*/
+.games_div > div > img{
+    width: 60px;
+    height: 60px;
+    margin: 1%;
+}
+
 img.nba_team_images_scoreboard{
     width: 30px;
     height:30px;
@@ -57,9 +63,37 @@ img.nba_team_images_scoreboard{
     width: 95px;
 }
 
+.date_longform{
+    font-weight: 600;
+}
+
 @media only screen and (max-width: 477px) {
     .date_longform{
         font-size: 13px;
         font-weight: 600;
+    }
+}
+
+/*targets "no games scheduled" return statement in scoreboardContainer*/
+.no_games_div{
+    margin-top: 10%;
+}
+
+.no_games_div > div > img{
+    margin-left: 5%;
+}
+
+.no_games_div > div > h4{
+    font-weight: 700;
+}
+
+@media only screen and (max-width: 545px) {
+    .no_games_div > div > img{
+        width: 175px;
+        height:175px;
+    }
+
+    .no_games_div > div > h4{
+        font-size: 14px;
     }
 }

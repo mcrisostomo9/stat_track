@@ -35,13 +35,18 @@ class Scoreboard extends React.Component {
     }
     if (games.length === 0) {
       return (
-        <div>No games today</div>
+        <div className="row no_games_div">
+          <div className="col-xs-6 col-xs-offset-3 text-center">
+            <img src="../assets/hoop_color_2.png" alt=""/>
+            <h4>NO GAMES SCHEDULED</h4>
+          </div>
+        </div>
       )
     }
     return (
-        <div className="row">
+        <div className="row games_div">
             <div className="col-xs-12 text-center">
-                <h1>NBA Scoreboard</h1>
+                <img src="../assets/hoop_color_2.png" alt=""/>
             </div>
             <div className="col-xs-12">
                 <GamesContainer/>

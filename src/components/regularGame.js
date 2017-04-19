@@ -14,7 +14,7 @@ const RegularGame = (props)=> {
   // for final score
 if(game.attendance > 0 && game.clock === ""){
   return(
-      <div  className='col-xs-7 col-md-4'>
+      <div  className='col-xs-12 col-md-4'>
           <div className='panel panel-warning'>
               <div className='panel-heading'>
                   <div className="row">
@@ -38,7 +38,7 @@ if(game.attendance > 0 && game.clock === ""){
   //for game that hasnt started
   if(game.clock === "" &&  game.period.isHalftime === false){
   return(
-      <div  className='col-xs-7 col-md-4'>
+      <div  className='col-xs-12 col-md-4'>
           <div className='panel panel-warning'>
               <div className='panel-heading'>
                   <div className="row">
@@ -61,7 +61,7 @@ if(game.attendance > 0 && game.clock === ""){
 }
 // for game in progress
 return(
-    <div  className='col-xs-7 col-md-4'>
+    <div  className='col-xs-12 col-md-4'>
         <div className='panel panel-warning'>
             {
                 (game.clock === "")

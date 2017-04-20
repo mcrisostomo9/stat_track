@@ -15,10 +15,11 @@ app.use(morgan('dev'));
 
 // Initialize CRUD API for user's favorite team
 // Catch all route to render index file for all react routes
+app.use(express.static(path.resolve(__dirname, '..', 'public')));
 app.use('/api', routes);
-// app.use('*', (req,res) => {
-//   res.sendFile(path.resolve(__dirname, '..', 'public', 'index.html'));
-// })
+app.use('*', (req,res) => {
+  res.sendFile(path.resolve(__dirname, '..', 'public','index.html'));
+});
 
 // Returns a status code and handles our errors
 app.use(function (err, req, res, next) {

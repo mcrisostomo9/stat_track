@@ -17,7 +17,7 @@ class Standings extends React.Component{
     // to map through the returned standings data
     let {west} = this.props.standings;
     return west.map((team, index)=>{
-      return <WestStandings name={team.teamId} key={index + team.teamId} wins={team.win} losses={team.loss} lastTenWin={team.lastTenWin} winPercent={team.winPctV2} gamesBehind={team.gamesBehind} index={index}/>
+      return <WestStandings name={team.teamId} key={team.teamId} wins={team.win} losses={team.loss} lastTenWin={team.lastTenWin} winPercent={team.winPctV2} gamesBehind={team.gamesBehind} index={index}/>
     })
   }
 
@@ -28,12 +28,11 @@ class Standings extends React.Component{
     // to map through the returned standings data
     let {east} = this.props.standings;
     return east.map((team, index)=>{
-      return <EastStandings name={team.teamId} key={index + team.teamId} wins={team.win} losses={team.loss} lastTenWin={team.lastTenWin} winPercent={team.winPctV2} gamesBehind={team.gamesBehind} index={index}/>
+      return <EastStandings name={team.teamId} key={team.teamId} wins={team.win} losses={team.loss} lastTenWin={team.lastTenWin} winPercent={team.winPctV2} gamesBehind={team.gamesBehind} index={index}/>
     })
   }
 
   render(){
-    console.log('standingsData', this.props.standings);
     return(
       <div>
           <div className="col-lg-6 col-sm-12">

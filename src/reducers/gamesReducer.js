@@ -6,7 +6,7 @@ export default function gamesData(state = [], action){
     case FETCH_GAMES:
       return {
         ...state,
-        games: action.payload.games,
+        games: action.payload.data.games.games,
         noGames: false
       }
     case ERROR_404:

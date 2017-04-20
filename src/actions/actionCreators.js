@@ -1,6 +1,8 @@
 import {FETCH_GAMES, FETCH_STANDINGS, SET_DATE, ERROR_404} from './types';
-import nba from 'nba.js';
+import axios from 'axios';
 
+//server url to interface the backend with the front end
+const baseurl = 'http://dev.iamandyong.com:8000/api/nba/'
 
 //function to dispatch the reducer, used in the fetchGamesFromApi to handle async call
 function gamesAction(res){
@@ -10,6 +12,7 @@ function gamesAction(res){
   }
 }
 
+// function to dispatch the render error for the 404 calls that go past the scheduled games of the playoffs
 function renderError(err){
   return {
     type: ERROR_404,
@@ -18,9 +21,9 @@ function renderError(err){
 }
 
 export function fetchGamesFromApi(day){
+  let games = `${baseurl}/games/${day}`;
   return (dispatch) =>{
-    //dispatching the nba.js method to return a respnse
-    return nba.data.scoreboard({date: day}).then(res =>{
+    return axios.get(games).then(res =>{
       //when response is received, dispatches gamesAction function with the received response as a param
       dispatch(gamesAction(res))
     })
@@ -40,8 +43,9 @@ function standingsAction(res){
 }
 
 export function fetchStandingsFromApi(){
+  let standings = `${baseurl}/standings`;
   return (dispatch)=>{
-    return nba.data.conferenceStandings().then(res =>{
+    return axios.get(standings).then(res =>{
       dispatch(standingsAction(res))
     })
     .catch(err=>{
@@ -49,18 +53,6 @@ export function fetchStandingsFromApi(){
     })
   }
 }
-
-
-//to format given date for api
-// Date.prototype.yyyymmdd = function() {
-//   let mm = this.getMonth() + 1; // getMonth() is zero-based
-//   let dd = this.getDate();
-//
-//   return [this.getFullYear(),
-//           (mm>9 ? '' : '0') + mm,
-//           (dd>9 ? '' : '0') + dd
-//          ].join('');
-// };
 
 function convertDate(date){
   let mm = date.getMonth() + 1; // getMonth() is zero-based

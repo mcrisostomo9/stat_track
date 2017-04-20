@@ -12,7 +12,6 @@ const PlayoffGame = (props)=> {
   let visitorTeam = teams.filter((visitorTeam) =>{
       return (visitorTeam.teamId === game.vTeam.teamId);
   });
-  console.log('team info', homeTeam);
   // for final score
   if(game.attendance > 0 && game.clock === ""){
       return(

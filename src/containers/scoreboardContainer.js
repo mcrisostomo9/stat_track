@@ -6,17 +6,14 @@ import GamesContainer from './gamesContainer'
 class Scoreboard extends React.Component {
   //make call to fetch game on mount
   componentDidMount() {
-    let {viewedDate, games} = this.props;
+    let {viewedDate} = this.props;
     this.props.fetchGames(viewedDate);
-    console.log('games after mount', games);
   }
 
   //TODO comment on what this actually does
   componentWillReceiveProps(nextProps) {
-    let {viewedDate, games} = this.props;
-    console.log('nextProps', nextProps);
-    console.log('TESTING PROPS GAMES', games);
-    if (this.props.viewedDate === nextProps.viewedDate)
+    let {viewedDate} = this.props;
+    if (viewedDate === nextProps.viewedDate)
       return false;
     this.props.fetchGames(nextProps.viewedDate);
     return true;

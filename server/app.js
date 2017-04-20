@@ -3,6 +3,7 @@
 const express    = require('express');
 const nba        = require('nba.js').default;
 const morgan     = require('morgan');
+const cors       = require('cors');
 const path       = require('path');
 
 // Define app to initialize express
@@ -12,6 +13,7 @@ const PORT       = 8000;
 
 // Logs HTTP request and status codes
 app.use(morgan('dev'));
+// app.use(cors());
 
 // Initialize CRUD API for user's favorite team
 // Catch all route to render index file for all react routes

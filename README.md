@@ -27,3 +27,9 @@ Version 0.1
 ### Future Builds
 * Individual NBA game box scores with statistics
 * Integrate MLB box scores and statistics
+
+### Developers
+Mark Crisostomo
+Jorge Cruz
+Charles Kim
+Andy Ong

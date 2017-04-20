@@ -15,7 +15,7 @@ app.use(morgan('dev'));
 
 // Initialize CRUD API for user's favorite team
 // Catch all route to render index file for all react routes
-app.use('/api', routes);
+// app.use('/api', routes);
 // app.use('*', (req,res) => {
 //   res.sendFile(path.resolve(__dirname, '..', 'public', 'index.html'));
 // })

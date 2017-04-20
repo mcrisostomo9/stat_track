@@ -8515,7 +8515,8 @@ module.exports = defaults;
 
 
 //server url to interface the backend with the front end
-var baseurl = 'http://dev.iamandyong.com:8000/api/nba/';
+// const baseurl = 'http://dev.iamandyong.com:8000/api/nba/'
+var baseurl = 'http://localhost:8000/api/nba/';
 
 //function to dispatch the reducer, used in the fetchGamesFromApi to handle async call
 function gamesAction(res) {

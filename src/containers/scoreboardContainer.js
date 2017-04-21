@@ -10,7 +10,7 @@ class Scoreboard extends React.Component {
     this.props.fetchGames(viewedDate);
   }
 
-  //TODO comment on what this actually does
+  //To handle the re-rendering when the viewedDate state changes
   componentWillReceiveProps(nextProps) {
     let {viewedDate} = this.props;
     if (viewedDate === nextProps.viewedDate)
@@ -21,7 +21,6 @@ class Scoreboard extends React.Component {
 
   render() {
     //handles initial render to show loading of the games, probably need to refine tho
-    console.log('games checking for render', this.props.games);
     let {games} = this.props;
     if (!games) {
       return (

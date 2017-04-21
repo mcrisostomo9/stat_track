@@ -12,7 +12,7 @@ const RegularGame = (props)=> {
   })
 
   // for final score
-if(game.attendance > 0 && game.clock === ""){
+  if(game.attendance > 0 && game.isGameActivated === false && game.period.isHalftime === false){
   return(
       <div  className='col-xs-12 col-md-4'>
           <div className='panel panel-warning'>
@@ -36,7 +36,7 @@ if(game.attendance > 0 && game.clock === ""){
   )
 }
   //for game that hasnt started
-  if(game.clock === "" &&  game.period.isHalftime === false){
+  if(game.isGameActivated === false){
   return(
       <div  className='col-xs-12 col-md-4'>
           <div className='panel panel-warning'>
@@ -48,11 +48,11 @@ if(game.attendance > 0 && game.clock === ""){
               <div className='panel-body'>
                   <div className="row scoreboard_first_team_row">
                       <div className="col-xs-9"><img className="nba_team_images_scoreboard" src={visitorTeam[0].logo} alt=""/> {visitorTeam[0].fullName}</div>
-                      <div className="score col-xs-3 text-center">{game.vTeam.score}</div>
+                      <div className="score col-xs-3 text-center"></div>
                   </div>
                   <div className="row">
                       <div className="col-xs-9"><img className="nba_team_images_scoreboard" src={homeTeam[0].logo} alt=""/> {homeTeam[0].fullName}</div>
-                      <div className="score col-xs-3 text-center">{game.hTeam.score}</div>
+                      <div className="score col-xs-3 text-center"></div>
                   </div>
               </div>
           </div>
@@ -64,7 +64,7 @@ return(
     <div  className='col-xs-12 col-md-4'>
         <div className='panel panel-warning'>
             {
-                (game.clock === "")
+              (game.period.isHalftime === true)
                     ? <div className='panel-heading'>
                     <div className="row">
                         <div className="col-xs-12 text-right">Halftime</div>
@@ -72,7 +72,7 @@ return(
                 </div>
                     : <div className='panel-heading'>
                     <div className="row">
-                        <div className="col-xs-12 text-right">{game.period.current}Q - {game.clock}</div>
+                        <div className="col-xs-12 text-right">Q{game.period.current} - {game.clock}</div>
                     </div>
                 </div>
             }

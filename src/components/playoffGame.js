@@ -3,7 +3,7 @@ import teams from '../data/teamInfo';
 
 
 const PlayoffGame = (props)=> {
-  let {game, startTime} = props; 
+  let {game, startTime} = props;
 
   let homeTeam  = teams.filter((homeTeam) => {
         return (homeTeam.teamId === game.hTeam.teamId)
@@ -95,7 +95,12 @@ const PlayoffGame = (props)=> {
                         <div className='panel-heading'>
                               <div className="row">
                                   <div className="col-xs-5">GAME {game.playoffs.gameNumInSeries}</div>
-                                  <div className="col-xs-7 text-right">Q{game.period.current} - {game.clock}</div>
+                                  {
+                                    // to get rid of showing Quarter 0 showing when game is acvtivated
+                                    (game.period.current ===0)
+                                    ? <div className="col-xs-7 text-right">Start time: {startTime}</div>
+                                    : <div className="col-xs-7 text-right">Q{game.period.current} - {game.clock}</div>
+                                  }
                               </div>
                         </div>
                 }

@@ -2,7 +2,7 @@ import React from 'react';
 import teams from '../data/teamInfo';
 
 const RegularGame = (props)=> {
-  let {game} = props;
+  let {game, startTime} = props;
 
   let homeTeam  = teams.filter((homeTeam) => {
         return (homeTeam.teamId === game.hTeam.teamId)
@@ -42,7 +42,7 @@ const RegularGame = (props)=> {
           <div className='panel panel-warning'>
               <div className='panel-heading'>
                   <div className="row">
-                      <div className="col-xs-12 text-right">Start time: {props.startTime}</div>
+                      <div className="col-xs-12 text-right">Start time: {startTime}</div>
                   </div>
               </div>
               <div className='panel-body'>

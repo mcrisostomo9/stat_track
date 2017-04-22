@@ -3,8 +3,7 @@ import teams from '../data/teamInfo';
 
 
 const PlayoffGame = (props)=> {
-  let {game} = props; // same as saying let game = props.game
-  let {startTime} = props;
+  let {game, startTime} = props; 
 
   let homeTeam  = teams.filter((homeTeam) => {
         return (homeTeam.teamId === game.hTeam.teamId)

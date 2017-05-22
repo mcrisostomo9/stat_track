@@ -32,6 +32,6 @@ Version 0.1
 
 ### Developers
 Mark Crisostomo  
+Charles Kim  
 Jorge Cruz  
 Andy Ong
-Charles Kim

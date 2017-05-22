@@ -24,12 +24,14 @@ An application that will display current regular season and post-season box scor
 Version 0.1
 * NBA  box scores of regular season and playoff games along with regular season standings.
 
-### Future Builds
+### Features in future development
 * Individual NBA game box scores with statistics
+* Routing based on dates
+* Drop down calendar navigation
 * Integrate MLB box scores and statistics
 
 ### Developers
-Mark Crisostomo
-Jorge Cruz
+Mark Crisostomo  
+Jorge Cruz  
 Andy Ong
 Charles Kim

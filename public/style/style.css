@@ -1,0 +1,99 @@
+/*targets header logo*/
+
+a.navbar-brand{
+    padding: 10px;
+}
+
+a.navbar-brand > img{
+    width: 34px;
+    height: 36px;
+}
+
+/*targets nba team images in standings*/
+img.nba_team_images{
+    width: 21px;
+    height:21px;
+}
+
+/*overriding thead alignment for standings container*/
+.table>thead:first-child>tr:first-child>th {
+    text-align: center;
+}
+
+/*targets western/eastern conference images in standingsContainer*/
+h3.western_conference, h3.eastern_conference{
+    margin-top: 0;
+}
+
+h3.western_conference > img{
+    width: 50px;
+    height: 50px;
+}
+
+h3.eastern_conference > img{
+    width: 52px;
+    height: 50px;
+}
+
+/*targets nba images in scoreboard*/
+.games_div > div > img{
+    width: 60px;
+    height: 60px;
+    margin: 1%;
+}
+
+img.nba_team_images_scoreboard{
+    width: 30px;
+    height:30px;
+    margin-right: 3%;
+}
+/*targeting scores in scoreboard*/
+.score{
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/*place bottom margin for the "first displayed team row" in scoreboard*/
+.scoreboard_first_team_row{
+    margin-bottom: 3%;
+}
+
+/*targeting dateNavi container in scoreboard*/
+.btn-default{
+    width: 95px;
+}
+
+.date_longform{
+    font-weight: 600;
+}
+
+@media only screen and (max-width: 477px) {
+    .date_longform{
+        font-size: 13px;
+        font-weight: 600;
+    }
+}
+
+/*targets "no games scheduled" return statement in scoreboardContainer*/
+.no_games_div{
+    margin-top: 10%;
+}
+
+.no_games_div > div > img{
+    margin-left: 5%;
+}
+
+.no_games_div > div > h4{
+    font-weight: 700;
+}
+
+@media only screen and (max-width: 545px) {
+    .no_games_div > div > img{
+        width: 175px;
+        height:175px;
+    }
+
+    .no_games_div > div > h4{
+        font-size: 14px;
+    }
+}

@@ -11,6 +11,14 @@ router.get('/games/:day', (req,res) => {
   })
 });
 
+router.get('/calendar', (req,res) => {
+  nba.data.calendar().then(data => {
+    res.status(200).json({"Success": true, "calendar": data})
+  }).catch(err => {
+    res.status(404).json({"Success": false, "Message": "404 Not Found!"})
+  })
+});
+
 router.get('/standings', (req,res) => {
   nba.data.conferenceStandings().then(data => {
     res.status(200).json({"Success": true, "games": data})

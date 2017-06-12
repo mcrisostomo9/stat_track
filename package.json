@@ -25,9 +25,10 @@
     "pack": "node_modules/.bin/webpack --config webpack.deploy.config.js --progress --colors",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "server": "node ./server/app.js"
+    "server": "nodemon ./server/app.js"
   },
   "devDependencies": {
+    "nodemon": "^1.11.0",
     "react-scripts": "^1.0.7"
   }
 }

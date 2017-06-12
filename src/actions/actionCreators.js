@@ -1,4 +1,4 @@
-import {FETCH_GAMES, FETCH_STANDINGS, SET_DATE, ERROR_404} from './types';
+import {FETCH_GAMES, FETCH_STANDINGS, FETCH_CALENDAR SET_DATE, ERROR_404} from './types';
 import axios from 'axios';
 
 //server url to interface the backend with the front end
@@ -73,5 +73,25 @@ export function setViewedDate(date){
     numeric: dateNumeric,
     longDate: dateLongForm,
     unformattedDate: date
+  }
+}
+
+//function to dispatch the calendar reducer
+function calendarAction(res){
+  return{
+    type: FETCH_CALENDAR,
+    payload: res
+  }
+}
+
+export function fetchCalendarFromApi() {
+  let calendar = `${baseurl}/calendar`;
+  return (dispatch)=>{
+    return axios.get(calendar).then(res =>{
+      dispatch(calendarAction(res))
+    })
+    .catch(err=>{
+      console.log('error', err);
+    })
   }
 }

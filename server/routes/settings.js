@@ -6,7 +6,7 @@ const router      = express.Router();
 const Setting     = model.settings;
 
 const Sequelize   = require('sequelize');
-const sequelize   = new Sequelize(config.db.name, config.db.user, config.db.password);
+// const sequelize   = new Sequelize(config.db.name, config.db.user, config.db.password);
 
 router.get('/', (req,res) => {
   res.status(200).send("Hello this a me, Mario");

@@ -4,7 +4,6 @@ import axios from 'axios';
 //server url to interface the backend with the front end
 const baseurl = 'http://localhost:8000/api/nba/';
 
-
 //function to dispatch the reducer, used in the fetchGamesFromApi to handle async call
 function gamesAction(res){
   return{

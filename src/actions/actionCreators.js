@@ -79,7 +79,7 @@ export function setViewedDate(date){
 function calendarAction(res){
   return{
     type: FETCH_CALENDAR,
-    payload: res
+    payload: res.data
   }
 }
 
@@ -87,6 +87,7 @@ export function fetchCalendarFromApi() {
   let calendar = `${baseurl}/calendar`;
   return (dispatch)=>{
     return axios.get(calendar).then(res =>{
+      console.log('date action', res.data.calendar);
       dispatch(calendarAction(res))
     })
     .catch(err=>{

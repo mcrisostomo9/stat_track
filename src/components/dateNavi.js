@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {setViewedDate} from '../actions/actionCreators';
+import {setViewedDate, fetchCalendarFromApi} from '../actions/actionCreators';
 import Scoreboard from '../containers/scoreboardContainer';
 import {Glyphicon} from "react-bootstrap";
 
@@ -8,6 +8,9 @@ class DateNavi extends React.Component{
   constructor(props){
     super(props);
     this.props.sendDate(new Date());
+    this.props.dateFromApi().then(
+        console.log('api date', this.props.endSeasonDate)
+    );
   }
   previousDay(){
     let temp = this.props.unformattedDate;
@@ -21,6 +24,7 @@ class DateNavi extends React.Component{
   }
 
   render(){
+      console.log('api date', this.props.endSeasonDate)
       return(
           <div>
               <div className="row">
@@ -44,13 +48,15 @@ const mapStateToProps = (state)=>{
   return{
     viewedDate: state.setDate.viewedDate,
     viewedDateLongForm: state.setDate.viewedDateLongForm,
-    unformattedDate: state.setDate.unformattedDate
+    unformattedDate: state.setDate.unformattedDate,
+    endSeasonDate: state.endSeasonDate
   }
 }
 
 const mapDispatchToProps = (dispatch)=>{
   return{
     sendDate: (day) => dispatch(setViewedDate(day)),
+    dateFromApi: () => dispatch(fetchCalendarFromApi())
   }
 }
 

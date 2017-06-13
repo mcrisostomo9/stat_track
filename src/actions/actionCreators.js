@@ -1,8 +1,8 @@
-import {FETCH_GAMES, FETCH_STANDINGS, FETCH_CALENDAR SET_DATE, ERROR_404} from './types';
+import {FETCH_GAMES, FETCH_STANDINGS, FETCH_CALENDAR, SET_DATE, ERROR_404} from './types';
 import axios from 'axios';
 
 //server url to interface the backend with the front end
-const baseurl = 'http://localhost:8000/api/nba/'
+const baseurl = 'http://localhost:8000/api/nba/';
 
 
 //function to dispatch the reducer, used in the fetchGamesFromApi to handle async call

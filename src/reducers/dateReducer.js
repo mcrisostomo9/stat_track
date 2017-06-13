@@ -12,7 +12,7 @@ export default function setDate(state = '', action){
       case FETCH_CALENDAR:
           return {
               ...state,
-              endSeasonDate: action.payload.calendar
+              endSeasonDate: action.payload.data.calendar.endDate
           }
     default:
       return state

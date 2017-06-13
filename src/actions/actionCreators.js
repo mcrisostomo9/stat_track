@@ -4,6 +4,7 @@ import axios from 'axios';
 //server url to interface the backend with the front end. Use Andy's url and allow CORS for testing
 // const baseurl = 'http://localhost:8000/api/nba/';
 const baseurl = 'http://dev.iamandyong.com:8000/api/nba/';
+// TODO use localhost url
 
 //function to dispatch the reducer, used in the fetchGamesFromApi to handle async call
 function gamesAction(res){
@@ -80,7 +81,7 @@ export function setViewedDate(date){
 function calendarAction(res){
   return{
     type: FETCH_CALENDAR,
-    payload: res.data
+    payload: res
   }
 }
 
@@ -88,7 +89,6 @@ export function fetchCalendarFromApi() {
   let calendar = `${baseurl}/calendar`;
   return (dispatch)=>{
     return axios.get(calendar).then(res =>{
-      console.log('date action', res.data.calendar);
       dispatch(calendarAction(res))
     })
     .catch(err=>{

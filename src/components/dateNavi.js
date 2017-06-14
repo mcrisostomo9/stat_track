@@ -1,15 +1,13 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {setViewedDate, fetchCalendarFromApi} from '../actions/actionCreators';
+import {setViewedDate} from '../actions/actionCreators';
 import Scoreboard from '../containers/scoreboardContainer';
 import {Glyphicon} from "react-bootstrap";
 
 class DateNavi extends React.Component{
   constructor(props){
     super(props);
-    this.props.dateFromApi();
-    //hardcoded the end of the season date
-    this.props.sendDate(new Date('Mon Jun 12 2017 17:14:22 GMT-0700 (PDT)'));
+    this.props.sendDate(new Date());
   }
   previousDay(){
     let temp = this.props.unformattedDate;
@@ -23,7 +21,6 @@ class DateNavi extends React.Component{
   }
 
   render(){
-      const { endSeasonDate, viewedDate } = this.props;
       return(
           <div>
               <div className="row">
@@ -34,12 +31,7 @@ class DateNavi extends React.Component{
                     <h4 className="date_longform">{this.props.viewedDateLongForm}</h4>
                   </div>
                   <div className="col-xs-4 text-left">
-                    {/*conditional to disable button for the end of the season*/}
-                    {
-                     (viewedDate < endSeasonDate) ?
-                         (<button className="btn btn-default" onClick={()=>this.nextDay()}>Next<Glyphicon glyph="chevron-right"/></button>):
-                         (<button className="btn btn-default disabled" disabled="disabled" onClick={()=>this.nextDay()}>Next<Glyphicon glyph="chevron-right"/></button>)
-                    }
+                    <button className="btn btn-default" onClick={()=>this.nextDay()}>Next<Glyphicon glyph="chevron-right"/></button>
                   </div>
               </div>
               <Scoreboard/>
@@ -52,15 +44,13 @@ const mapStateToProps = (state)=>{
   return{
     viewedDate: state.setDate.viewedDate,
     viewedDateLongForm: state.setDate.viewedDateLongForm,
-    unformattedDate: state.setDate.unformattedDate,
-    endSeasonDate: state.setDate.endSeasonDate
+    unformattedDate: state.setDate.unformattedDate
   }
 }
 
 const mapDispatchToProps = (dispatch)=>{
   return{
     sendDate: (day) => dispatch(setViewedDate(day)),
-    dateFromApi: () => dispatch(fetchCalendarFromApi())
   }
 }
 

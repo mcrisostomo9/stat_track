@@ -31,7 +31,7 @@ Version 0.1
 * Integrate MLB box scores and statistics
 
 ### Developers
-Mark Crisostomo  
 Charles Kim  
+Mark Crisostomo  
 Jorge Cruz  
 Andy Ong

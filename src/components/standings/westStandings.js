@@ -1,5 +1,5 @@
 import React from 'react';
-import teams from '../data/teamInfo';
+import teams from '../../data/teamInfo';
 
 const WestStandings = (props)=> {
     //to store the component props to info

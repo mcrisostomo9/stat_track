@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {fetchGamesFromApi} from '../actions/actionCreators';
-import GamesContainer from './gamesContainer'
+import {fetchGamesFromApi} from '../../actions/actionCreators';
+import GamesContainer from './Games'
 
 class Scoreboard extends React.Component {
   //make call to fetch game on mount

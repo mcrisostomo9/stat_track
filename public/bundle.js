@@ -469,12 +469,12 @@ if (process.env.NODE_ENV !== 'production') {
       object.$$typeof === REACT_ELEMENT_TYPE;
   };
 
-  // By explicitly using `prop-types` you are opting into new development behavior.
+  // By explicitly using `prop-gameTypes` you are opting into new development behavior.
   // http://fb.me/prop-types-in-prod
   var throwOnDirectAccess = true;
   module.exports = __webpack_require__(187)(isValidElement, throwOnDirectAccess);
 } else {
-  // By explicitly using `prop-types` you are opting into new production behavior.
+  // By explicitly using `prop-gameTypes` you are opting into new production behavior.
   // http://fb.me/prop-types-in-prod
   module.exports = __webpack_require__(387)();
 }
@@ -4413,7 +4413,7 @@ var statesAreEqual = exports.statesAreEqual = function statesAreEqual(a, b) {
     });
   }
 
-  // All other serializable types (string, number, boolean)
+  // All other serializable gameTypes (string, number, boolean)
   // should be strict equal.
   return false;
 };
@@ -5102,7 +5102,7 @@ if (process.env.NODE_ENV !== 'production') {
   if (canDefineProperty) {
     Object.defineProperty(React, 'PropTypes', {
       get: function () {
-        process.env.NODE_ENV !== 'production' ? warning(didWarnPropTypesDeprecated, 'Accessing PropTypes via the main React package is deprecated. Use ' + 'the prop-types package from npm instead.') : void 0;
+        process.env.NODE_ENV !== 'production' ? warning(didWarnPropTypesDeprecated, 'Accessing PropTypes via the main React package is deprecated. Use ' + 'the prop-gameTypes package from npm instead.') : void 0;
         didWarnPropTypesDeprecated = true;
         return ReactPropTypes;
       }
@@ -5593,7 +5593,7 @@ var warning = __webpack_require__(11);
 var getListener = EventPluginHub.getListener;
 
 /**
- * Some event types have a notion of different registration names for different
+ * Some event gameTypes have a notion of different registration names for different
  * "phases" of propagation. This finds listeners by a given phase.
  */
 function listenerAtPhase(inst, event, propagationPhase) {
@@ -5922,13 +5922,13 @@ var _temp = function () {
     return;
   }
 
-  __REACT_HOT_LOADER__.register(FETCH_GAMES, 'FETCH_GAMES', 'C:/Users/aong9_000/Desktop/projects/nbaStats/src/actions/types.js');
+  __REACT_HOT_LOADER__.register(FETCH_GAMES, 'FETCH_GAMES', 'C:/Users/aong9_000/Desktop/projects/nbaStats/src/actions/gameTypes.js');
 
-  __REACT_HOT_LOADER__.register(FETCH_STANDINGS, 'FETCH_STANDINGS', 'C:/Users/aong9_000/Desktop/projects/nbaStats/src/actions/types.js');
+  __REACT_HOT_LOADER__.register(FETCH_STANDINGS, 'FETCH_STANDINGS', 'C:/Users/aong9_000/Desktop/projects/nbaStats/src/actions/gameTypes.js');
 
-  __REACT_HOT_LOADER__.register(SET_DATE, 'SET_DATE', 'C:/Users/aong9_000/Desktop/projects/nbaStats/src/actions/types.js');
+  __REACT_HOT_LOADER__.register(SET_DATE, 'SET_DATE', 'C:/Users/aong9_000/Desktop/projects/nbaStats/src/actions/gameTypes.js');
 
-  __REACT_HOT_LOADER__.register(ERROR_404, 'ERROR_404', 'C:/Users/aong9_000/Desktop/projects/nbaStats/src/actions/types.js');
+  __REACT_HOT_LOADER__.register(ERROR_404, 'ERROR_404', 'C:/Users/aong9_000/Desktop/projects/nbaStats/src/actions/gameTypes.js');
 }();
 
 ;
@@ -7569,7 +7569,7 @@ var ReactBrowserEventEmitter = _assign({}, ReactEventEmitterMixin, {
    * register the `mousemove` on the document object, then it will of course
    * catch all `mousemove`s. This along with iOS quirks, justifies restricting
    * top-level listeners to the document object only, at least for these
-   * movement types of events and possibly all events.
+   * movement gameTypes of events and possibly all events.
    *
    * @see http://www.quirksmode.org/blog/archives/2010/09/click_event_del.html
    *
@@ -8101,7 +8101,7 @@ function escapeHtml(string) {
  */
 function escapeTextContentForBrowser(text) {
   if (typeof text === 'boolean' || typeof text === 'number') {
-    // this shortcircuit helps perf for types that we know will never have
+    // this shortcircuit helps perf for gameTypes that we know will never have
     // special characters, especially given that this function is used often
     // for numeric dom ids.
     return '' + text;
@@ -14450,7 +14450,7 @@ var Symbol = __WEBPACK_IMPORTED_MODULE_0__root_js__["a" /* default */].Symbol;
 
 // React 15.5 references this module, and assumes PropTypes are still callable in production.
 // Therefore we re-export development-only version with all the PropTypes checks here.
-// However if one is migrating to the `prop-types` npm library, they will go through the
+// However if one is migrating to the `prop-gameTypes` npm library, they will go through the
 // `index.js` entry point, and it will branch depending on the environment.
 var factory = __webpack_require__(187);
 module.exports = function(isValidElement) {
@@ -14623,12 +14623,12 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
 
       if (secret !== ReactPropTypesSecret) {
         if (throwOnDirectAccess) {
-          // New behavior only for users of `prop-types` package
+          // New behavior only for users of `prop-gameTypes` package
           invariant(
             false,
-            'Calling PropTypes validators directly is not supported by the `prop-types` package. ' +
+            'Calling PropTypes validators directly is not supported by the `prop-gameTypes` package. ' +
             'Use `PropTypes.checkPropTypes()` to call them. ' +
-            'Read more at http://fb.me/use-check-prop-types'
+            'Read more at http://fb.me/use-check-prop-gameTypes'
           );
         } else if (process.env.NODE_ENV !== 'production' && typeof console !== 'undefined') {
           // Old behavior for people using React.PropTypes
@@ -14642,7 +14642,7 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
               false,
               'You are manually calling a React.PropTypes validation ' +
               'function for the `%s` prop on `%s`. This is deprecated ' +
-              'and will throw in the standalone `prop-types` package. ' +
+              'and will throw in the standalone `prop-gameTypes` package. ' +
               'You may be seeing this warning due to a third-party PropTypes ' +
               'library. See https://fb.me/react-warning-dont-call-proptypes ' + 'for details.',
               propFullName,
@@ -14916,7 +14916,7 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
     return propType;
   }
 
-  // This handles more types than `getPropType`. Only used for error messages.
+  // This handles more gameTypes than `getPropType`. Only used for error messages.
   // See `createPrimitiveTypeChecker`.
   function getPreciseType(propValue) {
     var propType = getPropType(propValue);
@@ -18667,7 +18667,7 @@ function getTopLevelWrapperInContainer(container) {
 
 /**
  * Temporary (?) hack so that we can store all top-level pending updates on
- * composites instead of having to worry about different types of components
+ * composites instead of having to worry about different gameTypes of components
  * here.
  */
 var topLevelRootCounter = 1;
@@ -22005,10 +22005,10 @@ function compose() {
 
 
 /**
- * These are private action types reserved by Redux.
+ * These are private action gameTypes reserved by Redux.
  * For any unknown actions, you must return the current state.
  * If the current state is undefined, you must return the initial state.
- * Do not reference these action types directly in your code.
+ * Do not reference these action gameTypes directly in your code.
  */
 var ActionTypes = {
   INIT: '@@redux/INIT'
@@ -22144,7 +22144,7 @@ function createStore(reducer, preloadedState, enhancer) {
    * a good idea to keep actions serializable so you can record and replay user
    * sessions, or use the time travelling `redux-devtools`. An action must have
    * a `type` property which may not be `undefined`. It is a good idea to use
-   * string constants for action types.
+   * string constants for action gameTypes.
    *
    * @returns {Object} For convenience, the same action object you dispatched.
    *
@@ -24200,11 +24200,11 @@ var _temp = function () {
         return;
     }
 
-    __REACT_HOT_LOADER__.register(GamesContainer, 'GamesContainer', 'C:/Users/aong9_000/Desktop/projects/nbaStats/src/containers/gamesContainer.js');
+    __REACT_HOT_LOADER__.register(GamesContainer, 'GamesContainer', 'C:/Users/aong9_000/Desktop/projects/nbaStats/src/containers/Games.js');
 
-    __REACT_HOT_LOADER__.register(mapStateToProps, 'mapStateToProps', 'C:/Users/aong9_000/Desktop/projects/nbaStats/src/containers/gamesContainer.js');
+    __REACT_HOT_LOADER__.register(mapStateToProps, 'mapStateToProps', 'C:/Users/aong9_000/Desktop/projects/nbaStats/src/containers/Games.js');
 
-    __REACT_HOT_LOADER__.register(_default, 'default', 'C:/Users/aong9_000/Desktop/projects/nbaStats/src/containers/gamesContainer.js');
+    __REACT_HOT_LOADER__.register(_default, 'default', 'C:/Users/aong9_000/Desktop/projects/nbaStats/src/containers/Games.js');
 }();
 
 ;
@@ -27832,7 +27832,7 @@ function factory(ReactComponent, isValidElement, ReactNoopUpdateQueue) {
     statics: 'DEFINE_MANY',
 
     /**
-     * Definition of prop types for this component.
+     * Definition of prop gameTypes for this component.
      *
      * @type {object}
      * @optional
@@ -27840,7 +27840,7 @@ function factory(ReactComponent, isValidElement, ReactNoopUpdateQueue) {
     propTypes: 'DEFINE_MANY',
 
     /**
-     * Definition of context types for this component.
+     * Definition of context gameTypes for this component.
      *
      * @type {object}
      * @optional
@@ -27848,7 +27848,7 @@ function factory(ReactComponent, isValidElement, ReactNoopUpdateQueue) {
     contextTypes: 'DEFINE_MANY',
 
     /**
-     * Definition of context types this component sets for its children.
+     * Definition of context gameTypes this component sets for its children.
      *
      * @type {object}
      * @optional
@@ -30772,9 +30772,9 @@ module.exports = function() {
   function shim() {
     invariant(
       false,
-      'Calling PropTypes validators directly is not supported by the `prop-types` package. ' +
+      'Calling PropTypes validators directly is not supported by the `prop-gameTypes` package. ' +
       'Use PropTypes.checkPropTypes() to call them. ' +
-      'Read more at http://fb.me/use-check-prop-types'
+      'Read more at http://fb.me/use-check-prop-gameTypes'
     );
   };
   shim.isRequired = shim;
@@ -38732,7 +38732,7 @@ function isKeypressCommand(nativeEvent) {
 }
 
 /**
- * Translate native top level events into event types.
+ * Translate native top level events into event gameTypes.
  *
  * @param {string} topLevelType
  * @return {object}
@@ -38902,7 +38902,7 @@ function getNativeBeforeInputChars(topLevelType, nativeEvent) {
       return chars;
 
     default:
-      // For other native event types, do nothing.
+      // For other native event gameTypes, do nothing.
       return null;
   }
 }
@@ -39007,7 +39007,7 @@ function extractBeforeInputEvent(topLevelType, targetInst, nativeEvent, nativeEv
  *
  * This plugin is also responsible for emitting `composition` events, thus
  * allowing us to share composition fallback code for both `beforeInput` and
- * `composition` event types.
+ * `composition` event gameTypes.
  */
 var BeforeInputEventPlugin = {
 
@@ -40844,7 +40844,7 @@ var ReactCompositeComponent = {
   },
 
   /**
-   * Assert that the context types are valid
+   * Assert that the context gameTypes are valid
    *
    * @param {object} typeSpecs Map of context field to a ReactPropType
    * @param {object} values Runtime values that need to be type-checked
@@ -42682,7 +42682,7 @@ var ReactDOMInput = {
       }
     } else {
       if (props.value == null && props.defaultValue != null) {
-        // In Chrome, assigning defaultValue to certain input types triggers input validation.
+        // In Chrome, assigning defaultValue to certain input gameTypes triggers input validation.
         // For number inputs, the display value loses trailing decimal points. For email inputs,
         // Chrome raises "The specified value <x> is not a valid email address".
         //
@@ -42980,7 +42980,7 @@ function flattenChildren(children) {
   var content = '';
 
   // Flatten children and warn if they aren't strings or numbers;
-  // invalid types are ignored.
+  // invalid gameTypes are ignored.
   React.Children.forEach(children, function (child) {
     if (child == null) {
       return;
@@ -43425,7 +43425,7 @@ _assign(ReactDOMTextComponent.prototype, {
       if (nextStringText !== this._stringText) {
         // TODO: Save this as pending props and use performUpdateIfNecessary
         // and/or updateComponent to do the actual update for consistency with
-        // other component types?
+        // other component gameTypes?
         this._stringText = nextStringText;
         var commentNodes = this.getHostNode();
         DOMChildrenOperations.replaceDelimitedText(commentNodes[0], commentNodes[1], nextStringText);
@@ -47952,7 +47952,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; /*eslint-disable react/prop-types */
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; /*eslint-disable react/prop-gameTypes */
 
 
 var _react = __webpack_require__(1);
@@ -51875,7 +51875,7 @@ var ReactClassInterface = {
   statics: 'DEFINE_MANY',
 
   /**
-   * Definition of prop types for this component.
+   * Definition of prop gameTypes for this component.
    *
    * @type {object}
    * @optional
@@ -51883,7 +51883,7 @@ var ReactClassInterface = {
   propTypes: 'DEFINE_MANY',
 
   /**
-   * Definition of context types for this component.
+   * Definition of context gameTypes for this component.
    *
    * @type {object}
    * @optional
@@ -51891,7 +51891,7 @@ var ReactClassInterface = {
   contextTypes: 'DEFINE_MANY',
 
   /**
-   * Definition of context types this component sets for its children.
+   * Definition of context gameTypes this component sets for its children.
    *
    * @type {object}
    * @optional

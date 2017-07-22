@@ -2,6 +2,8 @@ import React from 'react';
 import teams from '../../../data/teamInfo';
 
 
+//TODO refactor playoff games to game status types
+
 const PlayoffGame = (props)=> {
   let {game, startTime} = props;
 

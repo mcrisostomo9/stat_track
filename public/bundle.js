@@ -1857,7 +1857,7 @@ var ReactComponentTreeHook = {
         nextChild.parentID = id;
         // TODO: This shouldn't be necessary but mounting a new root during in
         // componentWillMount currently causes not-yet-mounted components to
-        // be purged from our tree data so their parent id is missing.
+        // be purged from our tree teamData so their parent id is missing.
       }
       !(nextChild.parentID === id) ? process.env.NODE_ENV !== 'production' ? invariant(false, 'Expected onBeforeMountComponent() parent and onSetChildren() to be consistent (%s has parents %s and %s).', nextChildID, nextChild.parentID, id) : _prodInvariant('142', nextChildID, nextChild.parentID, id) : void 0;
     }
@@ -3388,7 +3388,7 @@ var DOMPropertyInjection = {
    * with the following properties:
    *
    * isCustomAttribute: function that given an attribute name will return true
-   * if it can be inserted into the DOM verbatim. Useful for data-* or aria-*
+   * if it can be inserted into the DOM verbatim. Useful for teamData-* or aria-*
    * attributes where it's impossible to enumerate all of the possible
    * attribute names,
    *
@@ -3491,8 +3491,8 @@ var ATTRIBUTE_NAME_START_CHAR = ':A-Z_a-z\\u00C0-\\u00D6\\u00D8-\\u00F6\\u00F8-\
  */
 var DOMProperty = {
 
-  ID_ATTRIBUTE_NAME: 'data-reactid',
-  ROOT_ATTRIBUTE_NAME: 'data-reactroot',
+  ID_ATTRIBUTE_NAME: 'teamData-reactid',
+  ROOT_ATTRIBUTE_NAME: 'teamData-reactroot',
 
   ATTRIBUTE_NAME_START_CHAR: ATTRIBUTE_NAME_START_CHAR,
   ATTRIBUTE_NAME_CHAR: ATTRIBUTE_NAME_START_CHAR + '\\-.0-9\\u00B7\\u0300-\\u036F\\u203F-\\u2040',
@@ -6312,9 +6312,9 @@ var _temp = function () {
     return;
   }
 
-  __REACT_HOT_LOADER__.register(teams, "teams", "C:/Users/aong9_000/Desktop/projects/nbaStats/src/data/teamInfo.js");
+  __REACT_HOT_LOADER__.register(teams, "teams", "C:/Users/aong9_000/Desktop/projects/nbaStats/src/teamData/teamInfo.js");
 
-  __REACT_HOT_LOADER__.register(_default, "default", "C:/Users/aong9_000/Desktop/projects/nbaStats/src/data/teamInfo.js");
+  __REACT_HOT_LOADER__.register(_default, "default", "C:/Users/aong9_000/Desktop/projects/nbaStats/src/teamData/teamInfo.js");
 }();
 
 ;
@@ -11464,7 +11464,7 @@ var ReactUpdateQueue = {
     if (process.env.NODE_ENV !== 'production') {
       var owner = ReactCurrentOwner.current;
       if (owner !== null) {
-        process.env.NODE_ENV !== 'production' ? warning(owner._warnedAboutRefsInRender, '%s is accessing isMounted inside its render() function. ' + 'render() should be a pure function of props and state. It should ' + 'never access something that requires stale data from the previous ' + 'render, such as refs. Move this logic to componentDidMount and ' + 'componentDidUpdate instead.', owner.getName() || 'A component') : void 0;
+        process.env.NODE_ENV !== 'production' ? warning(owner._warnedAboutRefsInRender, '%s is accessing isMounted inside its render() function. ' + 'render() should be a pure function of props and state. It should ' + 'never access something that requires stale teamData from the previous ' + 'render, such as refs. Move this logic to componentDidMount and ' + 'componentDidUpdate instead.', owner.getName() || 'A component') : void 0;
         owner._warnedAboutRefsInRender = true;
       }
     }
@@ -12743,7 +12743,7 @@ var RouterContext = __WEBPACK_IMPORTED_MODULE_2_create_react_class___default()({
             if (Object.prototype.hasOwnProperty.call(components, key)) {
               // Pass through the key as a prop to createElement to allow
               // custom createElement functions to know which named component
-              // they're rendering, for e.g. matching up to fetched data.
+              // they're rendering, for e.g. matching up to fetched teamData.
               elements[key] = _this.createElement(components[key], _extends({
                 key: key }, props));
             }
@@ -13179,7 +13179,7 @@ module.exports = function xhrAdapter(config) {
     if ('setRequestHeader' in request) {
       utils.forEach(requestHeaders, function setRequestHeader(val, key) {
         if (typeof requestData === 'undefined' && key.toLowerCase() === 'content-type') {
-          // Remove Content-Type if data is undefined
+          // Remove Content-Type if teamData is undefined
           delete requestHeaders[key];
         } else {
           // Otherwise add header to the request
@@ -18694,7 +18694,7 @@ TopLevelWrapper.isReactTopLevelWrapper = true;
  *   );
  *
  *   <div id="container">                   <-- Supplied `container`.
- *     <div data-reactid=".3">              <-- Rendered reactRoot of React
+ *     <div teamData-reactid=".3">              <-- Rendered reactRoot of React
  *       // ...                                 component.
  *     </div>
  *   </div>
@@ -22016,7 +22016,7 @@ var ActionTypes = {
 
 /**
  * Creates a Redux store that holds the state tree.
- * The only way to change the data in the store is to call `dispatch()` on it.
+ * The only way to change the teamData in the store is to call `dispatch()` on it.
  *
  * There should only be a single store in your app. To specify how different
  * parts of the state tree respond to actions, you may combine several reducers
@@ -22614,7 +22614,7 @@ module.exports = function dispatchRequest(config) {
   // Ensure headers exist
   config.headers = config.headers || {};
 
-  // Transform request data
+  // Transform request teamData
   config.data = transformData(
     config.data,
     config.headers,
@@ -22640,7 +22640,7 @@ module.exports = function dispatchRequest(config) {
   return adapter(config).then(function onAdapterResolution(response) {
     throwIfCancellationRequested(config);
 
-    // Transform response data
+    // Transform response teamData
     response.data = transformData(
       response.data,
       response.headers,
@@ -22652,7 +22652,7 @@ module.exports = function dispatchRequest(config) {
     if (!isCancel(reason)) {
       throwIfCancellationRequested(config);
 
-      // Transform response data
+      // Transform response teamData
       if (reason && reason.response) {
         reason.response.data = transformData(
           reason.response.data,
@@ -22735,12 +22735,12 @@ module.exports = function settle(resolve, reject, response) {
 var utils = __webpack_require__(24);
 
 /**
- * Transform the data for a request or a response
+ * Transform the teamData for a request or a response
  *
- * @param {Object|String} data The data to be transformed
+ * @param {Object|String} data The teamData to be transformed
  * @param {Array} headers The headers for the request or response
  * @param {Array|Function} fns A single function or Array of functions
- * @returns {*} The resulting transformed data
+ * @returns {*} The resulting transformed teamData
  */
 module.exports = function transformData(data, headers, fns) {
   /*eslint no-param-reassign:0*/
@@ -23377,7 +23377,7 @@ var EastStandings = function EastStandings(props) {
     //to store the component props to info
     var info = props;
 
-    //to filter the returned team id to have access to relevant team specific data
+    //to filter the returned team id to have access to relevant team specific teamData
     var team = __WEBPACK_IMPORTED_MODULE_1__data_teamInfo__["a" /* default */].filter(function (name) {
         return name.teamId === info.name;
     });
@@ -24058,7 +24058,7 @@ var WestStandings = function WestStandings(props) {
     //to store the component props to info
     var info = props;
 
-    //to filter the returned team id to have access to relevant team specific data
+    //to filter the returned team id to have access to relevant team specific teamData
     var team = __WEBPACK_IMPORTED_MODULE_1__data_teamInfo__["a" /* default */].filter(function (name) {
         return name.teamId === info.name;
     });
@@ -24404,7 +24404,7 @@ var Standings = function (_React$Component) {
           )
         );
       }
-      // to map through the returned standings data
+      // to map through the returned standings teamData
       var west = this.props.standings.west;
 
       return west.map(function (team, index) {
@@ -24425,7 +24425,7 @@ var Standings = function (_React$Component) {
           )
         );
       }
-      // to map through the returned standings data
+      // to map through the returned standings teamData
       var east = this.props.standings.east;
 
       return east.map(function (team, index) {
@@ -25847,7 +25847,7 @@ function placeHoldersCount (b64) {
 }
 
 function byteLength (b64) {
-  // base64 is 4/3 + up to two characters of the original data
+  // base64 is 4/3 + up to two characters of the original teamData
   return b64.length * 3 / 4 - placeHoldersCount(b64)
 }
 
@@ -27913,7 +27913,7 @@ function factory(ReactComponent, isValidElement, ReactNoopUpdateQueue) {
 
     /**
      * Invoked when the component is initially created and about to be mounted.
-     * This may have side effects, but any external subscriptions or data created
+     * This may have side effects, but any external subscriptions or teamData created
      * by this method must be cleaned up in `componentWillUnmount`.
      *
      * @optional
@@ -29128,7 +29128,7 @@ var invariant = __webpack_require__(10);
 /**
  * Convert array-like objects to arrays.
  *
- * This API assumes the caller knows the contents of the data type. For less
+ * This API assumes the caller knows the contents of the teamData type. For less
  * well defined inputs use createArrayFromMixed.
  *
  * @param {object|function|filelist} obj
@@ -38668,7 +38668,7 @@ if (ExecutionEnvironment.canUseDOM && 'documentMode' in document) {
 // useful, so we don't use it.
 var canUseTextInputEvent = ExecutionEnvironment.canUseDOM && 'TextEvent' in window && !documentMode && !isPresto();
 
-// In IE9+, we have access to composition events, but the data supplied
+// In IE9+, we have access to composition events, but the teamData supplied
 // by the native compositionend event may be incorrect. Japanese ideographic
 // spaces, for instance (\u3000) are not recorded correctly.
 var useFallbackCompositionData = ExecutionEnvironment.canUseDOM && (!canUseCompositionEvent || documentMode && documentMode > 8 && documentMode <= 11);
@@ -38787,8 +38787,8 @@ function isFallbackCompositionEnd(topLevelType, nativeEvent) {
 }
 
 /**
- * Google Input Tools provides composition data via a CustomEvent,
- * with the `data` property populated in the `detail` object. If this
+ * Google Input Tools provides composition teamData via a CustomEvent,
+ * with the `teamData` property populated in the `detail` object. If this
  * is available on the event object, use it. If not, this is a plain
  * composition event and we have nothing special to extract.
  *
@@ -38842,7 +38842,7 @@ function extractCompositionEvent(topLevelType, targetInst, nativeEvent, nativeEv
   var event = SyntheticCompositionEvent.getPooled(eventType, targetInst, nativeEvent, nativeEventTarget);
 
   if (fallbackData) {
-    // Inject data generated from fallback path into the synthetic event.
+    // Inject teamData generated from fallback path into the synthetic event.
     // This matches the property of native CompositionEventInterface.
     event.data = fallbackData;
   } else {
@@ -39902,7 +39902,7 @@ var HAS_POSITIVE_NUMERIC_VALUE = DOMProperty.injection.HAS_POSITIVE_NUMERIC_VALU
 var HAS_OVERLOADED_BOOLEAN_VALUE = DOMProperty.injection.HAS_OVERLOADED_BOOLEAN_VALUE;
 
 var HTMLDOMPropertyConfig = {
-  isCustomAttribute: RegExp.prototype.test.bind(new RegExp('^(data|aria)-[' + DOMProperty.ATTRIBUTE_NAME_CHAR + ']*$')),
+  isCustomAttribute: RegExp.prototype.test.bind(new RegExp('^(teamData|aria)-[' + DOMProperty.ATTRIBUTE_NAME_CHAR + ']*$')),
   Properties: {
     /**
      * Standard Properties
@@ -43829,7 +43829,7 @@ if (process.env.NODE_ENV !== 'production') {
     warnedProperties[name] = true;
     var lowerCasedName = name.toLowerCase();
 
-    // data-* attributes should be lowercase; suggest the lowercase version
+    // teamData-* attributes should be lowercase; suggest the lowercase version
     var standardName = DOMProperty.isCustomAttribute(lowerCasedName) ? lowerCasedName : DOMProperty.getPossibleStandardName.hasOwnProperty(lowerCasedName) ? DOMProperty.getPossibleStandardName[lowerCasedName] : null;
 
     var registrationName = EventPluginRegistry.possibleRegistrationNames.hasOwnProperty(lowerCasedName) ? EventPluginRegistry.possibleRegistrationNames[lowerCasedName] : null;
@@ -44788,7 +44788,7 @@ var TAG_END = /\/?>/;
 var COMMENT_START = /^<\!\-\-/;
 
 var ReactMarkupChecksum = {
-  CHECKSUM_ATTR_NAME: 'data-react-checksum',
+  CHECKSUM_ATTR_NAME: 'teamData-react-checksum',
 
   /**
    * @param {string} markup Markup string
@@ -45333,7 +45333,7 @@ function isValidOwner(object) {
  *   });
  *
  * Refs should rarely be used. When refs are used, they should only be done to
- * control data that is not handled by React's data flow.
+ * control teamData that is not handled by React's teamData flow.
  *
  * @class ReactOwner
  */
@@ -47354,7 +47354,7 @@ var styleWarnings = {};
 function dangerousStyleValue(name, value, component) {
   // Note that we've removed escapeTextForBrowser() calls here since the
   // whole string will be escaped when the attribute is injected into
-  // the markup. If you provide unsafe user data here they can inject
+  // the markup. If you provide unsafe user teamData here they can inject
   // arbitrary CSS which may be problematic (I couldn't repro this):
   // https://www.owasp.org/index.php/XSS_Filter_Evasion_Cheat_Sheet
   // http://www.thespanner.co.uk/2007/11/26/ultimate-xss-css-injection/
@@ -47442,7 +47442,7 @@ function findDOMNode(componentOrElement) {
   if (process.env.NODE_ENV !== 'production') {
     var owner = ReactCurrentOwner.current;
     if (owner !== null) {
-      process.env.NODE_ENV !== 'production' ? warning(owner._warnedAboutRefsInRender, '%s is accessing findDOMNode inside its render(). ' + 'render() should be a pure function of props and state. It should ' + 'never access something that requires stale data from the previous ' + 'render, such as refs. Move this logic to componentDidMount and ' + 'componentDidUpdate instead.', owner.getName() || 'A component') : void 0;
+      process.env.NODE_ENV !== 'production' ? warning(owner._warnedAboutRefsInRender, '%s is accessing findDOMNode inside its render(). ' + 'render() should be a pure function of props and state. It should ' + 'never access something that requires stale teamData from the previous ' + 'render, such as refs. Move this logic to componentDidMount and ' + 'componentDidUpdate instead.', owner.getName() || 'A component') : void 0;
       owner._warnedAboutRefsInRender = true;
     }
   }
@@ -51955,7 +51955,7 @@ var ReactClassInterface = {
 
   /**
    * Invoked when the component is initially created and about to be mounted.
-   * This may have side effects, but any external subscriptions or data created
+   * This may have side effects, but any external subscriptions or teamData created
    * by this method must be cleaned up in `componentWillUnmount`.
    *
    * @optional

@@ -1,5 +1,5 @@
 import React from 'react';
-import teams from '../../../data/teamInfo';
+import teams from '../../../teamData/teamInfo';
 
 
 //TODO refactor playoff games to game status types

@@ -1,5 +1,5 @@
 import React from 'react';
-import teams from '../../../data/teamInfo';
+import teams from '../../../teamData/teamInfo';
 import FinalScore from '../gameStatusType/FinalScore';
 import BeforeGameStart from "../gameStatusType/BeforeGameStart";
 import GameInProgress from "../gameStatusType/GameInProgress";

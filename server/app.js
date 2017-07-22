@@ -1,5 +1,5 @@
 // Import Modules
-// Define nba to access stats and data API endpoints
+// Define nba to access stats and teamData API endpoints
 const express    = require('express');
 const nba        = require('nba.js').default;
 const morgan     = require('morgan');

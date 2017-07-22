@@ -1,11 +1,11 @@
 import React from 'react';
-import teams from '../../data/teamInfo';
+import teams from '../../teamData/teamInfo';
 
 const EastStandings = (props)=> {
     //to store the component props to info
     const info = props;
 
-    //to filter the returned team id to have access to relevant team specific data
+    //to filter the returned team id to have access to relevant team specific teamData
     let team = teams.filter((name)=>{
         return (name.teamId === info.name)
     });

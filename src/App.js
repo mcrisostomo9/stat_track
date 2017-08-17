@@ -5,15 +5,15 @@ import Header from './components/Header'
 class App extends Component {
     render() {
         return (
-            <div className="container">
-                <div className="row">
-                    <div className="col-10">
-                        <HeaderOld/>
-                        {/*<Header/>*/}
+            <div>
+                <div>
+                    <div>
+                        {/*<HeaderOld/>*/}
+                        <Header/>
                     </div>
                 </div>
-                <div className="row">
-                    <div className="col-10">
+                <div >
+                    <div >
                         { this.props.children }
                     </div>
                 </div>

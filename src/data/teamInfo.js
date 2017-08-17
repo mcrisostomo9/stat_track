@@ -378,7 +378,7 @@ const teams = [
         "urlName": "jazz",
         "confName": "West",
         "divName": "Northwest",
-        "arena": 'Vivint Smart Home Arena',
+        "arena": 'Vivint Smart Scoreboard Arena',
         "logo": '../assets/nba_logos/uth.png'
       },
       {

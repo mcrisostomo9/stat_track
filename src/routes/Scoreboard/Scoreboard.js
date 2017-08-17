@@ -1,15 +1,14 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {setViewedDate, fetchCalendarFromApi} from '../actions/actionCreators';
-import Scoreboard from '../containers/scoreboardContainer';
+import {setViewedDate, fetchCalendarFromApi} from '../../actions/actionCreators';
+import ScoreboardContainer from './ScoreboardContainer';
 import {Glyphicon} from "react-bootstrap";
 
-class DateNavi extends React.Component{
+class Scoreboard extends React.Component{
   constructor(props){
     super(props);
     this.props.dateFromApi();
-    //hardcoded the end of the season date
-    this.props.sendDate(new Date('Mon Jun 12 2017 17:14:22 GMT-0700 (PDT)'));
+    this.props.sendDate(new Date());
   }
   previousDay(){
     let temp = this.props.unformattedDate;
@@ -42,7 +41,7 @@ class DateNavi extends React.Component{
                     }
                   </div>
               </div>
-              <Scoreboard/>
+              <ScoreboardContainer/>
           </div>
       )
   }
@@ -64,4 +63,4 @@ const mapDispatchToProps = (dispatch)=>{
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(DateNavi);
+export default connect(mapStateToProps, mapDispatchToProps)(Scoreboard);

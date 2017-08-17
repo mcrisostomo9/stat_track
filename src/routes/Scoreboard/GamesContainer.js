@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import RegularGame from '../components/regularGame';
-import PlayoffGame from '../components/playoffGame';
+import RegularGame from './RegularGame';
+import PlayoffGame from './PlayoffGame';
 
 class GamesContainer extends Component {
 

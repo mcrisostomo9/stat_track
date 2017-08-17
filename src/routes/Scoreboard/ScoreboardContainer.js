@@ -1,9 +1,9 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {fetchGamesFromApi} from '../actions/actionCreators';
-import GamesContainer from './gamesContainer'
+import {fetchGamesFromApi} from '../../actions/actionCreators';
+import GamesContainer from './GamesContainer'
 
-class Scoreboard extends React.Component {
+class ScoreboardContainer extends React.Component {
   //make call to fetch game on mount
   componentDidMount() {
     let {viewedDate} = this.props;
@@ -66,4 +66,4 @@ const mapDispatchToProps = (dispatch) => {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Scoreboard);
+export default connect(mapStateToProps, mapDispatchToProps)(ScoreboardContainer);

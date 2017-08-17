@@ -1,8 +1,8 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {fetchStandingsFromApi} from '../actions/actionCreators';
-import WestStandings from '../components/westStandings';
-import EastStandings from '../components/eastStandings';
+import {fetchStandingsFromApi} from '../../actions/actionCreators';
+import WestStandings from './WestStandings';
+import EastStandings from './EastStandings';
 import {Table} from 'react-bootstrap';
 
 class Standings extends React.Component{

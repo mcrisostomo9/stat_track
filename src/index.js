@@ -1,5 +1,5 @@
 import ReactDOM from 'react-dom';
-import router from './routes.js';
+import router from './routes/routes.js';
 
 ReactDOM.render(
   router,

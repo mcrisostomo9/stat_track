@@ -6287,7 +6287,7 @@ var teams = [{
   "urlName": "jazz",
   "confName": "West",
   "divName": "Northwest",
-  "arena": 'Vivint Smart Home Arena',
+  "arena": 'Vivint Smart Scoreboard Arena',
   "logo": '../assets/nba_logos/uth.png'
 }, {
   "city": "Washington",
@@ -23351,13 +23351,13 @@ var _temp = function () {
     return;
   }
 
-  __REACT_HOT_LOADER__.register(DateNavi, 'DateNavi', 'C:/Users/aong9_000/Desktop/projects/nbaStats/src/components/dateNavi.js');
+  __REACT_HOT_LOADER__.register(DateNavi, 'DateNavi', 'C:/Users/aong9_000/Desktop/projects/nbaStats/src/components/Scoreboard.js');
 
-  __REACT_HOT_LOADER__.register(mapStateToProps, 'mapStateToProps', 'C:/Users/aong9_000/Desktop/projects/nbaStats/src/components/dateNavi.js');
+  __REACT_HOT_LOADER__.register(mapStateToProps, 'mapStateToProps', 'C:/Users/aong9_000/Desktop/projects/nbaStats/src/components/Scoreboard.js');
 
-  __REACT_HOT_LOADER__.register(mapDispatchToProps, 'mapDispatchToProps', 'C:/Users/aong9_000/Desktop/projects/nbaStats/src/components/dateNavi.js');
+  __REACT_HOT_LOADER__.register(mapDispatchToProps, 'mapDispatchToProps', 'C:/Users/aong9_000/Desktop/projects/nbaStats/src/components/Scoreboard.js');
 
-  __REACT_HOT_LOADER__.register(_default, 'default', 'C:/Users/aong9_000/Desktop/projects/nbaStats/src/components/dateNavi.js');
+  __REACT_HOT_LOADER__.register(_default, 'default', 'C:/Users/aong9_000/Desktop/projects/nbaStats/src/components/Scoreboard.js');
 }();
 
 ;
@@ -23435,9 +23435,9 @@ var _temp = function () {
         return;
     }
 
-    __REACT_HOT_LOADER__.register(EastStandings, 'EastStandings', 'C:/Users/aong9_000/Desktop/projects/nbaStats/src/components/eastStandings.js');
+    __REACT_HOT_LOADER__.register(EastStandings, 'EastStandings', 'C:/Users/aong9_000/Desktop/projects/nbaStats/src/components/EastStandings.js');
 
-    __REACT_HOT_LOADER__.register(_default, 'default', 'C:/Users/aong9_000/Desktop/projects/nbaStats/src/components/eastStandings.js');
+    __REACT_HOT_LOADER__.register(_default, 'default', 'C:/Users/aong9_000/Desktop/projects/nbaStats/src/components/EastStandings.js');
 }();
 
 ;
@@ -23536,7 +23536,7 @@ var _temp = function () {
         return;
     }
 
-    __REACT_HOT_LOADER__.register(Header, 'Header', 'C:/Users/aong9_000/Desktop/projects/nbaStats/src/components/header.js');
+    __REACT_HOT_LOADER__.register(Header, 'Header', 'C:/Users/aong9_000/Desktop/projects/nbaStats/src/components/Header.js');
 }();
 
 ;
@@ -23803,9 +23803,9 @@ var _temp = function () {
         return;
     }
 
-    __REACT_HOT_LOADER__.register(PlayoffGame, 'PlayoffGame', 'C:/Users/aong9_000/Desktop/projects/nbaStats/src/components/playoffGame.js');
+    __REACT_HOT_LOADER__.register(PlayoffGame, 'PlayoffGame', 'C:/Users/aong9_000/Desktop/projects/nbaStats/src/components/PlayoffGame.js');
 
-    __REACT_HOT_LOADER__.register(_default, 'default', 'C:/Users/aong9_000/Desktop/projects/nbaStats/src/components/playoffGame.js');
+    __REACT_HOT_LOADER__.register(_default, 'default', 'C:/Users/aong9_000/Desktop/projects/nbaStats/src/components/PlayoffGame.js');
 }();
 
 ;
@@ -24036,9 +24036,9 @@ var _temp = function () {
         return;
     }
 
-    __REACT_HOT_LOADER__.register(RegularGame, 'RegularGame', 'C:/Users/aong9_000/Desktop/projects/nbaStats/src/components/regularGame.js');
+    __REACT_HOT_LOADER__.register(RegularGame, 'RegularGame', 'C:/Users/aong9_000/Desktop/projects/nbaStats/src/components/RegularGame.js');
 
-    __REACT_HOT_LOADER__.register(_default, 'default', 'C:/Users/aong9_000/Desktop/projects/nbaStats/src/components/regularGame.js');
+    __REACT_HOT_LOADER__.register(_default, 'default', 'C:/Users/aong9_000/Desktop/projects/nbaStats/src/components/RegularGame.js');
 }();
 
 ;
@@ -24116,9 +24116,9 @@ var _temp = function () {
         return;
     }
 
-    __REACT_HOT_LOADER__.register(WestStandings, 'WestStandings', 'C:/Users/aong9_000/Desktop/projects/nbaStats/src/components/westStandings.js');
+    __REACT_HOT_LOADER__.register(WestStandings, 'WestStandings', 'C:/Users/aong9_000/Desktop/projects/nbaStats/src/components/WestStandings.js');
 
-    __REACT_HOT_LOADER__.register(_default, 'default', 'C:/Users/aong9_000/Desktop/projects/nbaStats/src/components/westStandings.js');
+    __REACT_HOT_LOADER__.register(_default, 'default', 'C:/Users/aong9_000/Desktop/projects/nbaStats/src/components/WestStandings.js');
 }();
 
 ;
@@ -24200,11 +24200,11 @@ var _temp = function () {
         return;
     }
 
-    __REACT_HOT_LOADER__.register(GamesContainer, 'GamesContainer', 'C:/Users/aong9_000/Desktop/projects/nbaStats/src/containers/gamesContainer.js');
+    __REACT_HOT_LOADER__.register(GamesContainer, 'GamesContainer', 'C:/Users/aong9_000/Desktop/projects/nbaStats/src/containers/GamesContainer.js');
 
-    __REACT_HOT_LOADER__.register(mapStateToProps, 'mapStateToProps', 'C:/Users/aong9_000/Desktop/projects/nbaStats/src/containers/gamesContainer.js');
+    __REACT_HOT_LOADER__.register(mapStateToProps, 'mapStateToProps', 'C:/Users/aong9_000/Desktop/projects/nbaStats/src/containers/GamesContainer.js');
 
-    __REACT_HOT_LOADER__.register(_default, 'default', 'C:/Users/aong9_000/Desktop/projects/nbaStats/src/containers/gamesContainer.js');
+    __REACT_HOT_LOADER__.register(_default, 'default', 'C:/Users/aong9_000/Desktop/projects/nbaStats/src/containers/GamesContainer.js');
 }();
 
 ;
@@ -24338,13 +24338,13 @@ var _temp = function () {
     return;
   }
 
-  __REACT_HOT_LOADER__.register(Scoreboard, 'Scoreboard', 'C:/Users/aong9_000/Desktop/projects/nbaStats/src/containers/scoreboardContainer.js');
+  __REACT_HOT_LOADER__.register(Scoreboard, 'Scoreboard', 'C:/Users/aong9_000/Desktop/projects/nbaStats/src/containers/ScoreboardContainer.js');
 
-  __REACT_HOT_LOADER__.register(mapStateToProps, 'mapStateToProps', 'C:/Users/aong9_000/Desktop/projects/nbaStats/src/containers/scoreboardContainer.js');
+  __REACT_HOT_LOADER__.register(mapStateToProps, 'mapStateToProps', 'C:/Users/aong9_000/Desktop/projects/nbaStats/src/containers/ScoreboardContainer.js');
 
-  __REACT_HOT_LOADER__.register(mapDispatchToProps, 'mapDispatchToProps', 'C:/Users/aong9_000/Desktop/projects/nbaStats/src/containers/scoreboardContainer.js');
+  __REACT_HOT_LOADER__.register(mapDispatchToProps, 'mapDispatchToProps', 'C:/Users/aong9_000/Desktop/projects/nbaStats/src/containers/ScoreboardContainer.js');
 
-  __REACT_HOT_LOADER__.register(_default, 'default', 'C:/Users/aong9_000/Desktop/projects/nbaStats/src/containers/scoreboardContainer.js');
+  __REACT_HOT_LOADER__.register(_default, 'default', 'C:/Users/aong9_000/Desktop/projects/nbaStats/src/containers/ScoreboardContainer.js');
 }();
 
 ;
@@ -24593,13 +24593,13 @@ var _temp = function () {
     return;
   }
 
-  __REACT_HOT_LOADER__.register(Standings, 'Standings', 'C:/Users/aong9_000/Desktop/projects/nbaStats/src/containers/standingsContainer.js');
+  __REACT_HOT_LOADER__.register(Standings, 'Standings', 'C:/Users/aong9_000/Desktop/projects/nbaStats/src/containers/Standings.js');
 
-  __REACT_HOT_LOADER__.register(mapStateToProps, 'mapStateToProps', 'C:/Users/aong9_000/Desktop/projects/nbaStats/src/containers/standingsContainer.js');
+  __REACT_HOT_LOADER__.register(mapStateToProps, 'mapStateToProps', 'C:/Users/aong9_000/Desktop/projects/nbaStats/src/containers/Standings.js');
 
-  __REACT_HOT_LOADER__.register(mapDispatchToProps, 'mapDispatchToProps', 'C:/Users/aong9_000/Desktop/projects/nbaStats/src/containers/standingsContainer.js');
+  __REACT_HOT_LOADER__.register(mapDispatchToProps, 'mapDispatchToProps', 'C:/Users/aong9_000/Desktop/projects/nbaStats/src/containers/Standings.js');
 
-  __REACT_HOT_LOADER__.register(_default, 'default', 'C:/Users/aong9_000/Desktop/projects/nbaStats/src/containers/standingsContainer.js');
+  __REACT_HOT_LOADER__.register(_default, 'default', 'C:/Users/aong9_000/Desktop/projects/nbaStats/src/containers/Standings.js');
 }();
 
 ;
@@ -47609,7 +47609,7 @@ var translateToKey = {
   33: 'PageUp',
   34: 'PageDown',
   35: 'End',
-  36: 'Home',
+  36: 'Scoreboard',
   37: 'ArrowLeft',
   38: 'ArrowUp',
   39: 'ArrowRight',

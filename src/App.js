@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import {Header} from './components/Header';
+import HeaderOld from './components/HeaderOld';
+import Header from './components/Header'
 
 class App extends Component {
     render() {
@@ -7,7 +8,8 @@ class App extends Component {
             <div className="container">
                 <div className="row">
                     <div className="col-10">
-                        <Header/>
+                        <HeaderOld/>
+                        {/*<Header/>*/}
                     </div>
                 </div>
                 <div className="row">

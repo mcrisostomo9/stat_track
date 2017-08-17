@@ -23536,7 +23536,7 @@ var _temp = function () {
         return;
     }
 
-    __REACT_HOT_LOADER__.register(Header, 'Header', 'C:/Users/aong9_000/Desktop/projects/nbaStats/src/components/Header.js');
+    __REACT_HOT_LOADER__.register(Header, 'Header', 'C:/Users/aong9_000/Desktop/projects/nbaStats/src/components/HeaderOld.js');
 }();
 
 ;

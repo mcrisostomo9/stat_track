@@ -1,23 +1,32 @@
 import React, {Component} from 'react';
 import HeaderOld from './components/HeaderOld';
-import Header from './components/Header'
+import Header from './components/Header';
+import styled from 'styled-components';
+
+
+const PageContainer = styled.div`
+  background: url(${require('./assets/bg.jpg')}) repeat;
+  overflow: hidden;
+  height: 100vh;
+`;
+
 
 class App extends Component {
     render() {
         return (
-            <div>
-                <div>
-                    <div>
+            <PageContainer>
+                {/*<div>*/}
+                    {/*<div>*/}
                         {/*<HeaderOld/>*/}
                         <Header/>
-                    </div>
-                </div>
-                <div >
+                    {/*</div>*/}
+                {/*</div>*/}
+                {/*<div >*/}
                     <div >
                         { this.props.children }
                     </div>
-                </div>
-            </div>
+                {/*</div>*/}
+            </PageContainer>
         )
     }
 }

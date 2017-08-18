@@ -44,7 +44,7 @@ class Scoreboard extends React.Component{
                     <h4 className="date_longform">{this.props.viewedDateLongForm}</h4>
                   </div>
                   <div className="col-xs-4 text-left">
-                     <button className="btn btn-default" onClick={()=>this.nextDay()}>Next<Glyphicon glyph="chevron-right"/></button>
+                     <DateButton className="btn btn-default" onClick={()=>this.nextDay()}>Next<Glyphicon glyph="chevron-right"/></DateButton>
                   </div>
               </div>
               <ScoreboardContainer/>

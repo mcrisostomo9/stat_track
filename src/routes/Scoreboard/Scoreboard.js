@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {setViewedDate, fetchCalendarFromApi} from '../../actions/actionCreators';
-import ScoreboardContainer from './ScoreboardContainer';
+import Games from './Games';
 import {Glyphicon} from "react-bootstrap";
 import styled from 'styled-components';
 
@@ -47,7 +47,7 @@ class Scoreboard extends React.Component{
                      <DateButton className="btn btn-default" onClick={()=>this.nextDay()}>Next<Glyphicon glyph="chevron-right"/></DateButton>
                   </div>
               </div>
-              <ScoreboardContainer/>
+              <Games/>
           </ScoreboardGrid>
       )
   }

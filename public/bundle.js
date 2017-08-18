@@ -24200,11 +24200,11 @@ var _temp = function () {
         return;
     }
 
-    __REACT_HOT_LOADER__.register(GamesContainer, 'GamesContainer', 'C:/Users/aong9_000/Desktop/projects/nbaStats/src/containers/GamesContainer.js');
+    __REACT_HOT_LOADER__.register(GamesContainer, 'GamesContainer', 'C:/Users/aong9_000/Desktop/projects/nbaStats/src/containers/Game.js');
 
-    __REACT_HOT_LOADER__.register(mapStateToProps, 'mapStateToProps', 'C:/Users/aong9_000/Desktop/projects/nbaStats/src/containers/GamesContainer.js');
+    __REACT_HOT_LOADER__.register(mapStateToProps, 'mapStateToProps', 'C:/Users/aong9_000/Desktop/projects/nbaStats/src/containers/Game.js');
 
-    __REACT_HOT_LOADER__.register(_default, 'default', 'C:/Users/aong9_000/Desktop/projects/nbaStats/src/containers/GamesContainer.js');
+    __REACT_HOT_LOADER__.register(_default, 'default', 'C:/Users/aong9_000/Desktop/projects/nbaStats/src/containers/Game.js');
 }();
 
 ;
@@ -24338,13 +24338,13 @@ var _temp = function () {
     return;
   }
 
-  __REACT_HOT_LOADER__.register(Scoreboard, 'Scoreboard', 'C:/Users/aong9_000/Desktop/projects/nbaStats/src/containers/ScoreboardContainer.js');
+  __REACT_HOT_LOADER__.register(Scoreboard, 'Scoreboard', 'C:/Users/aong9_000/Desktop/projects/nbaStats/src/containers/Games.js');
 
-  __REACT_HOT_LOADER__.register(mapStateToProps, 'mapStateToProps', 'C:/Users/aong9_000/Desktop/projects/nbaStats/src/containers/ScoreboardContainer.js');
+  __REACT_HOT_LOADER__.register(mapStateToProps, 'mapStateToProps', 'C:/Users/aong9_000/Desktop/projects/nbaStats/src/containers/Games.js');
 
-  __REACT_HOT_LOADER__.register(mapDispatchToProps, 'mapDispatchToProps', 'C:/Users/aong9_000/Desktop/projects/nbaStats/src/containers/ScoreboardContainer.js');
+  __REACT_HOT_LOADER__.register(mapDispatchToProps, 'mapDispatchToProps', 'C:/Users/aong9_000/Desktop/projects/nbaStats/src/containers/Games.js');
 
-  __REACT_HOT_LOADER__.register(_default, 'default', 'C:/Users/aong9_000/Desktop/projects/nbaStats/src/containers/ScoreboardContainer.js');
+  __REACT_HOT_LOADER__.register(_default, 'default', 'C:/Users/aong9_000/Desktop/projects/nbaStats/src/containers/Games.js');
 }();
 
 ;

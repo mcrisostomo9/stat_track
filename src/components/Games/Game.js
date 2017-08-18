@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import RegularGame from './RegularGame';
-import PlayoffGame from './PlayoffGame';
+import RegularGame from './gameType/RegularGame';
+import PlayoffGame from './gameType/PlayoffGame';
 
-class GamesContainer extends Component {
+class Game extends Component {
 
     renderGames() {
 
@@ -33,4 +33,4 @@ class GamesContainer extends Component {
 const mapStateToProps = (state) => {
     return {games: state.gamesData.games}
 }
-export default connect(mapStateToProps)(GamesContainer);
+export default connect(mapStateToProps)(Game);

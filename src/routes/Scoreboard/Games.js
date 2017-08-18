@@ -1,9 +1,9 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {fetchGamesFromApi} from '../../actions/actionCreators';
-import GamesContainer from '../../components/Games/GamesContainer'
+import Game from '../../components/Games/Game'
 
-class ScoreboardContainer extends React.Component {
+class Games extends React.Component {
   //make call to fetch game on mount
   componentDidMount() {
     let {viewedDate} = this.props;
@@ -45,7 +45,7 @@ class ScoreboardContainer extends React.Component {
                 <img src="../assets/hoop_color_2.png" alt=""/>
             </div>
             <div className="col-xs-12">
-                <GamesContainer/>
+                <Game/>
             </div>
         </div>
     )
@@ -66,4 +66,4 @@ const mapDispatchToProps = (dispatch) => {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(ScoreboardContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(Games);

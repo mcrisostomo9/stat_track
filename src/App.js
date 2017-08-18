@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import HeaderOld from './components/HeaderOld';
 import Header from './components/Header';
 import styled from 'styled-components';
 
@@ -15,17 +14,10 @@ class App extends Component {
     render() {
         return (
             <PageContainer>
-                {/*<div>*/}
-                    {/*<div>*/}
-                        {/*<HeaderOld/>*/}
-                        <Header/>
-                    {/*</div>*/}
-                {/*</div>*/}
-                {/*<div >*/}
-                    <div >
-                        { this.props.children }
-                    </div>
-                {/*</div>*/}
+                <Header/>
+                <div >
+                    { this.props.children }
+                </div>
             </PageContainer>
         )
     }

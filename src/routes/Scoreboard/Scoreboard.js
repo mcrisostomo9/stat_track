@@ -3,6 +3,18 @@ import {connect} from 'react-redux';
 import {setViewedDate, fetchCalendarFromApi} from '../../actions/actionCreators';
 import ScoreboardContainer from './ScoreboardContainer';
 import {Glyphicon} from "react-bootstrap";
+import styled from 'styled-components';
+
+const ScoreboardGrid = styled.div`
+  background-color: white;
+  margin: 3%;
+  padding-top: 3%
+   
+`;
+
+const DateButton = styled.button`
+  outline: none;
+`;
 
 class Scoreboard extends React.Component{
   constructor(props){
@@ -23,10 +35,10 @@ class Scoreboard extends React.Component{
 
   render(){
       return(
-          <div>
+          <ScoreboardGrid>
               <div className="row">
                   <div className="col-xs-4 text-right">
-                    <button className="btn btn-default" onClick={()=>this.previousDay()}><Glyphicon glyph="chevron-left"/>Previous</button>
+                    <DateButton className="btn btn-default" onClick={()=>this.previousDay()}><Glyphicon glyph="chevron-left"/>Previous</DateButton>
                   </div>
                   <div className="col-xs-4 text-center">
                     <h4 className="date_longform">{this.props.viewedDateLongForm}</h4>
@@ -36,7 +48,7 @@ class Scoreboard extends React.Component{
                   </div>
               </div>
               <ScoreboardContainer/>
-          </div>
+          </ScoreboardGrid>
       )
   }
 }

@@ -8,8 +8,8 @@ import styled from 'styled-components';
 const ScoreboardGrid = styled.div`
   background-color: white;
   margin: 3%;
-  padding-top: 3%
-   
+  padding-top: 3%;
+  min-height: 700px;
 `;
 
 const DateButton = styled.button`

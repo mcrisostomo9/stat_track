@@ -1,5 +1,5 @@
 import React from 'react';
-import teams from '../../../teamData/teamInfo';
+import teams from '../../../data/teamInfo';
 
 
 const PlayoffGame = (props)=> {

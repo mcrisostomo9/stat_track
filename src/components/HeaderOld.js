@@ -5,7 +5,7 @@ import React from 'react';
 import {Nav, Navbar, NavItem} from 'react-bootstrap';
 import {LinkContainer, IndexLinkContainer} from 'react-router-bootstrap';
 
-export class Header extends React.Component{
+export default class HeaderOld extends React.Component{
     render(){
         return(
             <Navbar inverse collapseOnSelect>

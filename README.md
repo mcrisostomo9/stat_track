@@ -13,15 +13,16 @@ An application that will display current regular season and post-season box scor
 * nba.js
 
 ### Getting Started
-1. Setup server dependencies - `npm install`
-2. Spin up server
-    1. `npm run server` runs with nodemon global module
-    2. `npm run express` runs as normal
-3. Start dev server  - `npm start`
-4. Open a browser and navigate to `localhost:3000`
+1. Install dependencies - `npm install`
+2. Open up two terminals
+
+    > Spin up server - `npm run server` runs with nodemon global module
+    > Start dev server  - `npm start`
+
+3. Open a browser and navigate to `localhost:3000`
 
 ### Current Production Build
-Version 0.1
+Version 0.9
 * NBA  box scores of regular season and playoff games along with regular season standings.
 
 ### Features in future development

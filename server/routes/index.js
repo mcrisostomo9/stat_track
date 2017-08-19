@@ -1,11 +1,9 @@
-const settings      = require('./settings.js');
-const basketball    = require('./basketball.js');
-  
+const basketball = require('./basketball.js');
 
-const express       = require('express');
-const router        = express.Router();
 
-router.use('/settings', settings);
+const express = require('express');
+const router = express.Router();
+
 router.use('/nba', basketball);
 
 module.exports = router;

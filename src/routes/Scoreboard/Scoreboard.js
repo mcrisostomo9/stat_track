@@ -18,4 +18,4 @@ const Scoreboard = ()=>{
     )
 }
 
-export default Content;
+export default Scoreboard;

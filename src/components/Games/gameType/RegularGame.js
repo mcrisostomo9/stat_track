@@ -1,13 +1,18 @@
 import React from 'react';
 import teams from '../../../data/teamInfo';
+import styled from 'styled-components';
+
+
+
+
 
 const RegularGame = (props)=> {
-  let {game, startTime} = props;
+  const {game, startTime} = props;
 
-  let homeTeam  = teams.filter((homeTeam) => {
+  const homeTeam  = teams.filter((homeTeam) => {
         return (homeTeam.teamId === game.hTeam.teamId)
   })
-  let visitorTeam = teams.filter((visitorTeam) =>{
+  const visitorTeam = teams.filter((visitorTeam) =>{
       return (visitorTeam.teamId === game.vTeam.teamId);
   })
 
@@ -38,7 +43,7 @@ const RegularGame = (props)=> {
   //for game that hasnt started
   if(game.isGameActivated === false){
   return(
-      <div  className='col-xs-12 col-md-4'>
+      <div>
           <div className='panel panel-warning'>
               <div className='panel-heading'>
                   <div className="row">

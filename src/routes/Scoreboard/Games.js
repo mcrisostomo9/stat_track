@@ -2,6 +2,21 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {fetchGamesFromApi} from '../../actions/actionCreators';
 import Game from '../../components/Games/Game'
+import styled from 'styled-components';
+
+const GamesGridContainer = styled.div`
+  margin-top: 3rem;
+  display: grid;
+  grid-template-rows: 1fr 4fr;
+  justify-items: center;
+  grid-row-gap: 1rem;
+  
+`;
+
+const LogoImage = styled.img`
+  width: 10rem;
+`;
+
 
 class Games extends React.Component {
   //make call to fetch game on mount
@@ -31,23 +46,21 @@ class Games extends React.Component {
     }
     if (games.length === 0 || this.props.noGames) {
       return (
-        <div className="row no_games_div">
+        <GamesGridContainer>
           <div className="col-xs-6 col-xs-offset-3 text-center">
             <img src="../assets/hoop_color_2.png" alt=""/>
             <h4>NO GAMES SCHEDULED</h4>
           </div>
-        </div>
+        </GamesGridContainer>
       )
     }
     return (
-        <div className="row games_div">
-            <div className="col-xs-12 text-center">
-                <img src="../assets/hoop_color_2.png" alt=""/>
+        <GamesGridContainer>
+            <div>
+                <LogoImage src="../assets/hoop_color_2.png" alt=""/>
             </div>
-            <div className="col-xs-12">
-                <Game/>
-            </div>
-        </div>
+            <Game/>
+        </GamesGridContainer>
     )
   }
 }

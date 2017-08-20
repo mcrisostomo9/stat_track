@@ -2,6 +2,18 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import RegularGame from './gameType/RegularGame';
 import PlayoffGame from './gameType/PlayoffGame';
+import styled from 'styled-components';
+
+
+const GameContainer = styled.div`
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 1rem;
+  justify-items: stretch;
+  width: 100%;
+  padding: 0 1rem;
+ 
+`;
 
 class Game extends Component {
 
@@ -23,9 +35,9 @@ class Game extends Component {
 
     render() {
         return (
-            <div className="row">
+            <GameContainer>
                 {this.renderGames()}
-            </div>
+            </GameContainer>
         )
     }
 }

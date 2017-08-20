@@ -7,6 +7,7 @@ const Content = styled.div`
   background-color: white;
   margin: 3%;
   padding-top: 3%;
+  border-radius: 1em;
 `;
 
 const Scoreboard = ()=>{

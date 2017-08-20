@@ -17,7 +17,7 @@ const LogoImage = styled.img`
 `;
 
 
-class Games extends React.Component {
+class GamesGrid extends React.Component {
   //make call to fetch game on mount
   componentDidMount() {
     let {viewedDate} = this.props;
@@ -78,4 +78,4 @@ const mapDispatchToProps = (dispatch) => {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Games);
+export default connect(mapStateToProps, mapDispatchToProps)(GamesGrid);

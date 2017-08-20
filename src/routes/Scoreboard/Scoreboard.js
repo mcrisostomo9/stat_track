@@ -1,9 +1,9 @@
 import React from 'react';
-import Games from './Games';
+import GamesGrid from './GamesGrid';
 import styled from 'styled-components';
 import DateNavi from './DateNavi';
 
-const ScoreboardGrid = styled.div`
+const Content = styled.div`
   background-color: white;
   margin: 3%;
   padding-top: 3%;
@@ -11,11 +11,11 @@ const ScoreboardGrid = styled.div`
 
 const Scoreboard = ()=>{
     return(
-        <ScoreboardGrid>
+        <Content>
             <DateNavi/>
-            <Games/>
-        </ScoreboardGrid>
+            <GamesGrid/>
+        </Content>
     )
 }
 
-export default Scoreboard;
+export default Content;

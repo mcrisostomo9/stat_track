@@ -2,6 +2,22 @@ import React from 'react';
 import teams from '../../../data/teamInfo';
 import styled from 'styled-components';
 
+const TeamLogo = styled.img`
+   width: 30px;
+   height:30px;
+   margin-right: 3%;
+`;
+
+const IndividualGame = styled.div`
+  background-color: papayawhip;
+  display: grid;
+  grid-template-rows: 1fr 2fr 2fr;
+  grid-row-gap: 1em;
+  padding: 1em;
+  border: 1px solid #a2a2a2;
+  border-radius: 4px;
+  cursor: pointer;
+`;
 
 
 
@@ -43,26 +59,18 @@ const RegularGame = (props)=> {
   //for game that hasnt started
   if(game.isGameActivated === false){
   return(
-      <div>
-          <div className='panel panel-warning'>
-              <div className='panel-heading'>
-                  <div className="row">
-                      <div className="col-xs-12 text-right">Start time: {startTime}</div>
-                  </div>
-              </div>
-              <div className='panel-body'>
-                  <div className="row scoreboard_first_team_row">
-                      <div className="col-xs-9"><img className="nba_team_images_scoreboard" src={visitorTeam[0].logo} alt=""/> {visitorTeam[0].fullName}</div>
-                      <div className="score col-xs-3 text-center"></div>
-                  </div>
-                  <div className="row">
-                      <div className="col-xs-9"><img className="nba_team_images_scoreboard" src={homeTeam[0].logo} alt=""/> {homeTeam[0].fullName}</div>
-                      <div className="score col-xs-3 text-center"></div>
-                  </div>
-              </div>
+      <IndividualGame>
+          <div>Start time: {startTime}</div>
+          <div>
+              <TeamLogo  src={visitorTeam[0].logo} alt=""/>
+              {visitorTeam[0].fullName}
           </div>
-      </div>
-  )
+          <div>
+              <TeamLogo src={homeTeam[0].logo} alt=""/>
+              {homeTeam[0].fullName}
+          </div>
+      </IndividualGame>
+ )
 }
 // for game in progress
 return(

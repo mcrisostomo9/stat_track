@@ -7,10 +7,10 @@ import styled from 'styled-components';
 
 const GameContainer = styled.div`
   display: grid;
-  grid-column-gap: 1rem;
+  grid-gap: 1rem;
   justify-items: stretch;
   width: 100%;
-  padding: 0 1rem;
+  padding: 1em;
   
   @media (min-width: 300px){
       grid-template-columns: 1fr;

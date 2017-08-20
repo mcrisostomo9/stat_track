@@ -22,7 +22,7 @@ function renderError(err) {
 }
 
 export function fetchGamesFromApi(day) {
-  let games = `${baseurl}/games/${day}`;
+  const games = `${baseurl}/games/${day}`;
   return (dispatch) => {
     return axios.get(games).then(res => {
       //when response is received, dispatches gamesAction function with the received response as a param
@@ -44,7 +44,7 @@ function standingsAction(res) {
 }
 
 export function fetchStandingsFromApi() {
-  let standings = `${baseurl}/standings`;
+  const standings = `${baseurl}/standings`;
   return (dispatch) => {
     return axios.get(standings).then(res => {
       dispatch(standingsAction(res))
@@ -56,8 +56,8 @@ export function fetchStandingsFromApi() {
 }
 
 function convertDate(date) {
-  let mm = date.getMonth() + 1; // getMonth() is zero-based
-  let dd = date.getDate();
+  const mm = date.getMonth() + 1; // getMonth() is zero-based
+  const dd = date.getDate();
 
   return [date.getFullYear(),
   (mm > 9 ? '' : '0') + mm,
@@ -66,8 +66,8 @@ function convertDate(date) {
 }
 
 export function setViewedDate(date) {
-  let dateLongForm = date.toDateString();
-  let dateNumeric = convertDate(date);//converts given date to YYYYMMDD
+  const dateLongForm = date.toDateString();
+  const dateNumeric = convertDate(date);//converts given date to YYYYMMDD
   return {
     type: SET_DATE,
     numeric: dateNumeric,
@@ -85,7 +85,7 @@ function calendarAction(res) {
 }
 
 export function fetchCalendarFromApi() {
-  let calendar = `${baseurl}/calendar`;
+  const calendar = `${baseurl}/calendar`;
   return (dispatch) => {
     return axios.get(calendar).then(res => {
       dispatch(calendarAction(res))

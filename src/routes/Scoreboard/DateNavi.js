@@ -20,16 +20,19 @@ class DateNavi extends React.Component{
         this.props.sendDate(new Date(2017, 11, 8))
 
     }
+
     previousDay(){
         let temp = this.props.unformattedDate;
         temp.setDate(temp.getDate()-1);
         this.props.sendDate(temp);
     }
+
     nextDay(){
         let temp = this.props.unformattedDate;
         temp.setDate(temp.getDate()+1);
         this.props.sendDate(temp);
     }
+
     render(){
         return(
             <FlexContainer>

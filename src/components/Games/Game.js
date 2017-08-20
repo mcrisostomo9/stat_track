@@ -27,11 +27,6 @@ const GameContainer = styled.div`
   @media (min-width: 1200px){
     grid-template-columns: repeat(4, 1fr);
   }
-  
-   @media (min-width: 1500px){
-    grid-template-columns: repeat(5, 1fr);
-  }
- 
 `;
 
 class Game extends Component {

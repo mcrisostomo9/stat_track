@@ -9,7 +9,7 @@ class Game extends Component {
 
         return this.props.games.map((game) => {
             //convert UTC time received from nba.js to local start time of game
-            let startTime = new Date(game.startTimeUTC).toLocaleTimeString([], {
+            const startTime = new Date(game.startTimeUTC).toLocaleTimeString([], {
                 hour: '2-digit',
                 minute: '2-digit'
             });

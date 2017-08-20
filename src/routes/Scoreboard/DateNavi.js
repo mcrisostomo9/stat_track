@@ -6,6 +6,13 @@ import {setViewedDate, fetchCalendarFromApi} from '../../actions/actionCreators'
 
 const DateButton = styled.button`
   outline: none;
+  border: 0;
+  padding: 1em;
+  width: 8em
+`;
+
+const CurrentDate = styled.h4`
+  text-align: center
 `;
 
 class DateNavi extends React.Component{
@@ -37,7 +44,7 @@ class DateNavi extends React.Component{
         return(
             <FlexContainer>
                 <DateButton onClick={()=>this.previousDay()}>Previous</DateButton>
-                <h4>{this.props.viewedDateLongForm}</h4>
+                <CurrentDate>{this.props.viewedDateLongForm}</CurrentDate>
                 <DateButton  onClick={()=>this.nextDay()}>Next</DateButton>
             </FlexContainer>
         )

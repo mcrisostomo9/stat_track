@@ -7,7 +7,6 @@ const ScoreboardGrid = styled.div`
   background-color: white;
   margin: 3%;
   padding-top: 3%;
- 
 `;
 
 const Scoreboard = ()=>{

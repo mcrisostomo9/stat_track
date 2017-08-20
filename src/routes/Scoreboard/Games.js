@@ -7,10 +7,9 @@ import styled from 'styled-components';
 const GamesGridContainer = styled.div`
   margin-top: 3rem;
   display: grid;
-  grid-template-rows: 1fr 4fr;
   justify-items: center;
   grid-row-gap: 1rem;
-  
+  grid-template-rows: 1fr;
 `;
 
 const LogoImage = styled.img`

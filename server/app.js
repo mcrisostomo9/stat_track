@@ -3,7 +3,6 @@
 const express = require("express");
 const nba = require("nba.js").default;
 const morgan = require("morgan");
-const cors = require("cors");
 const path = require("path");
 
 // Define app to initialize express

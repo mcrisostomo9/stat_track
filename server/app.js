@@ -2,6 +2,7 @@
 // Define nba to access stats and teamData API endpoints
 const express = require("express");
 const nba = require("nba.js").default;
+const cors = require("cors");
 const morgan = require("morgan");
 const path = require("path");
 
@@ -13,7 +14,6 @@ const PORT = 8000;
 // Logs HTTP request and status codes
 app.use(morgan("dev"));
 app.use(cors());
-
 // Initialize CRUD API for user's favorite team
 // Catch all route to render index file for all react routes
 // app.use(express.static(path.resolve(__dirname, "..", "build")));

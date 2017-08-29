@@ -10,6 +10,13 @@ const GamesGridContainer = styled.div`
   justify-items: center;
   grid-row-gap: 1rem;
   grid-template-rows: 1fr;
+  font-family: none;
+`;
+
+const NoGamesContainer = styled.div`
+  text-align: center;
+  padding: 0 15px;
+  margin-left: 4%;
 `;
 
 const LogoImage = styled.img`width: 10rem;`;
@@ -38,10 +45,10 @@ class GamesGrid extends React.Component {
     if (games.length === 0 || this.props.noGames) {
       return (
         <GamesGridContainer>
-          <div className="col-xs-6 col-xs-offset-3 text-center">
+          <NoGamesContainer>
             <img src="../assets/hoop_color_2.png" alt="" />
             <h4>NO GAMES SCHEDULED</h4>
-          </div>
+          </NoGamesContainer>
         </GamesGridContainer>
       );
     }

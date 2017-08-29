@@ -13,6 +13,13 @@ const StyledHeader = styled.header`
   }
 `;
 
+// Made a new header to style
+const StyledNavBar = styled.header`
+  height: 10vh;
+  width: 100vw;
+
+`;
+
 const HeaderTitle = styled.h1`
   font-weight: bold;
   font-size: 5rem;
@@ -21,10 +28,10 @@ const HeaderTitle = styled.h1`
 
 const Header = ()=> {
     return (
-      <StyledHeader>
+
         <a href="/"><img src="../assets/ballcourt_white.png" alt=""/></a>
         <HeaderTitle>Pocket Stats</HeaderTitle>
-      </StyledHeader>
+      // </StyledHeader>
     )
 }
 

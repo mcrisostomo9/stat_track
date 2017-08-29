@@ -8,11 +8,13 @@ const Content = styled.div`
   margin: 3%;
   padding-top: 3%;
   border-radius: 1em;
+  box-shadow: 0 7px 6px -6px #777;
+  
 `;
 
 const Scoreboard = () => {
   return (
-    <Content className="gameContainer">
+    <Content>
       <DateNavi />
       <GamesGrid />
     </Content>

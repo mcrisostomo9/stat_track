@@ -4,11 +4,19 @@ import styled from 'styled-components';
 import {connect} from 'react-redux';
 import {setViewedDate, fetchCalendarFromApi} from '../../actions/actionCreators';
 
+// Adjusted some of the button styling
 const DateButton = styled.button`
   outline: none;
   border: 0;
   padding: 1em;
-  width: 8em
+  width: 6em;
+  border-radius: 0.75em;
+  box-shadow: 0 3.5px #ff9800;
+  background-color: #eaeaea;
+  
+  &:hover {
+      background-color: #a0a0a0
+  }
 `;
 
 const CurrentDate = styled.h4`

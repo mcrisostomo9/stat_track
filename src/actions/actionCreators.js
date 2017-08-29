@@ -2,8 +2,8 @@ import { FETCH_GAMES, FETCH_STANDINGS, FETCH_CALENDAR, SET_DATE, ERROR_404 } fro
 import axios from 'axios';
 
 //server url to interface the backend with the front end. Use Andy's url and allow CORS for testing
-const baseurl = 'http://localhost:8000/api/nba/'; // This is used for Local systems
-// const baseurl = '/api/nba/'; // This will be used for production
+const baseurl = 'http://localhost:8000/api/nba'; // This is used for Local systems
+// const baseurl = '/api/nba'; // This will be used for production
 
 //function to dispatch the reducer, used in the fetchGamesFromApi to handle async call
 function gamesAction(res) {

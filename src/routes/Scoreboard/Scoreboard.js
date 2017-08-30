@@ -7,7 +7,6 @@ import DateNavi from "./DateNavi";
 const Content = styled.div`
   background-color: #465e9b;
   margin: 3%;
-  height: 65vh;
   padding-top: 3%;
   border-radius: 1em;
   box-shadow: 0 7px 6px -6px #777;

@@ -13,7 +13,11 @@ const GamesGridContainer = styled.div`
   font-family: none;
 `;
 
+// Removed bootstrap classes
+// Restyled with "styled-components"
+// - Andy
 const NoGamesContainer = styled.div`
+  // height: 45vh;
   text-align: center;
   padding: 0 15px;
   margin-left: 4%;

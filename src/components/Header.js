@@ -15,23 +15,35 @@ const StyledHeader = styled.header`
 
 // Made a new header to style
 const StyledNavBar = styled.header`
-  height: 10vh;
   width: 100vw;
+  background-color: #333333;
+  border-radius: 0.75em;
+  box-shadow: 0 7px 6px -6px #777;
+  
+  > * {
+    display: inline-block;
+    margin: 15px;
+    vertical-align: middle;   
+  }
 
+  a img {
+    width: 50%;
+  }
 `;
 
-const HeaderTitle = styled.h1`
+const HeaderTitle = styled.div`
   font-weight: bold;
-  font-size: 5rem;
+  font-size: 3rem;
   color: #fff;
 `;
 
+// Removed StyledHeader and now adding StyledNavBar
 const Header = ()=> {
     return (
-
+      <StyledNavBar className="logo">
         <a href="/"><img src="../assets/ballcourt_white.png" alt=""/></a>
         <HeaderTitle>Pocket Stats</HeaderTitle>
-      // </StyledHeader>
+      </StyledNavBar>
     )
 }
 

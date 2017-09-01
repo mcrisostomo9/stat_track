@@ -1,7 +1,9 @@
 import ReactDOM from 'react-dom';
 import router from './routes/routes.js';
-import {  injectGlobal } from 'styled-components';
+import { injectGlobal } from 'styled-components';
 
+// Tentatively removing overflow-y: scroll
+// - Andy
 injectGlobal`   
    * {
       box-sizing: border-box 
@@ -11,7 +13,6 @@ injectGlobal`
     background: url(${require('./assets/bg.jpg')}) repeat;
     font-family: 'Roboto', serif;
     overflow-x: hidden;
-    overflow-y: scroll;
     height: 100vh;
    }
 `;

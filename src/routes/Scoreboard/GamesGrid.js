@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import { connect } from "react-redux";
 import { fetchGamesFromApi } from "../../actions/actionCreators";
 import Game from "../../components/Games/Game";
@@ -25,7 +25,7 @@ const NoGamesContainer = styled.div`
 
 const LogoImage = styled.img`width: 10rem;`;
 
-class GamesGrid extends React.Component {
+class GamesGrid extends Component {
   //make call to fetch game on mount
   componentDidMount() {
     let { viewedDate } = this.props;

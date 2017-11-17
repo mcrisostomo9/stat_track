@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import FlexContainer from '../../components/FlexContainer';
 import styled from 'styled-components';
 import {connect} from 'react-redux';
@@ -30,16 +30,16 @@ const CurrentDate = styled.h4`
   text-align: center
 `;
 
-class DateNavi extends React.Component{
+class DateNavi extends Component{
     constructor(props){
         super(props);
         this.props.dateFromApi();
 
         // for regular date
-        // this.props.sendDate(new Date());
+        this.props.sendDate(new Date());
 
         // date format (year, month, day)
-        this.props.sendDate(new Date(2017, 11, 8))
+        // this.props.sendDate(new Date(2017, 11, 8))
 
     }
 

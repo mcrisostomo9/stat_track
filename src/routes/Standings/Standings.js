@@ -1,12 +1,12 @@
-import React from 'react';
+import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import {fetchStandingsFromApi} from '../../actions/actionCreators';
 import WestStandings from './WestStandings';
 import EastStandings from './EastStandings';
 import {Table} from 'react-bootstrap';
 
-class Standings extends React.Component{
-  componentDidMount(){
+class Standings extends Component{
+  componentWillMount(){
     this.props.fetchStandings()
   }
 

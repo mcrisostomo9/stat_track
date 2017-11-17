@@ -20,7 +20,7 @@ const GameContainer = styled.div`
   }
 
   @media (min-width: 900px) {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 
   @media (min-width: 1200px) {

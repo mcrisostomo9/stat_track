@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 const StyledHeader = styled.header`
   display: grid;
@@ -43,6 +44,13 @@ const Header = ()=> {
       <StyledNavBar className="logo">
         <a href="/"><img src="../assets/ballcourt_white.png" alt=""/></a>
         <HeaderTitle>Pocket Stats</HeaderTitle>
+        <ul>
+          <li>
+            <Link to="/">Games</Link>
+            <Link to="/standings">Standings</Link>
+          </li>
+        </ul>
+        {/* <Link to="/standings">Standings</Link>  */}
       </StyledNavBar>
     )
 }

@@ -2,10 +2,20 @@ import React from "react";
 import teams from "../../../data/teamInfo";
 import styled from "styled-components";
 
+const TeamDisplay = styled.div`
+  position: relative;
+`;
+
 const TeamLogo = styled.img`
   width: 30px;
   height: 30px;
   margin-right: 3%;
+`;
+
+const Score = styled.div`
+  display: inline-block;
+  position: absolute;
+  right: 0;
 `;
 
 const IndividualGame = styled.div`
@@ -36,43 +46,25 @@ const RegularGame = props => {
     game.period.isHalftime === false
   ) {
     return (
-      <div className="col-xs-12 col-md-4">
-        <div className="panel panel-warning">
-          <div className="panel-heading">
-            <div className="row">
-              <div className="col-xs-12 text-right">FINAL SCORE</div>
-            </div>
-          </div>
-          <div className="panel-body">
-            <div className="row scoreboard_first_team_row">
-              <div className="col-xs-9">
-                <img
-                  className="nba_team_images_scoreboard"
-                  src={visitorTeam[0].logo}
-                  alt=""
-                />{" "}
-                {visitorTeam[0].fullName}
-              </div>
-              <div className="score col-xs-3 text-center">
-                {game.vTeam.score}
-              </div>
-            </div>
-            <div className="row">
-              <div className="col-xs-9">
-                <img
-                  className="nba_team_images_scoreboard"
-                  src={homeTeam[0].logo}
-                  alt=""
-                />{" "}
-                {homeTeam[0].fullName}
-              </div>
-              <div className="score col-xs-3 text-center">
-                {game.hTeam.score}
-              </div>
-            </div>
-          </div>
+      <IndividualGame>
+        <div>
+          Final Score
         </div>
-      </div>
+        <TeamDisplay>
+          <TeamLogo src={visitorTeam[0].logo} alt="" />
+          {visitorTeam[0].fullName}
+          <Score>
+            {game.vTeam.score}
+          </Score>
+        </TeamDisplay>
+        <TeamDisplay>
+          <TeamLogo src={homeTeam[0].logo} alt="" />
+          {homeTeam[0].fullName}
+          <Score>
+            {game.hTeam.score}
+          </Score>
+        </TeamDisplay>
+      </IndividualGame>
     );
   }
   //for game that hasnt started

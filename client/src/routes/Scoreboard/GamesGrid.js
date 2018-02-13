@@ -13,7 +13,7 @@ const GamesGridContainer = styled.div`
   font-family: none;
 
   @media (max-width: 450px) {
-    margin-top: 2rem;
+    margin-top: 1rem;
   }
 `;
 
@@ -26,8 +26,6 @@ const NoGamesContainer = styled.div`
   padding: 0 15px;
   margin-left: 4%;
 `;
-
-const LogoImage = styled.img`width: 6rem;`;
 
 class GamesGrid extends Component {
   //make call to fetch game on mount

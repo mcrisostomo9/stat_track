@@ -13,7 +13,7 @@ const DateButton = styled.button`
     outline: none;
     border: 0;
     padding: 1em;
-    height: 4em;
+    height: 3.1em;
     width: 6em;
     border-radius: 0.75em;
     box-shadow: 0 4px #ff9800;
@@ -34,9 +34,9 @@ const CurrentDate = styled.h4`
 `;
 
 const FlexContainer = styled.div`
-  display: flex;
-  margin-top: 2.5%;
-  justify-content: center;
+    display: flex;
+    margin-top: 2.5%;
+    justify-content: center;
 `;
 
 const LogoImage = styled.img`

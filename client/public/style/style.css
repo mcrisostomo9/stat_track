@@ -97,3 +97,16 @@ img.nba_team_images_scoreboard {
     font-size: 14px;
   }
 }
+
+.middle {
+  transform: rotate(180deg);
+  opacity: 0;
+}
+
+.top {
+  transform: rotate(225deg) translate(-8px, -6px);
+}
+
+.bottom {
+  transform: rotate(-225deg) translate(-9px, 8px);
+}

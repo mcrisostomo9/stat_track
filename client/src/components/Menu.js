@@ -6,22 +6,7 @@ const Bar = styled.div`
     height: 5px;
     background-color: #ff9800;
     margin: 6px 0;
-
-    .middle.open {
-        transform: rotate(180deg);
-        opacity: 0;
-        transition: .8s;
-    }
-    
-    top.open {
-        transform: rotate(225deg);
-        transition: 1s;
-    }
-
-    bottom.open {
-        transform: rotate(-225deg);
-        transition: 1s;
-    }
+    transition: .4s;
 `;
 
 class Menu extends Component {
@@ -36,8 +21,9 @@ class Menu extends Component {
     }
 
     toggleMenu() {
+        const { active } = this.state;
         this.setState({
-            active: true
+            active: !active
         });
     }
 
@@ -47,9 +33,9 @@ class Menu extends Component {
 
         return (
             <div onClick={ toggleMenu }>
-                <Bar className={ active ? '' : 'top open' } />
-                <Bar className={ active ? '' : 'middle open' } />
-                <Bar className={ active ? '' : 'bottom open' } />
+                <Bar className={ active ? 'top open' : '' } />
+                <Bar className={ active ? 'middle open' : '' } />
+                <Bar className={ active ? 'bottom open' : '' } />
             </div>
         )
     }

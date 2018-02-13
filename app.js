@@ -9,19 +9,19 @@ const path = require("path");
 // Define app to initialize express
 const app = express();
 const routes = require("./routes");
-const PORT = 8000;
+const PORT = process.env.PORT || 8000;
 
 // Logs HTTP request and status codes
 app.use(morgan("dev"));
-app.use(cors());
+// app.use(cors());
 
 // Initialize CRUD API for user's favorite team
 // Catch all route to render index file for all react routes
-// app.use(express.static(path.resolve(__dirname, "..", "build")));
+app.use(express.static(path.resolve(__dirname, "client", "build")));
 app.use("/api", routes);
-// app.use("*", (req, res) => {
-//   res.sendFile(path.resolve(__dirname, "..", "build", "index.html"));
-// });
+app.use("*", (req, res) => {
+  res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
+});
 
 // Returns a status code and handles our errors
 app.use(function (err, req, res, next) {

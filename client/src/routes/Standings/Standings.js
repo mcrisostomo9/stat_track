@@ -37,7 +37,7 @@ class Standings extends Component{
       <div>
           <div className="col-lg-6 col-sm-12">
               <h3 className="western_conference"><img src="../assets/nba_logos/west.png" alt=""/> West Standings </h3>
-              <Table hover bordered responsive>
+              <Table hover bordered>
                   <thead>
                       <tr className="panel-heading warning">
                           <th >#</th>
@@ -57,7 +57,7 @@ class Standings extends Component{
             </div>
             <div className="col-lg-6 col-sm-12">
               <h3 className="eastern_conference"><img src="../assets/nba_logos/east.png" alt=""/> East Standings</h3>
-                <Table hover bordered responsive>
+                <Table hover bordered>
                   <thead>
                       <tr className="panel-heading warning">
                           <th>#</th>

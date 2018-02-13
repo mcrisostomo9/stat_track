@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
-const StyledHeader = styled.header`
+const FooterGrid = styled.footer`
   display: grid;
   grid-template-columns: 1fr 3fr 1 fr;
   grid-template-rows: auto;
@@ -15,10 +15,10 @@ const StyledHeader = styled.header`
 `;
 
 // Made a new header to style
-const StyledNavBar = styled.header`
+const StyledFooter = styled.footer`
   width: 100vw;
-  background-color: #333333;
-  border-radius: 0.75em;
+  height: 20px;
+  background-color: #343a40;
   box-shadow: 0 7px 6px -6px #777;
   
   > * {
@@ -32,27 +32,17 @@ const StyledNavBar = styled.header`
   }
 `;
 
-const HeaderTitle = styled.div`
-  font-weight: bold;
-  font-size: 3rem;
-  color: #fff;
-`;
-
-// Removed StyledHeader and now adding StyledNavBar
-const Header = ()=> {
+const Footer = ()=> {
     return (
-      <StyledNavBar className="logo">
-        <a href="/"><img src="../assets/ballcourt_white.png" alt=""/></a>
-        <HeaderTitle>Pocket Stats</HeaderTitle>
-        <ul>
+      <StyledFooter className="logo">
+        {/* <ul>
           <li>
             <Link to="/">Games</Link>
             <Link to="/standings">Standings</Link>
           </li>
-        </ul>
-        {/* <Link to="/standings">Standings</Link>  */}
-      </StyledNavBar>
+        </ul> */}
+      </StyledFooter>
     )
 }
 
-export default Header;
+export default Footer;

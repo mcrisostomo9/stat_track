@@ -13,7 +13,6 @@ injectGlobal`
     background: url(${require('./assets/bg.jpg')}) repeat;
     font-family: 'Roboto', serif;
     overflow-x: hidden;
-    height: 100vh;
    }
 `;
 

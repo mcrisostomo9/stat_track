@@ -23,7 +23,7 @@ const NoGamesContainer = styled.div`
   margin-left: 4%;
 `;
 
-const LogoImage = styled.img`width: 10rem;`;
+const LogoImage = styled.img`width: 6rem;`;
 
 class GamesGrid extends Component {
   //make call to fetch game on mount
@@ -50,7 +50,6 @@ class GamesGrid extends Component {
       return (
         <GamesGridContainer>
           <NoGamesContainer>
-            <img src="../assets/hoop_color_2.png" alt="" />
             <h4>NO GAMES SCHEDULED</h4>
           </NoGamesContainer>
         </GamesGridContainer>
@@ -58,9 +57,6 @@ class GamesGrid extends Component {
     }
     return (
       <GamesGridContainer>
-        <div>
-          <LogoImage src="../assets/hoop_color_2.png" alt="" />
-        </div>
         <Game />
       </GamesGridContainer>
     );

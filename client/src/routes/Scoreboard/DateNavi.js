@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import FlexContainer from '../../components/FlexContainer';
+// import FlexContainer from '../../components/FlexContainer';
+import GridContainer from '../../components/GridContainer';
+
 import styled from 'styled-components';
 import {connect} from 'react-redux';
 import {setViewedDate, fetchCalendarFromApi} from '../../actions/actionCreators';
@@ -8,26 +10,41 @@ import {setViewedDate, fetchCalendarFromApi} from '../../actions/actionCreators'
 // Added button click effects
 // - Andy
 const DateButton = styled.button`
-  outline: none;
-  border: 0;
-  padding: 1em;
-  width: 6em;
-  border-radius: 0.75em;
-  box-shadow: 0 4px #ff9800;
-  background-color: #eaeaea;
+    outline: none;
+    border: 0;
+    padding: 1em;
+    height: 4em;
+    width: 6em;
+    border-radius: 0.75em;
+    box-shadow: 0 4px #ff9800;
+    background-color: #eaeaea;
   
-  &:hover {
-    background-color: #a0a0a0;
-  }
-  &:active {
-    background-color: #a0a0a0;
-    box-shadow: 0 1px #c37400;
-    transform: translateY(4px);
-  }
+    &:hover {
+        background-color: #a0a0a0;
+    }
+    &:active {
+        background-color: #a0a0a0;
+        box-shadow: 0 1px #c37400;
+        transform: translateY(4px);
+    }
 `;
 
 const CurrentDate = styled.h4`
-  text-align: center
+    text-align: center
+`;
+
+const FlexContainer = styled.div`
+  display: flex;
+  margin-top: 5%;
+  justify-content: center;
+`;
+
+const LogoImage = styled.img`
+    width: 6rem;
+
+    @media (max-width: 450px) {
+        width: 4rem;
+    }
 `;
 
 class DateNavi extends Component{
@@ -57,11 +74,17 @@ class DateNavi extends Component{
 
     render(){
         return(
-            <FlexContainer>
-                <DateButton onClick={()=>this.previousDay()}>Previous</DateButton>
-                <CurrentDate>{this.props.viewedDateLongForm}</CurrentDate>
-                <DateButton  onClick={()=>this.nextDay()}>Next</DateButton>
-            </FlexContainer>
+            <div>
+                <GridContainer>
+                    <DateButton onClick={()=>this.previousDay()}>Previous</DateButton>
+                    <LogoImage src="../../assets/hoop_color_2.png" alt="hoop image"/>
+                    <DateButton  onClick={()=>this.nextDay()}>Next</DateButton>
+                </GridContainer>
+                <FlexContainer>
+                    <CurrentDate>{this.props.viewedDateLongForm}</CurrentDate>
+                </FlexContainer>
+            </div>
+
         )
     }
 }

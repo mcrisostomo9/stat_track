@@ -6,4 +6,4 @@ const FlexContainer = styled.div`
   justify-content: center;
 `;
 
-// export default FlexContainer;
+export default FlexContainer;

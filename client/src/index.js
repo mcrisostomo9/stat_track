@@ -6,7 +6,11 @@ import { injectGlobal } from 'styled-components';
 // - Andy
 injectGlobal`   
    * {
-      box-sizing: border-box 
+      box-sizing: border-box; 
+   }
+
+   html {
+    background-color: #343a40;
    }
    
    body {

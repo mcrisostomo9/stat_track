@@ -11,6 +11,10 @@ const GamesGridContainer = styled.div`
   grid-row-gap: 1rem;
   grid-template-rows: 1fr;
   font-family: none;
+
+  @media (max-width: 450px) {
+    margin-top: 2rem;
+  }
 `;
 
 // Removed bootstrap classes

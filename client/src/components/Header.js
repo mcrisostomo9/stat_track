@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { Component } from 'react';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+
+import FlexContainer from './FlexContainer';
+import Menu from './Menu';
+import NavItems from './NavItems';
 
 const StyledHeader = styled.header`
   width: 100vw;
+  height: 68px;
   background-color: #343a40;
   box-shadow: 0 7px 6px -6px #777;
   display: grid;
@@ -11,41 +15,71 @@ const StyledHeader = styled.header`
   grid-template-rows: auto;
   justify-items: center;
   align-items: center;
-  padding: 5px 0;
-  // @media (min-width: 1025px) {
-  //   grid-template-columns: 1fr 1024px 1fr;
 
-  // }
+  @media (min-width: 1400px) {
+    grid-template-columns: 1fr 16fr 4fr;
+  }
+
+  @media (max-width: 1400px) {
+    grid-template-columns: 1fr 10fr 5fr;
+  }
+
+  @media (max-width: 450px) {
+    grid-template-columns: 2fr 6fr 2fr;
+  }
 
   img {
-    width: 75%;
+    width: 60%;
+    height: 100%;
   }
 `;
 
 const HeaderTitle = styled.div`
   font-weight: bold;
-  font-size: 3rem;
+  font-size: 2rem;
   color: #fff;
-
-  @media (max-width: 420px) {
-    font-size: 2rem;
-
-  }
+  align-self: center;
+  justify-self: start;
 `;
 
-const Header = ()=> {
+class Header extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      mobile: false
+    }
+
+    this.checkHeaderSize = this.checkHeaderSize.bind(this);
+  }
+  componentDidMount() {
+    this.checkHeaderSize();
+    window.addEventListener("resize", this.checkHeaderSize);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("resize", this.checkHeaderSize);
+  }
+
+  checkHeaderSize() {
+    this.setState({
+      mobile: window.innerWidth > 768
+    });
+  }
+
+  render() {
+    const { mobile } = this.state;
+
     return (
       <StyledHeader className="logo">
-        <img src="../assets/ballcourt_white.png" alt=""/>
+        <FlexContainer>
+          <img src="../assets/ballcourt_white.png" alt=""/>
+        </FlexContainer>
         <HeaderTitle>Pocket Stats</HeaderTitle>
-        <ul>
-          <li>
-            <Link to="/">Games</Link>
-            <Link to="/standings">Standings</Link>
-          </li>
-        </ul>
+        { mobile ? <NavItems /> : <Menu /> }
       </StyledHeader>
     )
+  }
 }
 
 export default Header;

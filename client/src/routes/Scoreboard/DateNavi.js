@@ -35,7 +35,7 @@ const CurrentDate = styled.h4`
 
 const FlexContainer = styled.div`
   display: flex;
-  margin-top: 5%;
+  margin-top: 2.5%;
   justify-content: center;
 `;
 

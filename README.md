@@ -13,11 +13,11 @@ An application that will display current regular season and post-season box scor
 * nba.js
 
 ### Getting Started
-1. Install dependencies - `npm install`
-2. Open up two terminals
+1. Install dependencies - `npm install` in project and client folders
+2. Change directories to project folder
 
     > Spin up server - `npm run server` runs with nodemon global module
-    > Start dev server  - `npm start`
+    > Start dev server  - `cd client` then `npm start`
 
 3. Open a browser and navigate to `localhost:3000`
 

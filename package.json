@@ -1,35 +1,33 @@
 {
-  "name": "stat_tracking",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "axios": "^0.16.2",
-    "cors": "^2.8.3",
-    "express": "^4.15.3",
-    "morgan": "^1.8.2",
-    "nba.js": "^0.3.3",
-    "react": "^15.5.4",
-    "react-bootstrap": "^0.30.10",
-    "react-dom": "^15.5.4",
-    "react-redux": "^5.0.5",
-    "react-router": "^3.0.5",
-    "react-router-bootstrap": "^0.23.3",
-    "react-router-redux": "^5.0.0-alpha.5",
-    "redux": "^3.6.0",
-    "redux-thunk": "^2.2.0",
-    "sequelize": "^4.1.0",
-    "styled-components": "^2.1.2"
-  },
+  "name": "pocket-stats-server",
+  "version": "1.0.0",
+  "description": "Used to proxy API routes through a node server and handle React-Router",
+  "main": "index.js",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "pack": "node_modules/.bin/webpack --config webpack.deploy.config.js --progress --colors",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "server": "nodemon ./server/app.js"
+    "start": "node app.js",
+    "server": "nodemon app.js",
+    "client": "npm start --prefix client",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "keywords": [
+    "Node",
+    "Express",
+    "Mongo",
+    "Mongoose",
+    "NBA.js"
+  ],
+  "author": "Andy Ong",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.4",
+    "express": "^4.15.4",
+    "mongoose": "^4.11.9",
+    "morgan": "^1.8.2",
+    "nba.js": "0.3.3"
   },
   "devDependencies": {
-    "nodemon": "^1.11.0",
-    "react-scripts": "^1.0.7"
+    "concurrently": "^3.5.1",
+    "nodemon": "^1.12.1"
   }
 }

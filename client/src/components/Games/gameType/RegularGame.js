@@ -87,56 +87,45 @@ const RegularGame = props => {
   }
   // for game in progress
   return (
-    <div className="col-xs-12 col-md-4">
-      <div className="panel panel-warning">
-        {game.period.isHalftime === true
-          ? <div className="panel-heading">
-              <div className="row">
-                <div className="col-xs-12 text-right">Halftime</div>
-              </div>
+    <IndividualGame>
+      {game.period.isHalftime === true
+        ? <div>Halftime</div>
+        : game.period.current === 0 
+          ? <div>
+              Start time: {startTime}
             </div>
-          : <div className="panel-heading">
-              <div className="row">
-                {// to get rid of showing Quarter 0 showing when game is acvtivated
-                game.period.current === 0
-                  ? <div className="col-xs-7 text-right">
-                      Start time: {startTime}
-                    </div>
-                  : <div className="col-xs-7 text-right">
-                      Q{game.period.current} - {game.clock}
-                    </div>}{" "}
-              </div>
-            </div>}
-        <div className="panel-body">
-          <div className="row scoreboard_first_team_row">
-            <div className="col-xs-9">
-              <img
-                className="nba_team_images_scoreboard"
-                src={homeTeam[0].logo}
-                alt=""
-              />{" "}
-              {visitorTeam[0].fullName}
+          : <div>
+              Q{game.period.current} - {game.clock}
             </div>
-            <div className="score col-xs-3 text-center">
-              {game.vTeam.score}
-            </div>
-          </div>
-          <div className="row">
-            <div className="col-xs-9">
-              <img
-                className="nba_team_images_scoreboard"
-                src={homeTeam[0].logo}
-                alt=""
-              />{" "}
-              {homeTeam[0].fullName}
-            </div>
-            <div className="score col-xs-3 text-center">
-              {game.hTeam.score}
-            </div>
-          </div>
-        </div>
+      }
+      <div>
+        <TeamDisplay>
+          <img
+            className="nba_team_images_scoreboard"
+            src={homeTeam[0].logo}
+            alt=""
+          />{" "}
+          {homeTeam[0].fullName}
+          <Score>
+            {game.hTeam.score}
+          </Score>
+        </TeamDisplay>
       </div>
-    </div>
+      <div>
+        <TeamDisplay>
+          <img
+            className="nba_team_images_scoreboard"
+            src={visitorTeam[0].logo}
+            alt=""
+          />{" "}
+          {visitorTeam[0].fullName}
+          <Score>
+            {game.vTeam.score}
+          </Score>
+        </TeamDisplay>
+      </div>   
+    </IndividualGame>
+
   );
 };
 

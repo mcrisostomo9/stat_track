@@ -19,7 +19,6 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "bundle": "node_modules/.bin/webpack --config webpack.deploy.config.js --progress --colors",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },

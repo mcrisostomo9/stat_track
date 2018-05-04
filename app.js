@@ -13,7 +13,7 @@ const PORT = process.env.PORT || 8000;
 
 // Logs HTTP request and status codes
 app.use(morgan("dev"));
-// app.use(cors());
+app.use(cors());
 
 // Initialize CRUD API for user's favorite team
 // Catch all route to render index file for all react routes

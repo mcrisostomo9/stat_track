@@ -24,7 +24,7 @@
     "express": "^4.15.4",
     "mongoose": "^4.11.9",
     "morgan": "^1.8.2",
-    "nba.js": "0.3.3"
+    "nba.js": "^0.3.3"
   },
   "devDependencies": {
     "concurrently": "^3.5.1",

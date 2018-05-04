@@ -95,7 +95,7 @@ const PlayoffGame = props => {
   // for game in progress
   return (
     <IndividualGame>
-      {game.period.isHalftime === true ? (
+      {game.period.isHalftime === true || game.clock === "0.0" ? (
         <div>Halftime</div>
       ) : game.period.current === 0 ? (
         <div>Start time: {startTime}</div>

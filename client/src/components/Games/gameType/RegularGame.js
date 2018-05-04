@@ -47,22 +47,16 @@ const RegularGame = props => {
   ) {
     return (
       <IndividualGame>
-        <div>
-          Final Score
-        </div>
+        <div>Final Score</div>
         <TeamDisplay>
           <TeamLogo src={visitorTeam[0].logo} alt="" />
           {visitorTeam[0].fullName}
-          <Score>
-            {game.vTeam.score}
-          </Score>
+          <Score>{game.vTeam.score}</Score>
         </TeamDisplay>
         <TeamDisplay>
           <TeamLogo src={homeTeam[0].logo} alt="" />
           {homeTeam[0].fullName}
-          <Score>
-            {game.hTeam.score}
-          </Score>
+          <Score>{game.hTeam.score}</Score>
         </TeamDisplay>
       </IndividualGame>
     );
@@ -71,9 +65,7 @@ const RegularGame = props => {
   if (game.isGameActivated === false) {
     return (
       <IndividualGame>
-        <div>
-          Start time: {startTime}
-        </div>
+        <div>Start time: {startTime}</div>
         <div>
           <TeamLogo src={visitorTeam[0].logo} alt="" />
           {visitorTeam[0].fullName}
@@ -88,16 +80,15 @@ const RegularGame = props => {
   // for game in progress
   return (
     <IndividualGame>
-      {game.period.isHalftime === true
-        ? <div>Halftime</div>
-        : game.period.current === 0 
-          ? <div>
-              Start time: {startTime}
-            </div>
-          : <div>
-              Q{game.period.current} - {game.clock}
-            </div>
-      }
+      {game.period.isHalftime === true ? (
+        <div>Halftime</div>
+      ) : game.period.current === 0 ? (
+        <div>Start time: {startTime}</div>
+      ) : (
+        <div>
+          Q{game.period.current} - {game.clock}
+        </div>
+      )}
       <div>
         <TeamDisplay>
           <img
@@ -106,9 +97,7 @@ const RegularGame = props => {
             alt=""
           />{" "}
           {homeTeam[0].fullName}
-          <Score>
-            {game.hTeam.score}
-          </Score>
+          <Score>{game.hTeam.score}</Score>
         </TeamDisplay>
       </div>
       <div>
@@ -119,13 +108,10 @@ const RegularGame = props => {
             alt=""
           />{" "}
           {visitorTeam[0].fullName}
-          <Score>
-            {game.vTeam.score}
-          </Score>
+          <Score>{game.vTeam.score}</Score>
         </TeamDisplay>
-      </div>   
+      </div>
     </IndividualGame>
-
   );
 };
 

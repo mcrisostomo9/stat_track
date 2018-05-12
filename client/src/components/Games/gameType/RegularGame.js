@@ -7,8 +7,8 @@ const TeamDisplay = styled.div`
 `;
 
 const TeamLogo = styled.img`
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   margin-right: 3%;
 `;
 
@@ -26,7 +26,6 @@ const IndividualGame = styled.div`
   padding: 1em;
   border: 1px solid #a2a2a2;
   border-radius: 4px;
-  cursor: pointer;
 `;
 
 const RegularGame = props => {
